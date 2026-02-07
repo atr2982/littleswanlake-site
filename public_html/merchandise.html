@@ -45,8 +45,23 @@ Description: A two-column fixed-width template suitable for small websites.
 </head>
 <body>
 <div id="wrapper">
-  <div id="menu">
-    <ul>
+  <div id="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">Little Swan Lake</div>
+      <div class="topbar-right">
+        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
+          <span class="pin-icon" aria-hidden="true"></span>
+          229 140th St, Avon, IL 61415
+        </a>
+      </div>
+    </div>
+  </div>
+<div id="menu">
+    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
+      <span class="menu-toggle-icon" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <ul id="menu-list">
       <li class="active"><a href="http://littleswanlake.net/">Home </a></li>
       <li><a href="http://littleswanlake.net/news.html">News </a></li>
       <li><a href="http://littleswanlake.net/boatingandfishin.html">Fishing & Boating </a></li>
@@ -55,6 +70,50 @@ Description: A two-column fixed-width template suitable for small websites.
       <li><a href="http://littleswanlake.net/forms.html">Forms </a></li>
       <li><a href="http://littleswanlake.net/directions.html">Directions </a></li>
       <li><a href="http://littleswanlake.net/contacts.html">Contact </a></li>
+      <li class="mobile-only has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
+        <ul class="submenu">
+          <li><a href="http://littleswanlake.net/">Home</a></li>
+          <li><a href="../contacts.html">Contacts</a></li>
+          <li><a href="../memberinfo.html">Member Information</a></li>
+          <li><a href="../siltation.html">Siltation Committee</a></li>
+          <li><a href="../photos.html">Photos & Lake Map</a></li>
+          <li><a href="../news.html">LSL Newsletter and other News</a></li>
+          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
+          <li><a href="http://littleswanlake.net/lol-news.html">(Monthly News)</a></li>
+          <li><a href="../forms.html">Forms **new**</a></li>
+          <li><a href="../ClubhouseRental.html">Clubhouse Rental form and information</a></li>
+          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
+          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
+          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
+          <li><a href="../jobs.html">Job Listing</a></li>
+          <li><a href="../history.html">History</a></li>
+          <li><a href="../directions.html">Directions</a></li>
+          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
+        </ul>
+      </li>
+      <li class="mobile-only has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
+        <ul class="submenu">
+          <li><a href="../board.html">Board Meetings</a></li>
+          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
+        </ul>
+      </li>
+      <li class="mobile-only has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
+        <ul class="submenu">
+          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
+          <li><a href="../boating.html">Boating</a></li>
+          <li><a href="../fishing.html">Fishing</a></li>
+          <li><a href="../swimming.html">Swimming</a></li>
+        </ul>
+      </li>
+      <li class="mobile-only has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
+        <ul class="submenu">
+          <li><a href="http://littleswanlake.net/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
+        </ul>
+      </li>
     </ul>
   </div>
   <!-- end div#menu -->
@@ -125,5 +184,64 @@ Description: A two-column fixed-width template suitable for small websites.
   <!-- end div#footer -->
 </div>
 <!-- end div#wrapper -->
+
+<script type="text/javascript">
+  (function() {
+    var menu = document.getElementById("menu");
+    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
+    var list = document.getElementById("menu-list");
+    if (!menu || !toggle || !list) return;
+
+    function setOpen(isOpen) {
+      menu.classList.toggle("menu-open", isOpen);
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (!isOpen) {
+        var openSubs = list.querySelectorAll(".submenu-open");
+        for (var i = 0; i < openSubs.length; i++) {
+          openSubs[i].classList.remove("submenu-open");
+        }
+        var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
+        for (var j = 0; j < subToggles.length; j++) {
+          subToggles[j].setAttribute("aria-expanded", "false");
+        }
+      }
+    }
+
+    toggle.addEventListener("click", function() {
+      setOpen(!menu.classList.contains("menu-open"));
+    });
+
+    document.addEventListener("click", function(e) {
+      if (!menu.classList.contains("menu-open")) return;
+      if (menu.contains(e.target)) return;
+      setOpen(false);
+    });
+
+    list.addEventListener("click", function(e) {
+      if (e.target && e.target.tagName === "A") {
+        setOpen(false);
+      }
+    });
+
+    list.addEventListener("click", function(e) {
+      var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
+        ? e.target
+        : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
+      if (!toggleBtn) return;
+      var item = toggleBtn.closest("li");
+      if (!item) return;
+      var isOpen = item.classList.contains("submenu-open");
+      item.classList.toggle("submenu-open", !isOpen);
+      toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
+      e.preventDefault();
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  })();
+</script>
 </body>
 </html>

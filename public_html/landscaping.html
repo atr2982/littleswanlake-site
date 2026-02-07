@@ -21,4 +21,63 @@ strong { font-weight:bold }
 <td height=22><a href="index.html">HOME</a></td>
 <td height=22></td></tr><tr class="f-sp"><td><img src="images/_clear.gif" border=0 width=694 height=1 alt="" style="float:left"></td><td><img src="images/_clear.gif" border=0 width=101 height=1 alt="" style="float:left"></td><td height=1><img src="images/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td></tr></table><div id="item4" style="position:absolute; left:411px; top:635px; width:379px; height:285px; z-index:1"><img src="images/landsc4.jpeg" border=0 width=390 height=296 alt="item4" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item1" style="position:absolute; left:12px; top:34px; width:379px; height:285px; z-index:2"><img src="images/landsc1.jpeg" border=0 width=390 height=296 alt="item1" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item2" style="position:absolute; left:412px; top:34px; width:379px; height:285px; z-index:3"><img src="images/landsc2.jpeg" border=0 width=390 height=296 alt="item2" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item5" style="position:absolute; left:12px; top:634px; width:379px; height:285px; z-index:4"><img src="images/landsc5.jpeg" border=0 width=390 height=296 alt="item5" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item6" style="position:absolute; left:412px; top:935px; width:379px; height:285px; z-index:5"><img src="images/landsc6.jpeg" border=0 width=390 height=296 alt="item6" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item7" style="position:absolute; left:12px; top:934px; width:379px; height:285px; z-index:6"><img src="images/landsc7.jpeg" border=0 width=390 height=296 alt="item7" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item8" style="position:absolute; left:412px; top:1235px; width:379px; height:285px; z-index:7"><img src="images/landsc8.jpeg" border=0 width=390 height=296 alt="item8" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item9" style="position:absolute; left:12px; top:1234px; width:379px; height:285px; z-index:8"><img src="images/landsc9.jpeg" border=0 width=390 height=296 alt="item9" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item3" style="position:absolute; left:412px; top:335px; width:379px; height:285px; z-index:9"><img src="images/landsc3.jpeg" border=0 width=390 height=296 alt="item3" style="position:relative; left:-7px; top:-7px; float:left"></div><div id="item10" style="position:absolute; left:10px; top:332px; width:390px; height:288px; z-index:10"><img src="images/landsc0.gif" border=0 width=278 height=53 alt="If you would like to" style="position:relative; left:56px; top:1px; float:left"></div>
 </div>
-<div><img src="http://www.freewaypro.com/counter/counter.php?site=10005846&amp;page=Landscaping&amp;file=landscaping.html" width="1" height="1" alt="FreeCounter"></div></body></html>
+<div><img src="http://www.freewaypro.com/counter/counter.php?site=10005846&amp;page=Landscaping&amp;file=landscaping.html" width="1" height="1" alt="FreeCounter"></div>
+<script type="text/javascript">
+  (function() {
+    var menu = document.getElementById("menu");
+    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
+    var list = document.getElementById("menu-list");
+    if (!menu || !toggle || !list) return;
+
+    function setOpen(isOpen) {
+      menu.classList.toggle("menu-open", isOpen);
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (!isOpen) {
+        var openSubs = list.querySelectorAll(".submenu-open");
+        for (var i = 0; i < openSubs.length; i++) {
+          openSubs[i].classList.remove("submenu-open");
+        }
+        var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
+        for (var j = 0; j < subToggles.length; j++) {
+          subToggles[j].setAttribute("aria-expanded", "false");
+        }
+      }
+    }
+
+    toggle.addEventListener("click", function() {
+      setOpen(!menu.classList.contains("menu-open"));
+    });
+
+    document.addEventListener("click", function(e) {
+      if (!menu.classList.contains("menu-open")) return;
+      if (menu.contains(e.target)) return;
+      setOpen(false);
+    });
+
+    list.addEventListener("click", function(e) {
+      if (e.target && e.target.tagName === "A") {
+        setOpen(false);
+      }
+    });
+
+    list.addEventListener("click", function(e) {
+      var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
+        ? e.target
+        : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
+      if (!toggleBtn) return;
+      var item = toggleBtn.closest("li");
+      if (!item) return;
+      var isOpen = item.classList.contains("submenu-open");
+      item.classList.toggle("submenu-open", !isOpen);
+      toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
+      e.preventDefault();
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  })();
+</script>
+</body></html>

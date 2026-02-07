@@ -216,13 +216,15 @@ a:hover {
 #menu > ul > li > a:hover {
 	background: transparent;
 	color: #7EBA25;
-	text-decoration: none;
+	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 
 #menu > ul > li.active > a {
 	background: transparent;
 	color: #7EBA25;
-	text-decoration: none;
+	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 
 .submenu-toggle {
@@ -737,6 +739,11 @@ table {
 		font-weight: normal;
 		font-family: "Work Sans", Arial, Helvetica, sans-serif;
 		text-decoration: none;
+	}
+
+	.submenu a:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 
 	.submenu li {

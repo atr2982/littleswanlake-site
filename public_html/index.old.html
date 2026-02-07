@@ -49,4 +49,63 @@ strong { font-weight:bold }
       <span class="style4">will be Monday, December 1, 2014 at 7:00 PM</span></p>
     </div>
 </div>
-<div id="item3" style="position:absolute; left:604px; top:880px; width:189px; height:100px; z-index:31"><img src="Resources/index3.gif" border=0 width=179 height=92 alt="Swingle Creek" style="position:relative; left:4px; top:-1px; float:left"></div><div id="item1a1a1a1a1a" style="position:absolute; left:587px; top:851px; width:8px; height:163px; z-index:32"><img src="Resources/item1a1a1a1a1a.gif" border=0 width=8 height=164 alt="" style="float:left"></div><map name="map1"><area alt="" coords="608,22,757,34" href="merchandise.html"><area alt="" coords="426,22,577,34" href="ladiesofthelake.html"><area alt="" coords="331,22,391,37" href="history.html"><area alt="" coords="217,22,301,34" href="directions.html"><area alt="" coords="130,22,187,34" href="aerialshots.html"><area alt="" coords="12,22,100,34" href="classifieds.html"><area alt="" coords="534,0,769,15" href="lakehomesforsale.html"><area alt="" coords="417,0,503,15" href="swimming.html"><area alt="" coords="239,0,385,15" href="boatingandfishin.html"><area alt="" coords="102,0,208,12" href="memberinfo.html"><area alt="" coords="0,1,71,12" href="contacts.html"></map><map name="map2"><area alt="" coords="305,51,472,63" href="mailto:LSLClerk%40hotmail.com"></map><map name="map3"><area alt="" coords="95,34,320,46" href="mailto:wcanimalcontrol%40frontier.com"></map><map name="map4"><area alt="" coords="3,115,256,126" href="mailto:LSLClerk%40hotmail.com"><area alt="" coords="2,98,164,111" href="mailto:LSLClerk%40hotmail.com"><area alt="" coords="283,65,334,77" href="memberinfo.html"><area alt="" coords="28,18,221,30" href="memberinfo.html"></map><map name="map5"><area alt="CLICK HERE FOR MORE DETAILS" coords="0,0,139,10" href="classifieds.html"></map></div></body></html>
+<div id="item3" style="position:absolute; left:604px; top:880px; width:189px; height:100px; z-index:31"><img src="Resources/index3.gif" border=0 width=179 height=92 alt="Swingle Creek" style="position:relative; left:4px; top:-1px; float:left"></div><div id="item1a1a1a1a1a" style="position:absolute; left:587px; top:851px; width:8px; height:163px; z-index:32"><img src="Resources/item1a1a1a1a1a.gif" border=0 width=8 height=164 alt="" style="float:left"></div><map name="map1"><area alt="" coords="608,22,757,34" href="merchandise.html"><area alt="" coords="426,22,577,34" href="ladiesofthelake.html"><area alt="" coords="331,22,391,37" href="history.html"><area alt="" coords="217,22,301,34" href="directions.html"><area alt="" coords="130,22,187,34" href="aerialshots.html"><area alt="" coords="12,22,100,34" href="classifieds.html"><area alt="" coords="534,0,769,15" href="lakehomesforsale.html"><area alt="" coords="417,0,503,15" href="swimming.html"><area alt="" coords="239,0,385,15" href="boatingandfishin.html"><area alt="" coords="102,0,208,12" href="memberinfo.html"><area alt="" coords="0,1,71,12" href="contacts.html"></map><map name="map2"><area alt="" coords="305,51,472,63" href="mailto:LSLClerk%40hotmail.com"></map><map name="map3"><area alt="" coords="95,34,320,46" href="mailto:wcanimalcontrol%40frontier.com"></map><map name="map4"><area alt="" coords="3,115,256,126" href="mailto:LSLClerk%40hotmail.com"><area alt="" coords="2,98,164,111" href="mailto:LSLClerk%40hotmail.com"><area alt="" coords="283,65,334,77" href="memberinfo.html"><area alt="" coords="28,18,221,30" href="memberinfo.html"></map><map name="map5"><area alt="CLICK HERE FOR MORE DETAILS" coords="0,0,139,10" href="classifieds.html"></map></div>
+<script type="text/javascript">
+  (function() {
+    var menu = document.getElementById("menu");
+    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
+    var list = document.getElementById("menu-list");
+    if (!menu || !toggle || !list) return;
+
+    function setOpen(isOpen) {
+      menu.classList.toggle("menu-open", isOpen);
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (!isOpen) {
+        var openSubs = list.querySelectorAll(".submenu-open");
+        for (var i = 0; i < openSubs.length; i++) {
+          openSubs[i].classList.remove("submenu-open");
+        }
+        var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
+        for (var j = 0; j < subToggles.length; j++) {
+          subToggles[j].setAttribute("aria-expanded", "false");
+        }
+      }
+    }
+
+    toggle.addEventListener("click", function() {
+      setOpen(!menu.classList.contains("menu-open"));
+    });
+
+    document.addEventListener("click", function(e) {
+      if (!menu.classList.contains("menu-open")) return;
+      if (menu.contains(e.target)) return;
+      setOpen(false);
+    });
+
+    list.addEventListener("click", function(e) {
+      if (e.target && e.target.tagName === "A") {
+        setOpen(false);
+      }
+    });
+
+    list.addEventListener("click", function(e) {
+      var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
+        ? e.target
+        : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
+      if (!toggleBtn) return;
+      var item = toggleBtn.closest("li");
+      if (!item) return;
+      var isOpen = item.classList.contains("submenu-open");
+      item.classList.toggle("submenu-open", !isOpen);
+      toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
+      e.preventDefault();
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  })();
+</script>
+</body></html>

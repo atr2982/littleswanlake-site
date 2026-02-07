@@ -85,5 +85,64 @@ onchange="n = 0;" size=16 name=string></FONT><BR><INPUT style="BORDER-RIGHT: #ff
 
 
 
+
+<script type="text/javascript">
+  (function() {
+    var menu = document.getElementById("menu");
+    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
+    var list = document.getElementById("menu-list");
+    if (!menu || !toggle || !list) return;
+
+    function setOpen(isOpen) {
+      menu.classList.toggle("menu-open", isOpen);
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (!isOpen) {
+        var openSubs = list.querySelectorAll(".submenu-open");
+        for (var i = 0; i < openSubs.length; i++) {
+          openSubs[i].classList.remove("submenu-open");
+        }
+        var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
+        for (var j = 0; j < subToggles.length; j++) {
+          subToggles[j].setAttribute("aria-expanded", "false");
+        }
+      }
+    }
+
+    toggle.addEventListener("click", function() {
+      setOpen(!menu.classList.contains("menu-open"));
+    });
+
+    document.addEventListener("click", function(e) {
+      if (!menu.classList.contains("menu-open")) return;
+      if (menu.contains(e.target)) return;
+      setOpen(false);
+    });
+
+    list.addEventListener("click", function(e) {
+      if (e.target && e.target.tagName === "A") {
+        setOpen(false);
+      }
+    });
+
+    list.addEventListener("click", function(e) {
+      var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
+        ? e.target
+        : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
+      if (!toggleBtn) return;
+      var item = toggleBtn.closest("li");
+      if (!item) return;
+      var isOpen = item.classList.contains("submenu-open");
+      item.classList.toggle("submenu-open", !isOpen);
+      toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
+      e.preventDefault();
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  })();
+</script>
 </body>
 </html>
