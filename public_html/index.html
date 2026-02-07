@@ -13,8 +13,9 @@ Description: A two-column fixed-width template suitable for small websites.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- <title>Lily Pads by Free Css Templates</title> -->
-<title>Little Swan Lake Club website</title>
+<title>Little Swan Lake Club</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
@@ -73,6 +74,17 @@ div.WordSection1
 </head>
 <body>
 <div id="wrapper">
+  <div id="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">Little Swan Lake</div>
+      <div class="topbar-right">
+        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
+          <span class="pin-icon" aria-hidden="true"></span>
+          229 140th St, Avon, IL 61415
+        </a>
+      </div>
+    </div>
+  </div>
 <!--  <div id="header">
     <div id="logo">
       <h1><a href="#">Lily Pads</a></h1>
@@ -83,7 +95,11 @@ div.WordSection1
   
   <!-- end div#header -->
   <div id="menu">
-    <ul>
+    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
+      <span class="menu-toggle-icon" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <ul id="menu-list">
       <li class="active"><a href="http://littleswanlake.net/">Home </a></li>
       <li><a href="http://littleswanlake.net/news.html">News </a></li>
       <li><a href="http://littleswanlake.net/boatingandfishin.html">Fishing & Boating </a></li>
@@ -619,5 +635,34 @@ Bubble Wrap</p>
   <!-- end div#footer -->
 </div>
 <!-- end div#wrapper -->
+<script type="text/javascript">
+  (function() {
+    var menu = document.getElementById("menu");
+    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
+    var list = document.getElementById("menu-list");
+    if (!menu || !toggle || !list) return;
+
+    function setOpen(isOpen) {
+      menu.classList.toggle("menu-open", isOpen);
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    }
+
+    toggle.addEventListener("click", function() {
+      setOpen(!menu.classList.contains("menu-open"));
+    });
+
+    list.addEventListener("click", function(e) {
+      if (e.target && e.target.tagName === "A") {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  })();
+</script>
 </body>
 </html>
