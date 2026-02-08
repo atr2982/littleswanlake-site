@@ -737,6 +737,7 @@ table {
 		text-transform: none;
 		letter-spacing: 0;
 		font-weight: normal;
+		font-size: 13px;
 		font-family: "Work Sans", Arial, Helvetica, sans-serif;
 		text-decoration: none !important;
 	}

@@ -72,10 +72,22 @@ div.WordSection1
 
 </style>
 <style type="text/css" id="home-page-styles">
+  :root {
+    --lake-ink: #17212a;
+    --lake-muted: #4a5a6a;
+    --lake-accent: #1f4d7a;
+    --lake-accent-strong: #163a5b;
+    --lake-accent-soft: #e3edf7;
+    --lake-neutral: #f3f5f7;
+    --lake-border: #d7dee6;
+    --lake-panel: #ffffff;
+    --lake-shadow: 0 10px 24px rgba(10, 25, 40, 0.10);
+  }
   .home-page {
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
-    color: #1f1f1f;
+    color: var(--lake-ink);
     line-height: 1.6;
+    background: #ffffff;
   }
   .home-page #content.home-content {
     width: 100%;
@@ -86,10 +98,11 @@ div.WordSection1
     gap: 28px;
   }
   .home-page .home-hero {
-    background: #f7f7f5;
-    border: 1px solid #e6e4dd;
+    background: var(--lake-panel);
+    border: 1px solid var(--lake-border);
     padding: 24px;
     border-radius: 10px;
+    box-shadow: var(--lake-shadow);
   }
   .home-page .hero-title {
     display: flex;
@@ -100,27 +113,29 @@ div.WordSection1
   .home-page h1 {
     font-size: 28px;
     margin: 0;
-    color: #1a1a1a;
+    color: var(--lake-ink);
   }
   .home-page h2 {
     font-size: 20px;
     margin: 0 0 10px 0;
-    color: #1a1a1a;
+    color: var(--lake-ink);
   }
   .home-page h3 {
     font-size: 16px;
     margin: 16px 0 8px 0;
+    color: var(--lake-ink);
   }
   .home-page h4 {
     font-size: 14px;
     margin: 12px 0 6px 0;
+    color: var(--lake-ink);
   }
   .home-page p {
     margin: 0 0 12px 0;
   }
   .home-page .updated {
     font-size: 12px;
-    color: #5a5a5a;
+    color: var(--lake-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -132,21 +147,22 @@ div.WordSection1
   .home-page .callout {
     padding: 12px 14px;
     border-radius: 8px;
-    background: #ffffff;
-    border: 1px solid #e5e5e5;
+    background: var(--lake-panel);
+    border: 1px solid var(--lake-border);
+    box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
   }
   .home-page .callout.alert {
-    border-color: #f1c6c6;
-    background: #fff5f5;
+    border-color: #e6c7c7;
+    background: #fff4f2;
   }
   .home-page .callout.info {
-    border-color: #cfe3d8;
-    background: #f4fbf7;
+    border-color: #c9d8e9;
+    background: var(--lake-accent-soft);
   }
   .home-page .highlight-text {
     padding: 10px 12px;
-    border-left: 4px solid #1f5f3b;
-    background: #f4fbf7;
+    border-left: 4px solid var(--lake-accent);
+    background: var(--lake-accent-soft);
     border-radius: 6px;
   }
   .home-page .link-list {
@@ -160,12 +176,12 @@ div.WordSection1
     text-decoration: underline;
   }
   .home-page .note {
-    color: #444;
+    color: var(--lake-muted);
   }
   .home-page .alert {
-    color: #7b2d2d;
-    background: #fff3f3;
-    border: 1px solid #f1c6c6;
+    color: #6b3a2f;
+    background: #fff4f2;
+    border: 1px solid #e6c7c7;
     padding: 12px 14px;
     border-radius: 8px;
   }
@@ -176,14 +192,15 @@ div.WordSection1
   }
   .home-page figure {
     margin: 0;
-    background: #ffffff;
-    border: 1px solid #e6e4dd;
+    background: var(--lake-panel);
+    border: 1px solid var(--lake-border);
     border-radius: 10px;
     padding: 12px;
+    box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
   }
   .home-page figcaption {
     font-size: 12px;
-    color: #5a5a5a;
+    color: var(--lake-muted);
     margin-top: 8px;
   }
   .home-page .media-single {
@@ -195,10 +212,11 @@ div.WordSection1
     gap: 16px;
   }
   .home-page .card {
-    border: 1px solid #e6e4dd;
+    border: 1px solid var(--lake-border);
     border-radius: 10px;
     padding: 16px;
-    background: #ffffff;
+    background: var(--lake-panel);
+    box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
   }
   .home-page .two-col {
     display: grid;
@@ -220,11 +238,51 @@ div.WordSection1
     }
   }
   .home-page a {
-    color: #1f5f3b;
+    color: var(--lake-accent);
     text-decoration: underline;
   }
   .home-page a:hover {
     text-decoration: underline;
+  }
+  .home-page .home-section {
+    padding: 6px 0;
+  }
+  .home-page .split .card {
+    background: var(--lake-panel);
+  }
+  .home-page #menu {
+    background: #2f3338;
+  }
+  .home-page #menu > ul > li > a {
+    color: #cdd9e3;
+  }
+  .home-page #menu > ul > li > a:hover,
+  .home-page #menu > ul > li.active > a {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+  }
+  .home-page .menu-toggle-icon,
+  .home-page .menu-toggle-icon::before,
+  .home-page .menu-toggle-icon::after {
+    background: #cdd9e3;
+  }
+  .home-page .pin-icon {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f4d7a'><path d='M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z'/></svg>") no-repeat center / contain;
+  }
+  @media (max-width: 640px) {
+    .home-page #menu > ul {
+      background: #2f3338;
+    }
+    .home-page .submenu {
+      background: #262a2f;
+    }
+    .home-page .submenu-toggle,
+    .home-page .submenu-toggle::after {
+      color: #cdd9e3;
+    }
+    .home-page .submenu a {
+      color: #cdd9e3 !important;
+    }
   }
   @media (max-width: 640px) {
     .home-page .home-hero {
