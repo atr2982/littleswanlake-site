@@ -122,7 +122,7 @@ a:hover {
 	width: 12px;
 	height: 12px;
 	display: inline-block;
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f5f3b'><path d='M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z'/></svg>") no-repeat center / contain;
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f4d7a'><path d='M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z'/></svg>") no-repeat center / contain;
 }
 
 /* Logo */
@@ -165,7 +165,7 @@ a:hover {
 	width: 100%;
 	min-height: 47px;
 	margin: 0 auto;
-	background: url(images/img02.jpg) repeat-x left top;
+	background: #2f3338;
 	position: relative;
 }
 
@@ -207,7 +207,7 @@ a:hover {
 	text-transform: uppercase;
 	font-size: 11px;
 	font-weight: bold;
-	color: #7EBA25;
+	color: #cdd9e3;
 	white-space: nowrap;
 	font-family: "Work Sans", Arial, Helvetica, sans-serif;
 	letter-spacing: 0.8px;
@@ -215,14 +215,14 @@ a:hover {
 
 #menu > ul > li > a:hover {
 	background: transparent;
-	color: #7EBA25;
+	color: #ffffff;
 	text-decoration: underline;
 	text-underline-offset: 3px;
 }
 
 #menu > ul > li.active > a {
 	background: transparent;
-	color: #7EBA25;
+	color: #ffffff;
 	text-decoration: underline;
 	text-underline-offset: 3px;
 }
@@ -250,7 +250,7 @@ a:hover {
 .menu-toggle-icon {
 	width: 20px;
 	height: 2px;
-	background: #7EBA25;
+	background: #cdd9e3;
 	position: relative;
 	display: block;
 }
@@ -262,7 +262,7 @@ a:hover {
 	left: 0;
 	width: 20px;
 	height: 2px;
-	background: #7EBA25;
+	background: #cdd9e3;
 }
 
 .menu-toggle-icon::before {
@@ -634,7 +634,7 @@ table {
 		position: absolute;
 		left: 0;
 		top: 47px;
-		background: #3A3A3A;
+		background: #2f3338;
 		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 		z-index: 50;
 	}
@@ -692,7 +692,7 @@ table {
 		padding: 16px 12px;
 		background: transparent;
 		border: none;
-		color: #7EBA25;
+		color: #cdd9e3;
 		text-transform: uppercase;
 		font-weight: bold;
 		font-size: 11px;
@@ -704,7 +704,7 @@ table {
 	.submenu-toggle::after {
 		content: "▾";
 		font-size: 12px;
-		color: #7EBA25;
+		color: #cdd9e3;
 	}
 
 	.has-submenu.submenu-open .submenu-toggle::after {
@@ -722,7 +722,7 @@ table {
 		transform: translateY(-4px);
 		overflow: hidden;
 		transition: max-height 220ms ease, opacity 200ms ease, transform 200ms ease;
-		background: #2F2F2F;
+		background: #262a2f;
 	}
 
 	.has-submenu.submenu-open .submenu {
@@ -733,7 +733,7 @@ table {
 
 	.submenu a {
 		padding: 12px 18px;
-		color: #7EBA25 !important;
+		color: #cdd9e3 !important;
 		text-transform: none;
 		letter-spacing: 0;
 		font-weight: normal;

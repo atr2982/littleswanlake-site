@@ -190,6 +190,23 @@ div.WordSection1
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 16px;
   }
+  .home-page .rules-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .home-page .rules-table th,
+  .home-page .rules-table td {
+    border: 1px solid var(--lake-border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .home-page .rules-table thead th {
+    background: var(--lake-neutral);
+    color: var(--lake-ink);
+  }
   .home-page figure {
     margin: 0;
     background: var(--lake-panel);
@@ -285,6 +302,39 @@ div.WordSection1
     }
   }
   @media (max-width: 640px) {
+    .home-page .boating-table {
+      border: 0;
+      font-size: 13px;
+    }
+    .home-page .boating-table thead {
+      display: none;
+    }
+    .home-page .boating-table tbody,
+    .home-page .boating-table tr,
+    .home-page .boating-table td {
+      display: block;
+      width: 100%;
+    }
+    .home-page .boating-table tr {
+      margin-bottom: 12px;
+      border: 1px solid var(--lake-border);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 6px 10px;
+    }
+    .home-page .boating-table td {
+      border: none;
+      padding: 6px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .home-page .boating-table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: var(--lake-muted);
+      min-width: 45%;
+    }
     .home-page .home-hero {
       padding: 18px;
     }
@@ -530,6 +580,39 @@ div.WordSection1
 
           <section class="home-section">
             <h2>Important Boating Reminders</h2>
+            <div class="callout info">
+              <p><strong>NEW (added 10/31/2025)</strong> Size and power restrictions are as follows:</p>
+              <table class="rules-table boating-table" aria-label="Boat size and power restrictions">
+                <thead>
+                  <tr>
+                    <th scope="col">Boat Type</th>
+                    <th scope="col">Maximum length</th>
+                    <th scope="col">Maximum Outboard Horsepower</th>
+                    <th scope="col">Maximum I/O and Inboard Horsepower</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Boat Type">Speed, pleasure, cuddy, sail, ski or fishing</td>
+                    <td data-label="Maximum length">21 feet</td>
+                    <td data-label="Maximum Outboard Horsepower">150hp</td>
+                    <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Boat Type">Deck boat</td>
+                    <td data-label="Maximum length">22 feet</td>
+                    <td data-label="Maximum Outboard Horsepower">150hp</td>
+                    <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Boat Type">Pontoon</td>
+                    <td data-label="Maximum length">28 feet</td>
+                    <td data-label="Maximum Outboard Horsepower">150hp</td>
+                    <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p><strong>Tubing or Skiing</strong> - There is a new law which requires a flag flying at the highest part of your boat while pulling tubers or skiers or when they are in the water. While skiing or tubing, be sure to have a responsible spotter; the driver <strong>cannot</strong> be considered a spotter. Boat in a counter-clock-wise pattern. Children under 13 must wear life preservers. Lights must be used after dark and boats are restricted to a no-wake speed after dark. <span class="note">(added 8/4/2020)</span></p>
             <ol>
               <li>Two persons are required to be aboard a boat when engaged in towing any person participating in a water sport. (Sec. 15, Illinois Regulations)</li>
