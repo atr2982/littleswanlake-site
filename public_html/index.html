@@ -11,591 +11,923 @@ Description: A two-column fixed-width template suitable for small websites.
 
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Lily Pads by Free Css Templates</title> -->
-<title>Little Swan Lake Club</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-<!--
-.style1 {color: #FF0000}
-.style3 {
-	font-size: 18;
-	font-weight: bold;
-}
-.style5 {
-	color: #3300FF;
-	font-weight: bold;
-}
-.style6 {
-	color: #0000FF;
-	font-weight: bold;
-}
-.style7 {color: #66FF00}
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <title>Lily Pads by Free Css Templates</title> -->
+  <title>Little Swan Lake Club</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <style type="text/css">
+    <!--
+    .style1 {
+      color: #FF0000
+    }
+
+    .style3 {
+      font-size: 18;
+      font-weight: bold;
+    }
+
+    .style5 {
+      color: #3300FF;
+      font-weight: bold;
+    }
+
+    .style6 {
+      color: #0000FF;
+      font-weight: bold;
+    }
+
+    .style7 {
+      color: #66FF00
+    }
 
 
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
+    /* Style Definitions */
+    p.MsoNormal,
+    li.MsoNormal,
+    div.MsoNormal {
+      margin-top: 0in;
+      margin-right: 0in;
+      margin-bottom: 8.0pt;
+      margin-left: 0in;
+      line-height: 107%;
+      font-size: 11.0pt;
+      font-family: "Calibri", sans-serif;
+    }
 
-</style>
-<style type="text/css" id="home-page-styles">
-  :root {
-    --lake-ink: #17212a;
-    --lake-muted: #4a5a6a;
-    --lake-accent: #1f4d7a;
-    --lake-accent-strong: #163a5b;
-    --lake-accent-soft: #e3edf7;
-    --lake-neutral: #f3f5f7;
-    --lake-border: #d7dee6;
-    --lake-panel: #ffffff;
-    --lake-shadow: 0 10px 24px rgba(10, 25, 40, 0.10);
-  }
-  .home-page {
-    font-family: "Work Sans", Arial, Helvetica, sans-serif;
-    color: var(--lake-ink);
-    line-height: 1.6;
-    background: #ffffff;
-  }
+    p.MsoNoSpacing,
+    li.MsoNoSpacing,
+    div.MsoNoSpacing {
+      margin: 0in;
+      margin-bottom: .0001pt;
+      font-size: 11.0pt;
+      font-family: "Calibri", sans-serif;
+    }
+
+    .MsoChpDefault {
+      font-family: "Calibri", sans-serif;
+    }
+
+    .MsoPapDefault {
+      margin-bottom: 8.0pt;
+      line-height: 107%;
+    }
+
+    @page WordSection1 {
+      size: 8.5in 11.0in;
+      margin: 1.0in 1.0in 1.0in 1.0in;
+    }
+
+    div.WordSection1 {
+      page: WordSection1;
+    }
+    -->
+  </style>
+
+  </style>
+  <style type="text/css" id="home-page-styles">
+    :root {
+      --lake-ink: #17212a;
+      --lake-muted: #4a5a6a;
+      --lake-accent: #1f4d7a;
+      --lake-accent-strong: #163a5b;
+      --lake-accent-soft: #e3edf7;
+      --lake-neutral: #f3f5f7;
+      --lake-border: #d7dee6;
+      --lake-panel: #ffffff;
+      --lake-shadow: 0 10px 24px rgba(10, 25, 40, 0.10);
+    }
+
+    .home-page {
+      font-family: "Work Sans", Arial, Helvetica, sans-serif;
+      color: var(--lake-ink);
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
   .home-page #content.home-content {
     width: 100%;
   }
-  .home-page .home-main {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+  .home-page #page {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
   }
-  .home-page .home-hero {
-    background: var(--lake-panel);
-    border: 1px solid var(--lake-border);
-    padding: 24px;
-    border-radius: 10px;
-    box-shadow: var(--lake-shadow);
-  }
-  .home-page .hero-title {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 12px;
-  }
-  .home-page h1 {
-    font-size: 28px;
-    margin: 0;
-    color: var(--lake-ink);
-  }
-  .home-page h2 {
-    font-size: 20px;
-    margin: 0 0 10px 0;
-    color: var(--lake-ink);
-  }
-  .home-page h3 {
-    font-size: 16px;
-    margin: 16px 0 8px 0;
-    color: var(--lake-ink);
-  }
-  .home-page h4 {
-    font-size: 14px;
-    margin: 12px 0 6px 0;
-    color: var(--lake-ink);
-  }
-  .home-page p {
-    margin: 0 0 12px 0;
-  }
-  .home-page .updated {
-    font-size: 12px;
-    color: #0b4dff;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .home-page .callouts {
-    display: grid;
-    gap: 10px;
-    margin-top: 16px;
-  }
-  .home-page .callout {
-    padding: 12px 14px;
-    border-radius: 8px;
-    background: var(--lake-panel);
-    border: 1px solid var(--lake-border);
-    box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
-  }
-  .home-page .callout.alert {
-    border-color: #e6c7c7;
-    background: #fff4f2;
-  }
-  .home-page .callout.info {
-    border-color: #c9d8e9;
-    background: var(--lake-accent-soft);
-  }
-  .home-page .highlight-text {
-    padding: 10px 12px;
-    border-left: 4px solid var(--lake-accent);
-    background: var(--lake-accent-soft);
-    border-radius: 6px;
-  }
-  .home-page .highlight-neutral {
-    padding: 10px 12px;
-    border-left: 4px solid #5b6770;
-    background: #f4f6f8;
-    border-radius: 6px;
-  }
-  .home-page .highlight-warm {
-    padding: 10px 12px;
-    border-left: 4px solid #cc0000;
-    background: #fff1f1;
-    border-radius: 6px;
-  }
-  .home-page .link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 8px;
-  }
-  .home-page .link-list a {
-    text-decoration: underline;
-  }
-  .home-page .note {
-    color: #0b4dff;
-    font-weight: 600;
-  }
-  .home-page .alert {
-    color: #6b3a2f;
-    background: #fff4f2;
-    border: 1px solid #e6c7c7;
-    padding: 12px 14px;
-    border-radius: 8px;
-  }
-  .home-page .media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-  }
-  .home-page .rules-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 13px;
-  }
-  .home-page .rules-table th,
-  .home-page .rules-table td {
-    border: 1px solid var(--lake-border);
-    padding: 8px 10px;
-    text-align: left;
-    vertical-align: top;
-  }
-  .home-page .rules-table thead th {
-    background: var(--lake-neutral);
-    color: var(--lake-ink);
-  }
-  .home-page figure {
-    margin: 0;
-    background: var(--lake-panel);
-    border: 1px solid var(--lake-border);
-    border-radius: 10px;
-    padding: 12px;
-    box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
-  }
-  .home-page figcaption {
-    font-size: 12px;
-    color: #0b4dff;
-    font-weight: 600;
-    margin-top: 8px;
-  }
-  .home-page .media-single {
-    max-width: 520px;
-  }
-  .home-page .split {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-  }
-  .home-page .card {
-    border: 1px solid var(--lake-border);
-    border-radius: 10px;
-    padding: 16px;
-    background: var(--lake-panel);
-    box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
-  }
-  .home-page .section-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .home-page .fish-image {
-    width: 42px;
-    height: 28px;
-    object-fit: contain;
-    display: block;
-  }
-  .home-page .fish-image-large {
-    width: 180px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-  }
-  .home-page .fishing-regs-card {
-    display: flex;
-    flex-direction: column;
-  }
-  .home-page .fishing-regs-card .fish-image-large {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .home-page .two-col {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-  }
-  .home-page ol, .home-page ul {
-    padding-left: 18px;
-    margin: 0 0 12px 0;
-  }
-  .home-page ul.submenu {
-    padding-left: 0;
-    margin: 0;
-  }
-  .home-page .spaced-list li {
-    margin-bottom: 8px;
-  }
-  .home-page .spaced-list li:last-child {
-    margin-bottom: 0;
-  }
-  @media (max-width: 640px) {
-    .submenu {
-      margin: 0;
-      padding-left: 0;
+
+    .home-page .home-main {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
     }
-  }
-  .home-page a {
-    color: #0b4dff;
-    text-decoration: underline;
-  }
-  .home-page a:hover {
-    text-decoration: underline;
-  }
+
+    .home-page .home-hero {
+      background: var(--lake-panel);
+      border: 1px solid var(--lake-border);
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: var(--lake-shadow);
+    }
+
+    .home-page .hero-title {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .home-page h1 {
+      font-size: 28px;
+      margin: 0;
+      color: var(--lake-ink);
+    }
+
+    .home-page h2 {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+      color: var(--lake-ink);
+    }
+
+    .home-page h3 {
+      font-size: 16px;
+      margin: 16px 0 8px 0;
+      color: var(--lake-ink);
+    }
+
+    .home-page h4 {
+      font-size: 14px;
+      margin: 12px 0 6px 0;
+      color: var(--lake-ink);
+    }
+
+    .home-page p {
+      margin: 0 0 12px 0;
+    }
+
+    .home-page .updated {
+      font-size: 12px;
+      color: #0b4dff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .home-page .callouts {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .home-page .callout {
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: var(--lake-panel);
+      border: 1px solid var(--lake-border);
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+    }
+
+    .home-page .callout.alert {
+      border-color: #e6c7c7;
+      background: #fff4f2;
+    }
+
+    .home-page .callout.info {
+      border-color: #c9d8e9;
+      background: var(--lake-accent-soft);
+    }
+
+    .home-page .highlight-text {
+      padding: 10px 12px;
+      border-left: 4px solid var(--lake-accent);
+      background: var(--lake-accent-soft);
+      border-radius: 6px;
+    }
+
+    .home-page .highlight-neutral {
+      padding: 10px 12px;
+      border-left: 4px solid #5b6770;
+      background: #f4f6f8;
+      border-radius: 6px;
+    }
+
+    .home-page .highlight-warm {
+      padding: 10px 12px;
+      border-left: 4px solid #cc0000;
+      background: #fff1f1;
+      border-radius: 6px;
+    }
+
+    .home-page .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .home-page .link-list a {
+      text-decoration: underline;
+    }
+
+    .home-page .note {
+      color: #0b4dff;
+      font-weight: 600;
+    }
+
+    .home-page .alert {
+      color: #6b3a2f;
+      background: #fff4f2;
+      border: 1px solid #e6c7c7;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+
+    .home-page .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .home-page .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .home-page .rules-table th,
+    .home-page .rules-table td {
+      border: 1px solid var(--lake-border);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .home-page .rules-table thead th {
+      background: var(--lake-neutral);
+      color: var(--lake-ink);
+    }
+
+    .home-page figure {
+      margin: 0;
+      background: var(--lake-panel);
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+    }
+
+    .home-page figcaption {
+      font-size: 12px;
+      color: #0b4dff;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .home-page .media-single {
+      max-width: 520px;
+    }
+
+    .home-page .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .home-page .card {
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      padding: 16px;
+      background: var(--lake-panel);
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+    }
+
+    .home-page .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .home-page .fish-image {
+      width: 42px;
+      height: 28px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .home-page .fish-image-large {
+      width: 180px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .home-page .fishing-regs-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .home-page .fishing-regs-card .fish-image-large {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .home-page .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .home-page ol,
+    .home-page ul {
+      padding-left: 18px;
+      margin: 0 0 12px 0;
+    }
+
+    .home-page ul.submenu {
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .home-page .spaced-list li {
+      margin-bottom: 8px;
+    }
+
+    .home-page .spaced-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 640px) {
+      .submenu {
+        margin: 0;
+        padding-left: 0;
+      }
+    }
+
+    .home-page a {
+      color: #0b4dff;
+      text-decoration: underline;
+    }
+
+    .home-page a:hover {
+      text-decoration: underline;
+    }
+
   .home-page .home-section {
     padding: 6px 0;
   }
-  .home-page .split .card {
-    background: var(--lake-panel);
+  .home-page .home-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 6px 0;
   }
-  .home-page #menu {
+  .home-page .home-toolbar-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--lake-ink);
+    font-weight: 600;
+  }
+  .home-page .home-toolbar-left svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+  }
+  .home-page .home-toolbar-left i {
+    font-size: 14px;
+  }
+  .home-page .home-toolbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .home-page .site-search {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .home-page .site-search input[type="text"] {
+    height: 32px;
+    min-width: 220px;
+    padding: 0 10px;
+    border: 1px solid var(--lake-border);
+    border-radius: 6px;
+    font-family: inherit;
+  }
+  .home-page .site-search input[type="text"]:focus {
+    outline: none;
+    border-color: #4a5a6a;
+    box-shadow: none;
+  }
+  .home-page .site-search button {
+    height: 32px;
+    width: 32px;
+    border: 1px solid #394048;
+    border-radius: 6px;
     background: #2f3338;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
-  .home-page #menu > ul > li > a {
+  .home-page .site-search button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .home-page .site-search button:hover {
+    color: var(--lake-accent);
+  }
+  .home-page .site-search button svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+  }
+  .home-page .site-search button i {
+    font-size: 14px;
+  }
+
+  .home-page .sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 14px;
+    background: #ffffff;
+    color: var(--lake-ink);
+    border: 0;
+    border-radius: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .home-page .sidebar-toggle:hover {
+    color: var(--lake-accent);
+  }
+  .home-page #sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    max-width: 80vw;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    background: #2f3338;
+    color: #cdd9e3;
+    padding: 18px 16px;
+    box-shadow: 8px 0 18px rgba(0, 0, 0, 0.2);
+    transform: translateX(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-page.sidebar-open #sidebar {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .home-page #sidebar h2 {
     color: #cdd9e3;
   }
-  .home-page #menu > ul > li > a:hover,
-  .home-page #menu > ul > li.active > a {
+  .home-page .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .home-page .sidebar-header h2 {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .home-page .sidebar-menu-title {
+    padding-bottom: 10px !important;
+  }
+  .home-page .sidebar-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #3f464e;
+    background: transparent;
+    color: #cdd9e3;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: auto;
+    align-self: flex-end;
+  }
+  .home-page .sidebar-close:hover {
     color: #ffffff;
-    text-decoration-color: #ffffff;
   }
-  .home-page .menu-toggle-icon,
-  .home-page .menu-toggle-icon::before,
-  .home-page .menu-toggle-icon::after {
-    background: #cdd9e3;
+  .home-page .sidebar-close svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+    stroke: currentColor;
   }
-  .home-page .pin-icon {
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f4d7a'><path d='M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z'/></svg>") no-repeat center / contain;
+  .home-page .sidebar-close i {
+    font-size: 16px;
   }
-  @media (max-width: 640px) {
-    .home-page #menu > ul {
+  .home-page #sidebar > ul > h2,
+  .home-page #sidebar > ul > li:first-of-type > h2 {
+    padding-bottom: 0;
+  }
+  .home-page #sidebar > ul {
+    margin-top: -8px;
+  }
+  .home-page #sidebar li > ul {
+    padding-left: 12px;
+  }
+  .home-page #sidebar a {
+    color: #cdd9e3;
+  }
+  .home-page #sidebar a:hover {
+    color: #ffffff;
+  }
+  .home-page #sidebar li li {
+    border-bottom: 1px solid #3f464e;
+  }
+
+    .home-page .split .card {
+      background: var(--lake-panel);
+    }
+
+    .home-page #menu {
       background: #2f3338;
     }
-    .home-page .submenu {
-      background: #262a2f;
-    }
-    .home-page .submenu-toggle,
-    .home-page .submenu-toggle::after {
+
+    .home-page #menu>ul>li>a {
       color: #cdd9e3;
     }
-    .home-page .submenu a {
-      color: #cdd9e3 !important;
+
+    .home-page #menu>ul>li>a:hover,
+    .home-page #menu>ul>li.active>a {
+      color: #ffffff;
+      text-decoration-color: #ffffff;
     }
-  }
-  @media (max-width: 640px) {
-    .home-page .boating-table {
-      border: 0;
-      font-size: 13px;
+
+    .home-page .menu-toggle-icon,
+    .home-page .menu-toggle-icon::before,
+    .home-page .menu-toggle-icon::after {
+      background: #cdd9e3;
     }
-    .home-page .boating-table thead {
-      display: none;
+
+    .home-page .pin-icon {
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f4d7a'><path d='M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z'/></svg>") no-repeat center / contain;
     }
-    .home-page .boating-table tbody,
-    .home-page .boating-table tr,
-    .home-page .boating-table td {
-      display: block;
-      width: 100%;
+
+    @media (max-width: 640px) {
+      .home-page #menu>ul {
+        background: #2f3338;
+      }
+
+      .home-page .submenu {
+        background: #262a2f;
+      }
+
+      .home-page .submenu-toggle,
+      .home-page .submenu-toggle::after {
+        color: #cdd9e3;
+      }
+
+      .home-page .submenu a {
+        color: #cdd9e3 !important;
+      }
     }
-    .home-page .boating-table tr {
-      margin-bottom: 12px;
-      border: 1px solid var(--lake-border);
-      border-radius: 8px;
-      background: #ffffff;
-      padding: 6px 10px;
-    }
-    .home-page .boating-table td {
-      border: none;
-      padding: 6px 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .home-page .boating-table td::before {
-      content: attr(data-label);
-      font-weight: 600;
-      color: #0b4dff;
-      font-weight: 600;
-      min-width: 45%;
-    }
-    .home-page .home-hero {
-      padding: 18px;
-    }
+
+    @media (max-width: 640px) {
+      .home-page .boating-table {
+        border: 0;
+        font-size: 13px;
+      }
+
+      .home-page .boating-table thead {
+        display: none;
+      }
+
+      .home-page .boating-table tbody,
+      .home-page .boating-table tr,
+      .home-page .boating-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .home-page .boating-table tr {
+        margin-bottom: 12px;
+        border: 1px solid var(--lake-border);
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 6px 10px;
+      }
+
+      .home-page .boating-table td {
+        border: none;
+        padding: 6px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .home-page .boating-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #0b4dff;
+        font-weight: 600;
+        min-width: 45%;
+      }
+
+      .home-page .home-hero {
+        padding: 18px;
+      }
+
     .home-page h1 {
       font-size: 24px;
     }
+    .home-page .sidebar-toggle {
+      display: none;
+    }
+    .home-page #sidebar {
+      display: none;
+    }
   }
-</style>
+  </style>
 </head>
+
 <body class="home-page">
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
+  <div id="wrapper">
+    <div id="topbar">
+      <div class="topbar-inner">
+        <div class="topbar-left">Little Swan Lake</div>
+        <div class="topbar-right">
+          <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
+            <span class="pin-icon" aria-hidden="true"></span>
+            229 140th St, Avon, IL 61415
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-<!--  <div id="header">
+    <!--  <div id="header">
     <div id="logo">
       <h1><a href="#">Lily Pads</a></h1>
       <h2><a href="http://www.freecsstemplates.org/">By Free CSS Templates</a></h2>
     </div>
     <!-- end div#logo -->
-<!--  </div> -->
-  
-  <!-- end div#header -->
-  <div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="http://littleswanlake.net/">Home </a></li>
-      <li><a href="http://littleswanlake.net/news.html">News </a></li>
-      <li><a href="http://littleswanlake.net/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="http://littleswanlake.net/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="http://littleswanlake.net/rules.html">Rules & Regulations </a></li>
-      <li><a href="http://littleswanlake.net/forms.html">Forms </a></li>
-      <li><a href="http://littleswanlake.net/directions.html">Directions </a></li>
-      <li><a href="http://littleswanlake.net/contacts.html">Contact </a></li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="http://littleswanlake.net/">Home</a></li>
-          <li><a href="../contacts.html">Contacts</a></li>
-          <li><a href="../memberinfo.html">Member Information</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="http://littleswanlake.net/lol-news.html">(Monthly News)</a></li>
-          <li><a href="../forms.html">Forms **new**</a></li>
-          <li><a href="../ClubhouseRental.html">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="http://littleswanlake.net/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash"><img src="images/heading2.jpg" width="940" height="274" alt="" /></div>
+    <!--  </div> -->
+
+    <!-- end div#header -->
+    <div id="menu">
+      <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <ul id="menu-list">
+        <li class="active"><a href="http://littleswanlake.net/">Home </a></li>
+        <li><a href="http://littleswanlake.net/news.html">News </a></li>
+        <li><a href="http://littleswanlake.net/boatingandfishin.html">Fishing & Boating </a></li>
+        <li><a href="http://littleswanlake.net/lakehomesforsale.html">For Sale </a></li>
+        <li><a href="http://littleswanlake.net/rules.html">Rules & Regulations </a></li>
+        <li><a href="http://littleswanlake.net/forms.html">Forms </a></li>
+        <li><a href="http://littleswanlake.net/directions.html">Directions </a></li>
+        <li><a href="http://littleswanlake.net/contacts.html">Contact </a></li>
+        <li class="mobile-only has-submenu">
+          <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
+          <ul class="submenu">
+            <li><a href="http://littleswanlake.net/">Home</a></li>
+            <li><a href="../contacts.html">Contacts</a></li>
+            <li><a href="../memberinfo.html">Member Information</a></li>
+            <li><a href="../siltation.html">Siltation Committee</a></li>
+            <li><a href="../photos.html">Photos & Lake Map</a></li>
+            <li><a href="../news.html">LSL Newsletter and other News</a></li>
+            <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
+            <li><a href="http://littleswanlake.net/lol-news.html">(Monthly News)</a></li>
+            <li><a href="../forms.html">Forms **new**</a></li>
+            <li><a href="../ClubhouseRental.html">Clubhouse Rental form and information</a></li>
+            <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
+            <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
+            <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
+            <li><a href="../jobs.html">Job Listing</a></li>
+            <li><a href="../history.html">History</a></li>
+            <li><a href="../directions.html">Directions</a></li>
+            <li><a href="../links.html">Local Links (schools and other sites)</a></li>
+          </ul>
+        </li>
+        <li class="mobile-only has-submenu">
+          <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
+          <ul class="submenu">
+            <li><a href="../board.html">Board Meetings</a></li>
+            <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
+          </ul>
+        </li>
+        <li class="mobile-only has-submenu">
+          <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
+          <ul class="submenu">
+            <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
+            <li><a href="../boating.html">Boating</a></li>
+            <li><a href="../fishing.html">Fishing</a></li>
+            <li><a href="../swimming.html">Swimming</a></li>
+          </ul>
+        </li>
+        <li class="mobile-only has-submenu">
+          <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
+          <ul class="submenu">
+            <li><a href="http://littleswanlake.net/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- end div#menu -->
+    <div id="splash"><img src="images/heading2.jpg" width="940" height="274" alt="" /></div>
   <div id="page">
     <div id="page-bgtop">
       <div id="content" class="home-content">
-        <main class="home-main">
-          <section class="home-hero">
-            <div class="hero-title">
-              <h1>Little Swan Lake Club</h1>
-              <p class="updated">Updated September 15, 2025</p>
+          <div class="home-toolbar">
+            <div class="home-toolbar-left">
+              <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">
+                Side Menu
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
-            <p>Welcome to the Little Swan Lake website. The lake is located 4 miles west of Avon, Illinois. Little Swan Lake is a private lake made up of members who either own or lease property and are represented by the Little Swan Lake Club Board who are elected by the members.</p>
-            <p>We welcome new people to our committees. Check out the volunteer opportunities by clicking on <a href="http://littleswanlake.net/volunteers.html" title="volunteers wanted">volunteers</a>. If a member is interested in working on one of the committees, please contact the committee chair or any board member. Board Meetings are held the first Monday of the month at 7 PM.</p>
-
-            <div class="callouts">
-              <div class="highlight-neutral">Board Meetings are the first Monday of the month at 7 PM.</div>
-              <div class="highlight-warm">Avon Businessmen's Association will assist members who wish to drop off their boats for storage at Avcom Park. <strong>The first date is October 18, 2025; the second date is November 22, 2025</strong>, and can be dropped off from 9am until noon. Please contact Rick Mathre, Phone#: 309-333-8107 if you have questions.</div>
-              <div class="highlight-text"><a class="link-green" href="http://littleswanlake.net/images/RecyclingAccepted.jpg" target="_blank"><strong>Recycling is back!</strong></a> Click the link to see what can be recycled and what you can't put into the bin. EE Recycling does not want plastic bags, so please dump your recycling out of any plastic bags you bring.</div>
+            <div class="home-toolbar-right">
+              <form class="site-search" action="https://www.google.com/search" method="get" target="_blank" rel="noopener">
+                <input type="hidden" name="q" value="site:littleswanlake.net" />
+                <input type="text" name="q" placeholder="Search the site" aria-label="Search the site" />
+                <button type="submit" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+              </form>
             </div>
-          </section>
+          </div>
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>Little Swan Lake Club</h1>
+                <p class="updated">Updated September 15, 2025</p>
+              </div>
+              <p>Welcome to the Little Swan Lake website. The lake is located 4 miles west of Avon, Illinois. Little
+                Swan Lake is a private lake made up of members who either own or lease property and are represented by
+                the Little Swan Lake Club Board who are elected by the members.</p>
+              <p>We welcome new people to our committees. Check out the volunteer opportunities by clicking on <a
+                  href="http://littleswanlake.net/volunteers.html" title="volunteers wanted">volunteers</a>. If a member
+                is interested in working on one of the committees, please contact the committee chair or any board
+                member. Board Meetings are held the first Monday of the month at 7 PM.</p>
 
-          <section class="home-section">
-            <h2>Newsletters and Updates</h2>
-            <ul class="link-list">
-              <li>Read the most recent <a href="news.html" title="Little Swan Lake Newsletter" target="_blank">Little Swan Lake Newsletter</a>. You may also click the News menu option.</li>
-              <li>We have a new <a href="lol-news.html" title="Ladies of the Lake Newsletter" target="_blank">Ladies of the Lake newsletter</a>. You may also click the Ladies of the Lake (Monthly News) menu option.</li>
-              <li><a href="http://littleswanlake.net/images/IL-Algae-News-release.pdf" target="_blank">IL News Release regarding Algae Bloom (06/08/2021)</a></li>
-              <li><a class="link-red" href="http://littleswanlake.net/classifieds.html" target="_blank">Check out the new Pendarvis mowing service and items for sale</a></li>
-            </ul>
-            <div class="spacer"></div>
-            <p><strong>(04/05/2021)</strong> The storage shed <a href="/images/Building-2014-11-18-update03052021.pdf" title="Building and construction rules" target="_blank">rules</a> have been updated to accommodate a larger size shed. The new changes are: a storage shed can now be a maximum of 196 square feet with wall sides not to exceed 8 feet and the peak not to exceed 11 feet. If the lot owner wishes a larger shed, the structure will need to follow the permanent garage rules which include a foundation.</p>
-          </section>
+              <div class="callouts">
+                <div class="highlight-neutral">Board Meetings are the first Monday of the month at 7 PM.</div>
+                <div class="highlight-warm">Avon Businessmen's Association will assist members who wish to drop off
+                  their boats for storage at Avcom Park. <strong>The first date is October 18, 2025; the second date is
+                    November 22, 2025</strong>, and can be dropped off from 9am until noon. Please contact Rick Mathre,
+                  Phone#: 309-333-8107 if you have questions.</div>
+                <div class="highlight-text"><a class="link-green"
+                    href="http://littleswanlake.net/images/RecyclingAccepted.jpg" target="_blank"><strong>Recycling is
+                      back!</strong></a> Click the link to see what can be recycled and what you can't put into the bin.
+                  EE Recycling does not want plastic bags, so please dump your recycling out of any plastic bags you
+                  bring.</div>
+              </div>
+            </section>
 
-          <section class="home-section">
-            <h2>Fishing and Lake Updates</h2>
-            <div class="split">
-              <div class="card fishing-regs-card">
-                <div class="section-title">
-                  <h3>2023 LSL Fishing Regulations</h3>
+            <section class="home-section">
+              <h2>Newsletters and Updates</h2>
+              <ul class="link-list">
+                <li>Read the most recent <a href="news.html" title="Little Swan Lake Newsletter" target="_blank">Little
+                    Swan Lake Newsletter</a>. You may also click the News menu option.</li>
+                <li>We have a new <a href="lol-news.html" title="Ladies of the Lake Newsletter" target="_blank">Ladies
+                    of the Lake newsletter</a>. You may also click the Ladies of the Lake (Monthly News) menu option.
+                </li>
+                <li><a href="http://littleswanlake.net/images/IL-Algae-News-release.pdf" target="_blank">IL News Release
+                    regarding Algae Bloom (06/08/2021)</a></li>
+                <li><a class="link-red" href="http://littleswanlake.net/classifieds.html" target="_blank">Check out the
+                    new Pendarvis mowing service and items for sale</a></li>
+              </ul>
+              <div class="spacer"></div>
+              <p><strong>(04/05/2021)</strong> The storage shed <a href="/images/Building-2014-11-18-update03052021.pdf"
+                  title="Building and construction rules" target="_blank">rules</a> have been updated to accommodate a
+                larger size shed. The new changes are: a storage shed can now be a maximum of 196 square feet with wall
+                sides not to exceed 8 feet and the peak not to exceed 11 feet. If the lot owner wishes a larger shed,
+                the structure will need to follow the permanent garage rules which include a foundation.</p>
+            </section>
+
+            <section class="home-section">
+              <h2>Fishing and Lake Updates</h2>
+              <div class="split">
+                <div class="card fishing-regs-card">
+                  <div class="section-title">
+                    <h3>2023 LSL Fishing Regulations</h3>
+                  </div>
+                  <p class="highlight-text">Please read and obey all size and creel limits. Current boat sticker and
+                    fishing license are required.</p>
+                  <table class="rules-table" aria-label="2023 LSL Fishing Regulations">
+                    <thead>
+                      <tr>
+                        <th scope="col">Species</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Limit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Bass</td>
+                        <td>10&quot;–15&quot;</td>
+                        <td>Catch and release</td>
+                      </tr>
+                      <tr>
+                        <td>Bass</td>
+                        <td>Over 15&quot;</td>
+                        <td>Catch and release</td>
+                      </tr>
+                      <tr>
+                        <td>Catfish</td>
+                        <td>None</td>
+                        <td>6 per day</td>
+                      </tr>
+                      <tr>
+                        <td>Bluegill/Sunfish</td>
+                        <td>Under 8&quot;</td>
+                        <td>25 per day</td>
+                      </tr>
+                      <tr>
+                        <td>Bluegill/Sunfish</td>
+                        <td>8&quot; and over</td>
+                        <td>5 per day</td>
+                      </tr>
+                      <tr>
+                        <td>Crappie</td>
+                        <td>Under 10&quot;</td>
+                        <td>No limit</td>
+                      </tr>
+                      <tr>
+                        <td>Crappie</td>
+                        <td>10&quot; and over</td>
+                        <td>No limit</td>
+                      </tr>
+                      <tr>
+                        <td>Walleye</td>
+                        <td>15&quot; or larger</td>
+                        <td>3 per day</td>
+                      </tr>
+                      <tr>
+                        <td>Northern Pike/Muskie</td>
+                        <td>Catch and release</td>
+                        <td>Catch and release</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="spacer"></div>
+                  <p class="highlight-text">Please dispose of any Carp or Green sunfish (rock bass) caught. Please do
+                    not put them back in the lake.</p>
+                  <img class="fish-image-large" src="images/fishHook.png" alt="Fish hook" />
                 </div>
-                <p class="highlight-text">Please read and obey all size and creel limits. Current boat sticker and fishing license are required.</p>
-                <table class="rules-table" aria-label="2023 LSL Fishing Regulations">
-                  <thead>
-                    <tr>
-                      <th scope="col">Species</th>
-                      <th scope="col">Size</th>
-                      <th scope="col">Limit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Bass</td>
-                      <td>10&quot;–15&quot;</td>
-                      <td>Catch and release</td>
-                    </tr>
-                    <tr>
-                      <td>Bass</td>
-                      <td>Over 15&quot;</td>
-                      <td>Catch and release</td>
-                    </tr>
-                    <tr>
-                      <td>Catfish</td>
-                      <td>None</td>
-                      <td>6 per day</td>
-                    </tr>
-                    <tr>
-                      <td>Bluegill/Sunfish</td>
-                      <td>Under 8&quot;</td>
-                      <td>25 per day</td>
-                    </tr>
-                    <tr>
-                      <td>Bluegill/Sunfish</td>
-                      <td>8&quot; and over</td>
-                      <td>5 per day</td>
-                    </tr>
-                    <tr>
-                      <td>Crappie</td>
-                      <td>Under 10&quot;</td>
-                      <td>No limit</td>
-                    </tr>
-                    <tr>
-                      <td>Crappie</td>
-                      <td>10&quot; and over</td>
-                      <td>No limit</td>
-                    </tr>
-                    <tr>
-                      <td>Walleye</td>
-                      <td>15&quot; or larger</td>
-                      <td>3 per day</td>
-                    </tr>
-                    <tr>
-                      <td>Northern Pike/Muskie</td>
-                      <td>Catch and release</td>
-                      <td>Catch and release</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="spacer"></div>
-                <p class="highlight-text">Please dispose of any Carp or Green sunfish (rock bass) caught. Please do 
-not put them back in the lake.</p>
-                <img class="fish-image-large" src="images/fishHook.png" alt="Fish hook" />
+                <div class="card">
+                  <h3>Little Swan Lake Fishing News 2023</h3>
+                  <p class="highlight-text">Fishing is GREAT at Little Swan Lake! Please help us keep it that way.</p>
+                  <p>In May 2023 a fish survey was completed by Austin Bennett - Fisheries Biologist with Herman
+                    Brothers Fisheries, Inc.</p>
+                  <p><strong>Species of fish from most to least:</strong> Gizzard shad 6-8&quot; long introduced 8-12
+                    yrs ago; Bluegill; Black &amp; White Crappie 6-8.5&quot;; Largemouth Bass 3-5 lb.; Catfish; Walleye;
+                    Carp.</p>
+                  <h4>Some facts &amp; recommendations</h4>
+                  <ul>
+                    <li><strong>Crappie</strong> population is mostly older fish. The large fish compete with young bass
+                      &amp; young crappie for food. So we can help by removing as many crappie as we can for the next 3
+                      years.</li>
+                    <div class="spacer"></div>
+                    <li><strong>Bass under 10&quot;</strong> numbers are low and are too skinny. So we can help by all
+                      of us using catch &amp; release for all bass for the next 3 years. Take a picture &amp; throw it
+                      back! LSL will stock more bass for next 3 years to help increase population for the future!</li>
+                    <div class="spacer"></div>
+                    <li><strong>Bluegill</strong> population is declining as gizzard shad population grows because of
+                      competition for food.</li>
+                    <div class="spacer"></div>
+                    <li><strong>Catfish</strong> young grow quickly to very large.</li>
+                    <div class="spacer"></div>
+                    <li><strong>Walleye</strong> not thriving partly caused by spillway - young fish get sucked out.
+                    </li>
+                    <div class="spacer"></div>
+                    <li><strong>Carp</strong> are very large - population is lower but need to keep in check + harvest
+                      some of the biggest.</li>
+                  </ul>
+                  <p><strong>Suggestion:</strong> Construct some fishing reefs in 10-15 ft. of water around shore to
+                    help create fish habitat.</p>
+                  <p class="highlight-text">If we all work for the next 3 years, our lake will be one of the best in
+                    Illinois. <strong>Thanks for helping. Pass the word!</strong></p>
+                </div>
               </div>
-              <div class="card">
-                <h3>Little Swan Lake Fishing News 2023</h3>
-                <p class="highlight-text">Fishing is GREAT at Little Swan Lake! Please help us keep it that way.</p>
-                <p>In May 2023 a fish survey was completed by Austin Bennett - Fisheries Biologist with Herman Brothers Fisheries, Inc.</p>
-                <p><strong>Species of fish from most to least:</strong> Gizzard shad 6-8&quot; long introduced 8-12 yrs ago; Bluegill; Black &amp; White Crappie 6-8.5&quot;; Largemouth Bass 3-5 lb.; Catfish; Walleye; Carp.</p>
-                <h4>Some facts &amp; recommendations</h4>
-                <ul>
-                  <li><strong>Crappie</strong> population is mostly older fish. The large fish compete with young bass &amp; young crappie for food. So we can help by removing as many crappie as we can for the next 3 years.</li>
-                  <div class="spacer"></div>
-                  <li><strong>Bass under 10&quot;</strong> numbers are low and are too skinny. So we can help by all of us using catch &amp; release for all bass for the next 3 years. Take a picture &amp; throw it back! LSL will stock more bass for next 3 years to help increase population for the future!</li>
-                  <div class="spacer"></div>
-                  <li><strong>Bluegill</strong> population is declining as gizzard shad population grows because of competition for food.</li>
-                  <div class="spacer"></div>
-                  <li><strong>Catfish</strong> young grow quickly to very large.</li>
-                  <div class="spacer"></div>
-                  <li><strong>Walleye</strong> not thriving partly caused by spillway - young fish get sucked out.</li>
-                  <div class="spacer"></div>
-                  <li><strong>Carp</strong> are very large - population is lower but need to keep in check + harvest some of the biggest.</li>
-                </ul>
-                <p><strong>Suggestion:</strong> Construct some fishing reefs in 10-15 ft. of water around shore to help create fish habitat.</p>
-                <p class="highlight-text">If we all work for the next 3 years, our lake will be one of the best in Illinois. <strong>Thanks for helping. Pass the word!</strong></p>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <!--
+            <!--
           <section class="home-section">
             <h2>Wildlife Sightings</h2>
             <p>Swans spotted on the lake - February 3, 2017</p>
@@ -606,293 +938,368 @@ not put them back in the lake.</p>
           </section>
           -->
 
-          <section class="home-section">
-            <h2>Guest-Owner Responsibilities</h2>
-            <p>As stated in the Little Swan Lake Club (LSL) Covenants, it is the responsibility of the Little Swan Lake Member to make sure that guests are aware of and abide by all the rules and regulations of Little Swan Lake as well as state and local laws and regulations. The LSL rules are posted on our web site <a href="http://littleswanlake.net">http://littleswanlake.net</a>. Below are a few requirements of special note for guests to use the LSL facilities, including the lake. Most of these are listed also in the various specific sections with more detail, but are gathered here for convenience.</p>
-            <ol class="spaced-list">
-              <li><strong>Clubhouse:</strong> the LSL member reserving the clubhouse must be present during the event.</li>
-              <li><strong>Fishing:</strong> a LSL member must be present when a guest is fishing either in a boat or on the shoreline, unless the shoreline is the member's property. The fisher must be properly licensed by the State of Illinois in all cases.</li>
-              <li><strong>Boating:</strong> a LSL member must be present at the lake when a guest is using the member's motorized boat. No guest boats are allowed.</li>
-              <li><strong>Other sport use:</strong> a LSL member must accompany the guest when snowmobiles, 4-wheelers etc. are used on any LSL property, including the lake. No vehicles are allowed on the dam without express permission of the LSL board.</li>
-              <li><strong>Swimming:</strong> it is fine for guests to swim no further than 100 feet from shore off a member's property with no member present. There is no swimming off boats in the Wake Zone or off outlots. When swimming off a member's boat in the no-wake zone a member must be present at the lake.</li>
-            </ol>
-          </section>
+            <section class="home-section">
+              <h2>Guest-Owner Responsibilities</h2>
+              <p>As stated in the Little Swan Lake Club (LSL) Covenants, it is the responsibility of the Little Swan
+                Lake Member to make sure that guests are aware of and abide by all the rules and regulations of Little
+                Swan Lake as well as state and local laws and regulations. The LSL rules are posted on our web site <a
+                  href="http://littleswanlake.net">http://littleswanlake.net</a>. Below are a few requirements of
+                special note for guests to use the LSL facilities, including the lake. Most of these are listed also in
+                the various specific sections with more detail, but are gathered here for convenience.</p>
+              <ol class="spaced-list">
+                <li><strong>Clubhouse:</strong> the LSL member reserving the clubhouse must be present during the event.
+                </li>
+                <li><strong>Fishing:</strong> a LSL member must be present when a guest is fishing either in a boat or
+                  on the shoreline, unless the shoreline is the member's property. The fisher must be properly licensed
+                  by the State of Illinois in all cases.</li>
+                <li><strong>Boating:</strong> a LSL member must be present at the lake when a guest is using the
+                  member's motorized boat. No guest boats are allowed.</li>
+                <li><strong>Other sport use:</strong> a LSL member must accompany the guest when snowmobiles, 4-wheelers
+                  etc. are used on any LSL property, including the lake. No vehicles are allowed on the dam without
+                  express permission of the LSL board.</li>
+                <li><strong>Swimming:</strong> it is fine for guests to swim no further than 100 feet from shore off a
+                  member's property with no member present. There is no swimming off boats in the Wake Zone or off
+                  outlots. When swimming off a member's boat in the no-wake zone a member must be present at the lake.
+                </li>
+              </ol>
+            </section>
 
-          <section class="home-section">
-            <h2>Swimming Rules in the No Wake Zone</h2>
-            <ol class="spaced-list">
-              <li>Boats must be anchored and motor turned off.</li>
-              <li>Boats must stay in the center of the no wake zone, not in the traffic lanes.</li>
-              <li>Swimming will only be allowed from 30 minutes before sunrise until 30 minutes after sunset. <span class="note">Note: if you are swimming within 100' of your own shoreline property there are no hour restrictions.</span></li>
-              <li>Swimmers must stay within 30' of the boat.</li>
-              <li>A responsible person, 18 years or older, must stay in or be tethered to the boat.</li>
-              <li>No diving allowed.</li>
-              <li>Be sure to inform anyone in your boat of these rules. Be smart - be safe!</li>
-              <li>Updated 5/7/2018.</li>
-            </ol>
-            <p class="highlight-warm">Rules will be strictly enforced with a minimum fine of $25 for the first offense and repeated offenses could lead to loss of lake privileges.</p>
-          </section>
+            <section class="home-section">
+              <h2>Swimming Rules in the No Wake Zone</h2>
+              <ol class="spaced-list">
+                <li>Boats must be anchored and motor turned off.</li>
+                <li>Boats must stay in the center of the no wake zone, not in the traffic lanes.</li>
+                <li>Swimming will only be allowed from 30 minutes before sunrise until 30 minutes after sunset. <span
+                    class="note">Note: if you are swimming within 100' of your own shoreline property there are no hour
+                    restrictions.</span></li>
+                <li>Swimmers must stay within 30' of the boat.</li>
+                <li>A responsible person, 18 years or older, must stay in or be tethered to the boat.</li>
+                <li>No diving allowed.</li>
+                <li>Be sure to inform anyone in your boat of these rules. Be smart - be safe!</li>
+                <li>Updated 5/7/2018.</li>
+              </ol>
+              <p class="highlight-warm">Rules will be strictly enforced with a minimum fine of $25 for the first offense
+                and repeated offenses could lead to loss of lake privileges.</p>
+            </section>
 
-          <section class="home-section">
-            <h2>Important Boating Reminders</h2>
-            <div class="callout info">
-              <p><strong>NEW (added 10/31/2025)</strong> Size and power restrictions are as follows:</p>
-              <table class="rules-table boating-table" aria-label="Boat size and power restrictions">
-                <thead>
-                  <tr>
-                    <th scope="col">Boat Type</th>
-                    <th scope="col">Maximum length</th>
-                    <th scope="col">Maximum Outboard Horsepower</th>
-                    <th scope="col">Maximum I/O and Inboard Horsepower</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-label="Boat Type">Speed, pleasure, cuddy, sail, ski or fishing</td>
-                    <td data-label="Maximum length">21 feet</td>
-                    <td data-label="Maximum Outboard Horsepower">150hp</td>
-                    <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
-                  </tr>
-                  <tr>
-                    <td data-label="Boat Type">Deck boat</td>
-                    <td data-label="Maximum length">22 feet</td>
-                    <td data-label="Maximum Outboard Horsepower">150hp</td>
-                    <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
-                  </tr>
-                  <tr>
-                    <td data-label="Boat Type">Pontoon</td>
-                    <td data-label="Maximum length">28 feet</td>
-                    <td data-label="Maximum Outboard Horsepower">150hp</td>
-                    <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="spacer"></div>
-            <p><strong>Tubing or Skiing</strong> - There is a new law which requires a flag flying at the highest part of your boat while pulling tubers or skiers or when they are in the water. While skiing or tubing, be sure to have a responsible spotter; the driver <strong>cannot</strong> be considered a spotter. Boat in a counter-clock-wise pattern. Children under 13 must wear life preservers. Lights must be used after dark and boats are restricted to a no-wake speed after dark. <span class="note">(added 8/4/2020)</span></p>
-            <ol class="spaced-list">
-              <li>Two persons are required to be aboard a boat when engaged in towing any person participating in a water sport. (Sec. 15, Illinois Regulations)</li>
-              <li>Ski boat operators are advised not to trail tow ropes in the water except when returning for a fallen skier. Other boaters are cautioned against crossing the ski boat's wake closer than 100 feet to the boat. Each boat operator is responsible for his/her own dropped loose skis.</li>
-              <li>Allow up to 2 tow ropes and a maximum of up to 3 persons in any combination of up to 2 towables built to accompany such.</li>
-              <li>Children 13 years old and under must wear a life jacket when in a boat that is not tied to a dock.</li>
-              <li>Boat traffic shall be in counter-clockwise pattern.</li>
-              <li>State law places restrictions on motorboat operators between the ages of 12 and 17. Such persons must operate the boat under the supervision of a parent, guardian or someone at least 18 years old that has been designated by a parent, or must hold a Boating Certificate issued by the State Department of Natural Resources. Such certificates can be earned by taking an 8 hour boating safety course approved by the department, and offered by organizations, school systems and volunteers throughout the state. The new law also bars anyone age 9 or under from operating a motorboat, and requires anyone at 10 or 11 to have a parent, guardian or someone over age 18 aboard.</li>
-            </ol>
-            <p><strong>Boat Ramp Parking</strong> - Please be sure boat trailers are parked at the ramp area rather than at the Clubhouse. The Clubhouse is often reserved for other functions and the parking spaces are needed. One or two trailers can take up a lot of parking spots. We realize at times additional trailer parking could be used and we are considering options in the Long Range Planning Committee. Anyone interested in working on the project, please contact a Board Member.</p>
-          </section>
-
-          <section class="home-section split">
-            <div class="card">
-              <h2>Rules and Regulations</h2>
-              <p class="updated">December 2015</p>
-              <p>The Committee on <a href="http://littleswanlake.net/rules.html" title="Rules and Regulations page" target="_blank">Rules and Regulations</a> has reviewed the current rules and has made several recommendations to the membership. These changes include removing duplicate or redundant information, making it readable by using common language, and updating incorrect information and rules.</p>
-            </div>
-            <div class="card">
-              <h2>Membership &amp; Boating Forms</h2>
-              <p class="updated">November 2017</p>
-              <p>The membership and boating <a href="http://littleswanlake.net/forms.html" title="membership and boating forms" target="_blank">forms</a> will be sent out in January. If you have not received the documents or are new to Little Swan Lake, you may download the forms on our forms page or please send an email with your request to Sharon Hundley (LSLClerk@hotmail.com).</p>
-            </div>
-          </section>
-
-          <section class="home-section">
-            <h2>Recycling</h2>
-            <p class="updated">September 2025</p>
-            <p><a href="/images/eagle-enterprise-recycle.jpg" title="Recycling" target="_blank">Recycling Information Eagle Enterprises</a></p>
-            <h3>Recycling Drop-Off</h3>
-            <div class="two-col">
-              <div>
-                <h4>Items Accepted</h4>
-                <ul>
-                  <li>Newspaper</li>
-                  <li>Magazines</li>
-                  <li>Cardboard, cereal &amp; Kleenex boxes</li>
-                  <li>Office paper, junk mail</li>
-                  <li>Telephone books</li>
-                  <li>Hardback &amp; paperback books</li>
-                  <li>Aluminum cans &amp; foil</li>
-                  <li>Aluminum scrap (lawn chairs, siding)</li>
-                  <li>Steel or tin cans</li>
-                  <li>Light steel (coat hangers, bicycles, etc.)</li>
-                  <li>Plastics #1 - 7, except #6 (look for the number inside the recycling triangle)</li>
-                  <li>Bags of plastic grocery bags (#2 or #4), bubble wrap</li>
-                </ul>
-                <p class="highlight-text"><strong>Containers must be free of food waste.</strong></p>
+            <section class="home-section">
+              <h2>Important Boating Reminders</h2>
+              <div class="callout info">
+                <p><strong>NEW (added 10/31/2025)</strong> Size and power restrictions are as follows:</p>
+                <table class="rules-table boating-table" aria-label="Boat size and power restrictions">
+                  <thead>
+                    <tr>
+                      <th scope="col">Boat Type</th>
+                      <th scope="col">Maximum length</th>
+                      <th scope="col">Maximum Outboard Horsepower</th>
+                      <th scope="col">Maximum I/O and Inboard Horsepower</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Boat Type">Speed, pleasure, cuddy, sail, ski or fishing</td>
+                      <td data-label="Maximum length">21 feet</td>
+                      <td data-label="Maximum Outboard Horsepower">150hp</td>
+                      <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Boat Type">Deck boat</td>
+                      <td data-label="Maximum length">22 feet</td>
+                      <td data-label="Maximum Outboard Horsepower">150hp</td>
+                      <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Boat Type">Pontoon</td>
+                      <td data-label="Maximum length">28 feet</td>
+                      <td data-label="Maximum Outboard Horsepower">150hp</td>
+                      <td data-label="Maximum I/O and Inboard Horsepower">200hp</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div>
-                <h4>Not Accepted</h4>
-                <ul>
-                  <li>Plastic bags</li>
-                  <li>Glass</li>
-                  <li>Styrofoam (#6)</li>
-                  <li>Wax cardboard (milk and juice cartons)</li>
-                  <li>Construction paper</li>
-                  <li>Paper towels &amp; Kleenex</li>
-                  <li>Paint</li>
-                  <li>Electronic equipment</li>
-                  <li>White goods (washer, dryer, stove, etc.)</li>
-                  <li>Household garbage</li>
-                  <li>Plastic toys</li>
-                </ul>
+              <div class="spacer"></div>
+              <p><strong>Tubing or Skiing</strong> - There is a new law which requires a flag flying at the highest part
+                of your boat while pulling tubers or skiers or when they are in the water. While skiing or tubing, be
+                sure to have a responsible spotter; the driver <strong>cannot</strong> be considered a spotter. Boat in
+                a counter-clock-wise pattern. Children under 13 must wear life preservers. Lights must be used after
+                dark and boats are restricted to a no-wake speed after dark. <span class="note">(added 8/4/2020)</span>
+              </p>
+              <ol class="spaced-list">
+                <li>Two persons are required to be aboard a boat when engaged in towing any person participating in a
+                  water sport. (Sec. 15, Illinois Regulations)</li>
+                <li>Ski boat operators are advised not to trail tow ropes in the water except when returning for a
+                  fallen skier. Other boaters are cautioned against crossing the ski boat's wake closer than 100 feet to
+                  the boat. Each boat operator is responsible for his/her own dropped loose skis.</li>
+                <li>Allow up to 2 tow ropes and a maximum of up to 3 persons in any combination of up to 2 towables
+                  built to accompany such.</li>
+                <li>Children 13 years old and under must wear a life jacket when in a boat that is not tied to a dock.
+                </li>
+                <li>Boat traffic shall be in counter-clockwise pattern.</li>
+                <li>State law places restrictions on motorboat operators between the ages of 12 and 17. Such persons
+                  must operate the boat under the supervision of a parent, guardian or someone at least 18 years old
+                  that has been designated by a parent, or must hold a Boating Certificate issued by the State
+                  Department of Natural Resources. Such certificates can be earned by taking an 8 hour boating safety
+                  course approved by the department, and offered by organizations, school systems and volunteers
+                  throughout the state. The new law also bars anyone age 9 or under from operating a motorboat, and
+                  requires anyone at 10 or 11 to have a parent, guardian or someone over age 18 aboard.</li>
+              </ol>
+              <p><strong>Boat Ramp Parking</strong> - Please be sure boat trailers are parked at the ramp area rather
+                than at the Clubhouse. The Clubhouse is often reserved for other functions and the parking spaces are
+                needed. One or two trailers can take up a lot of parking spots. We realize at times additional trailer
+                parking could be used and we are considering options in the Long Range Planning Committee. Anyone
+                interested in working on the project, please contact a Board Member.</p>
+            </section>
+
+            <section class="home-section split">
+              <div class="card">
+                <h2>Rules and Regulations</h2>
+                <p class="updated">December 2015</p>
+                <p>The Committee on <a href="http://littleswanlake.net/rules.html" title="Rules and Regulations page"
+                    target="_blank">Rules and Regulations</a> has reviewed the current rules and has made several
+                  recommendations to the membership. These changes include removing duplicate or redundant information,
+                  making it readable by using common language, and updating incorrect information and rules.</p>
               </div>
-            </div>
-          </section>
-        </main>
-      </div>      <!-- end div#content -->
+              <div class="card">
+                <h2>Membership &amp; Boating Forms</h2>
+                <p class="updated">November 2017</p>
+                <p>The membership and boating <a href="http://littleswanlake.net/forms.html"
+                    title="membership and boating forms" target="_blank">forms</a> will be sent out in January. If you
+                  have not received the documents or are new to Little Swan Lake, you may download the forms on our
+                  forms page or please send an email with your request to Sharon Hundley (LSLClerk@hotmail.com).</p>
+              </div>
+            </section>
 
-      <div id="sidebar">
-      <ul>
-<!--          <li id="search"> -->
-       <h2>Search</h2>
-<script async src="https://cse.google.com/cse.js?cx=1bf3659cc2e477f5c"></script>
-<div class="gcse-search"></div>     
-<!--<script>
-  (function() {
-    var cx = '016506659619628610110:hu0pahmepvy';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
--->			
-<!--			
-            <form method="get" action="">
-              <fieldset>
-                <input type="text" id="search-text" name="s" value="" />
-                <input type="submit" id="search-submit" value="Search" />
-              </fieldset>
-            </form>
+            <section class="home-section">
+              <h2>Recycling</h2>
+              <p class="updated">September 2025</p>
+              <p><a href="/images/eagle-enterprise-recycle.jpg" title="Recycling" target="_blank">Recycling Information
+                  Eagle Enterprises</a></p>
+              <h3>Recycling Drop-Off</h3>
+              <div class="two-col">
+                <div>
+                  <h4>Items Accepted</h4>
+                  <ul>
+                    <li>Newspaper</li>
+                    <li>Magazines</li>
+                    <li>Cardboard, cereal &amp; Kleenex boxes</li>
+                    <li>Office paper, junk mail</li>
+                    <li>Telephone books</li>
+                    <li>Hardback &amp; paperback books</li>
+                    <li>Aluminum cans &amp; foil</li>
+                    <li>Aluminum scrap (lawn chairs, siding)</li>
+                    <li>Steel or tin cans</li>
+                    <li>Light steel (coat hangers, bicycles, etc.)</li>
+                    <li>Plastics #1 - 7, except #6 (look for the number inside the recycling triangle)</li>
+                    <li>Bags of plastic grocery bags (#2 or #4), bubble wrap</li>
+                  </ul>
+                  <p class="highlight-text"><strong>Containers must be free of food waste.</strong></p>
+                </div>
+                <div>
+                  <h4>Not Accepted</h4>
+                  <ul>
+                    <li>Plastic bags</li>
+                    <li>Glass</li>
+                    <li>Styrofoam (#6)</li>
+                    <li>Wax cardboard (milk and juice cartons)</li>
+                    <li>Construction paper</li>
+                    <li>Paper towels &amp; Kleenex</li>
+                    <li>Paint</li>
+                    <li>Electronic equipment</li>
+                    <li>White goods (washer, dryer, stove, etc.)</li>
+                    <li>Household garbage</li>
+                    <li>Plastic toys</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div> <!-- end div#content -->
 
-          </li>
--->			
+        <div id="sidebar">
+          <div class="sidebar-header">
+            <h2 class="sidebar-menu-title">Menu</h2>
+            <button class="sidebar-close" type="button" aria-label="Close sections">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </button>
+          </div>
+          <ul>
+            <li>
+              <ul>
 
-          <li>
-            <h2>Menu</h2>
-            <ul>
-             
-              <li><a href="http://littleswanlake.net/">Home</a></li>
-              <li><a href="../contacts.html">Contacts</a></li>
-              <li><a href="../memberinfo.html">Member Information </a></li>
-              <li><a href="../siltation.html">Siltation Committee</a></li>
-	              <li><a href="../photos.html">Photos & Lake Map</a></li>
-              <li><a href="../news.html">LSL Newsletter and other News </a></li>
-              <li><a href="../lol-activities.html">Ladies of the Lake</a><a href="http://littleswanlake.net/lol-news.html">(Monthly News)</a></li>
-              <li><a href="../forms.html">Forms **new**</a></li>
-              <li><a href="../ClubhouseRental.html">Clubhouse Rental form and information</a></li>
-              <li><a href="../merchandise.html">For Sale: Lake Merchandise </a></li>
-              <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots </a></li>
-              <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-              <li><a href="../jobs.html">Job Listing </a></li>
-              <li><a href="../history.html">History</a></li>
-              <li><a href="../directions.html">Directions</a></li>
-              <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-              
-<!--          <li><a href="../news.html">News Letter </a></li> -->
+                <li><a href="http://littleswanlake.net/">Home</a></li>
+                <li><a href="../contacts.html">Contacts</a></li>
+                <li><a href="../memberinfo.html">Member Information </a></li>
+                <li><a href="../siltation.html">Siltation Committee</a></li>
+                <li><a href="../photos.html">Photos & Lake Map</a></li>
+                <li><a href="../news.html">LSL Newsletter and other News </a></li>
+                <li><a href="../lol-activities.html">Ladies of the Lake</a><a
+                    href="http://littleswanlake.net/lol-news.html">(Monthly News)</a></li>
+                <li><a href="../forms.html">Forms **new**</a></li>
+                <li><a href="../ClubhouseRental.html">Clubhouse Rental form and information</a></li>
+                <li><a href="../merchandise.html">For Sale: Lake Merchandise </a></li>
+                <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots </a></li>
+                <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
+                <li><a href="../jobs.html">Job Listing </a></li>
+                <li><a href="../history.html">History</a></li>
+                <li><a href="../directions.html">Directions</a></li>
+                <li><a href="../links.html">Local Links (schools and other sites)</a></li>
 
-            </ul>
-          </li>
-          <li>
-            <h2>Upcoming Events </h2>
-            <ul>
-              <li><a href="../board.html">Board Meetings</a></li>
-              <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2>Lake Rules </h2>
-            <ul>
-              <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-              <li><a href="../boating.html">Boating</a></li>
-              <li><a href="../fishing.html">Fishing</a></li>
-              <li><a href="../swimming.html">Swimming</a></li>
-            </ul>
-          </li>
+                <!--          <li><a href="../news.html">News Letter </a></li> -->
 
-          <li>
-            <h2>LSL Sanitary (water) District</h2>  
-             <span class="style1">(Not associated with the LSL Club)</span>
-            <ul>
-              <li><a href="http://littleswanlake.net/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-            </ul>
-          </li>
-          
-        </ul>
+              </ul>
+            </li>
+            <li>
+              <h2>Upcoming Events </h2>
+              <ul>
+                <li><a href="../board.html">Board Meetings</a></li>
+                <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>Lake Rules </h2>
+              <ul>
+                <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
+                <li><a href="../boating.html">Boating</a></li>
+                <li><a href="../fishing.html">Fishing</a></li>
+                <li><a href="../swimming.html">Swimming</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <h2>LSL Sanitary (water) District</h2>
+              <span class="style1">(Not associated with the LSL Club)</span>
+              <ul>
+                <li><a href="http://littleswanlake.net/sanitary-dist.html" target="_blank">Sanitary District Web
+                    Pages</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+        <!-- end div#sidebar -->
+        <div style="clear: both; height: 1px"></div>
       </div>
-      <!-- end div#sidebar -->
-      <div style="clear: both; height: 1px"></div>
     </div>
+    <!-- end div#page -->
+    <div id="footer">
+      <p><a href="mailto:r-andersen@wiu.edu">Contact the LSL Webmaster</a> <br />
+        Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a
+          href="http://www.freecsstemplates.org/">Free CSS Templates</a>. ---<a href="https://littlesw.ipage.com/stats/"
+          title="STATS" target="_blank">STATS</a>--- </p>
+      <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
+    </div>
+    <!-- end div#footer -->
   </div>
-  <!-- end div#page -->
-  <div id="footer">
-     <p><a href="mailto:r-andersen@wiu.edu">Contact the LSL Webmaster</a> <br/>
-    Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. ---<a href="https://littlesw.ipage.com/stats/" title="STATS" target="_blank">STATS</a>--- </p>
-    <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
-<script type="text/javascript">
-  (function() {
-    var menu = document.getElementById("menu");
-    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
-    var list = document.getElementById("menu-list");
-    if (!menu || !toggle || !list) return;
+  <!-- end div#wrapper -->
+  <script type="text/javascript">
+    (function () {
+      var menu = document.getElementById("menu");
+      var toggle = menu ? menu.querySelector(".menu-toggle") : null;
+      var list = document.getElementById("menu-list");
+      var sidebarToggle = document.querySelector(".sidebar-toggle");
+      var sidebar = document.getElementById("sidebar");
+      var sidebarClose = document.querySelector(".sidebar-close");
+      if (!menu || !toggle || !list) return;
 
-    function setOpen(isOpen) {
-      menu.classList.toggle("menu-open", isOpen);
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      if (!isOpen) {
-        var openSubs = list.querySelectorAll(".submenu-open");
-        for (var i = 0; i < openSubs.length; i++) {
-          openSubs[i].classList.remove("submenu-open");
-        }
-        var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
-        for (var j = 0; j < subToggles.length; j++) {
-          subToggles[j].setAttribute("aria-expanded", "false");
+      function setOpen(isOpen) {
+        menu.classList.toggle("menu-open", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        if (!isOpen) {
+          var openSubs = list.querySelectorAll(".submenu-open");
+          for (var i = 0; i < openSubs.length; i++) {
+            openSubs[i].classList.remove("submenu-open");
+          }
+          var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
+          for (var j = 0; j < subToggles.length; j++) {
+            subToggles[j].setAttribute("aria-expanded", "false");
+          }
         }
       }
-    }
 
-    toggle.addEventListener("click", function() {
-      setOpen(!menu.classList.contains("menu-open"));
-    });
+      toggle.addEventListener("click", function () {
+        setOpen(!menu.classList.contains("menu-open"));
+      });
 
-    document.addEventListener("click", function(e) {
-      if (!menu.classList.contains("menu-open")) return;
-      if (menu.contains(e.target)) return;
-      setOpen(false);
-    });
-
-    list.addEventListener("click", function(e) {
-      if (e.target && e.target.tagName === "A") {
-        setOpen(false);
+      if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener("click", function () {
+          var isOpen = document.body.classList.toggle("sidebar-open");
+          sidebarToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
       }
-    });
-
-    list.addEventListener("click", function(e) {
-      var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
-        ? e.target
-        : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
-      if (!toggleBtn) return;
-      var item = toggleBtn.closest("li");
-      if (!item) return;
-      var isOpen = item.classList.contains("submenu-open");
-      item.classList.toggle("submenu-open", !isOpen);
-      toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
-      e.preventDefault();
-    });
-
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Escape") {
-        setOpen(false);
+      if (sidebarClose && sidebarToggle) {
+        sidebarClose.addEventListener("click", function () {
+          document.body.classList.remove("sidebar-open");
+          sidebarToggle.setAttribute("aria-expanded", "false");
+        });
       }
-    });
-  })();
-</script>
+      document.addEventListener("click", function (e) {
+        if (!document.body.classList.contains("sidebar-open")) return;
+        if (sidebar && sidebar.contains(e.target)) return;
+        if (sidebarToggle && sidebarToggle.contains(e.target)) return;
+        document.body.classList.remove("sidebar-open");
+        if (sidebarToggle) {
+          sidebarToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!menu.classList.contains("menu-open")) return;
+        if (menu.contains(e.target)) return;
+        setOpen(false);
+      });
+
+      list.addEventListener("click", function (e) {
+        if (e.target && e.target.tagName === "A") {
+          setOpen(false);
+        }
+      });
+
+      list.addEventListener("click", function (e) {
+        var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
+          ? e.target
+          : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
+        if (!toggleBtn) return;
+        var item = toggleBtn.closest("li");
+        if (!item) return;
+        var isOpen = item.classList.contains("submenu-open");
+        item.classList.toggle("submenu-open", !isOpen);
+        toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
+        e.preventDefault();
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          setOpen(false);
+          if (sidebarToggle) {
+            document.body.classList.remove("sidebar-open");
+            sidebarToggle.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+
+      var siteSearch = document.querySelector(".site-search");
+      if (siteSearch) {
+        var searchInput = siteSearch.querySelector("input[type='text']");
+        var searchButton = siteSearch.querySelector("button[type='submit']");
+        var syncSearchButton = function () {
+          if (!searchButton || !searchInput) return;
+          searchButton.disabled = !searchInput.value.trim();
+        };
+        if (searchInput && searchButton) {
+          syncSearchButton();
+          searchInput.addEventListener("input", syncSearchButton);
+        }
+        siteSearch.addEventListener("submit", function () {
+          var input = siteSearch.querySelector("input[type='text']");
+          if (input) {
+            setTimeout(function () {
+              input.value = "";
+            }, 0);
+          }
+        });
+      }
+    })();
+  </script>
 </body>
-</html>
 
+</html>
