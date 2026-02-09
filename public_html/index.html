@@ -244,6 +244,32 @@ div.WordSection1
     background: var(--lake-panel);
     box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
   }
+  .home-page .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .home-page .fish-image {
+    width: 42px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+  }
+  .home-page .fish-image-large {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  .home-page .fishing-regs-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-page .fishing-regs-card .fish-image-large {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
   .home-page .two-col {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -478,8 +504,10 @@ div.WordSection1
           <section class="home-section">
             <h2>Fishing and Lake Updates</h2>
             <div class="split">
-              <div class="card">
-                <h3>2023 LSL Fishing Regulations</h3>
+              <div class="card fishing-regs-card">
+                <div class="section-title">
+                  <h3>2023 LSL Fishing Regulations</h3>
+                </div>
                 <p class="highlight-text">Please read and obey all size and creel limits. Current boat sticker and fishing license are required.</p>
                 <table class="rules-table" aria-label="2023 LSL Fishing Regulations">
                   <thead>
@@ -538,7 +566,9 @@ div.WordSection1
                   </tbody>
                 </table>
                 <div class="spacer"></div>
-                <p class="highlight-text">Please dispose of any Carp or Green sunfish (rock bass) caught. Please do not put them back in the lake.</p>
+                <p class="highlight-text">Please dispose of any Carp or Green sunfish (rock bass) caught. Please do 
+not put them back in the lake.</p>
+                <img class="fish-image-large" src="images/fishHook.png" alt="Fish hook" />
               </div>
               <div class="card">
                 <h3>Little Swan Lake Fishing News 2023</h3>
@@ -565,6 +595,7 @@ div.WordSection1
             </div>
           </section>
 
+          <!--
           <section class="home-section">
             <h2>Wildlife Sightings</h2>
             <p>Swans spotted on the lake - February 3, 2017</p>
@@ -573,6 +604,7 @@ div.WordSection1
               <figcaption>Swans on Little Swan Lake</figcaption>
             </figure>
           </section>
+          -->
 
           <section class="home-section">
             <h2>Guest-Owner Responsibilities</h2>
@@ -863,3 +895,4 @@ div.WordSection1
 </script>
 </body>
 </html>
+
