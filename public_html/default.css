@@ -284,6 +284,10 @@ a:hover {
 	border: 0;
 }
 
+.spacer {
+	height: 12px;
+}
+
 #splash {
 	width: 100%;
 	max-width: none;
