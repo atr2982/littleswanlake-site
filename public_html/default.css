@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
 
+@font-face {
+	font-family: "LSLCalligraphy";
+	src: url("fonts/LucidaUnicodeCalligraphy.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "LSLCalligraphy";
+	src: url("fonts/LucidaUnicodeCalligraphyBold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 /*
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -165,7 +181,7 @@ a:hover {
 	width: 100%;
 	min-height: 47px;
 	margin: 0 auto;
-	background: #2f3338;
+	background: #2e13d0;
 	position: relative;
 }
 
@@ -638,7 +654,7 @@ table {
 		position: absolute;
 		left: 0;
 		top: 47px;
-		background: #2f3338;
+		background: #2e13d0;
 		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 		z-index: 50;
 	}
@@ -784,3 +800,4 @@ table {
 		transform: translateY(0);
 	}
 }
+
