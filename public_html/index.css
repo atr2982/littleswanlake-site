@@ -455,7 +455,7 @@
     cursor: not-allowed;
   }
   .home-page .site-search button:hover {
-    color: var(--lake-accent);
+    color: #ffffff;
   }
   .home-page .site-search button svg {
     width: 16px;
