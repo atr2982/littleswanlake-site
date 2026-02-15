@@ -44,6 +44,7 @@
   border-radius: 6px;
   background: #ffffff;
   font-family: inherit;
+  font-size: inherit;
 }
 
 .forms-page .forms-search-bar input[type="text"]:focus {
@@ -149,5 +150,8 @@
   .forms-page .forms-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .forms-page .forms-search-bar input[type="text"] {
+    font-size: 16px;
   }
 }

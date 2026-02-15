@@ -430,6 +430,7 @@
     border: 1px solid var(--lake-border);
     border-radius: 6px;
     font-family: inherit;
+    font-size: inherit;
   }
   .home-page .site-search input[type="text"]:focus {
     outline: none;
@@ -673,6 +674,9 @@
     }
     .home-page #sidebar {
       display: none;
+    }
+    .home-page .site-search input[type="text"] {
+      font-size: 16px;
     }
   }
 
