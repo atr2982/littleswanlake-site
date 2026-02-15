@@ -31,7 +31,6 @@
 .forms-page .forms-search-bar {
   display: flex;
   align-items: center;
-  gap: 4px;
   margin-bottom: 12px;
   max-width: 420px;
 }
@@ -51,27 +50,6 @@
   outline: none;
   border-color: #4a5a6a;
   box-shadow: none;
-}
-
-.forms-page .forms-search-bar button {
-  height: 32px;
-  width: 32px;
-  border: 1px solid #2e13d0;
-  border-radius: 6px;
-  background: #2e13d0;
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.forms-page .forms-search-bar button:hover {
-  color: #ffffff;
-}
-
-.forms-page .forms-search-bar button i {
-  font-size: 14px;
 }
 
 .forms-page .forms-header {
