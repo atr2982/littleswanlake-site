@@ -13,6 +13,7 @@
   <link href="index.css" rel="stylesheet" type="text/css" />
   <style type="text/css">
     .template-page {
+      --footer-gap: 20px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -30,7 +31,7 @@
     }
 
     .template-page #footer {
-      margin-top: 20px;
+      margin-top: var(--footer-gap);
       width: 100vw;
       margin-left: calc(50% - 50vw);
       margin-right: calc(50% - 50vw);
