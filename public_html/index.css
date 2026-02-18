@@ -586,8 +586,14 @@
       color: #cdd9e3;
     }
 
+    .home-page #menu>ul>li>.nav-dropdown-toggle {
+      color: #cdd9e3;
+    }
+
     .home-page #menu>ul>li>a:hover,
-    .home-page #menu>ul>li.active>a {
+    .home-page #menu>ul>li.active>a,
+    .home-page #menu>ul>li>.nav-dropdown-toggle:hover,
+    .home-page #menu>ul>li.nav-dropdown-open>.nav-dropdown-toggle {
       color: #ffffff;
       text-decoration-color: #ffffff;
     }

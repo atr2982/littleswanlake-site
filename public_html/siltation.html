@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -21,6 +21,9 @@ Description: A two-column fixed-width template suitable for small websites.
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" href="images/logo1.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+<link href="index.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {color: #FF0000}
@@ -35,7 +38,7 @@ Description: A two-column fixed-width template suitable for small websites.
 -->
 </style>
 </head>
-<body>
+<body class="home-page">
 <div id="wrapper">
 <div id="topbar">
     <div class="topbar-inner">
@@ -63,24 +66,34 @@ Description: A two-column fixed-width template suitable for small websites.
       <span class="sr-only">Menu</span>
     </button>
     <ul id="menu-list">
-      <li class="active"><a href="http://littleswanlake.net/">Home </a></li>
-      <li><a href="http://littleswanlake.net/news.html">News </a></li>
-      <li><a href="http://littleswanlake.net/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="http://littleswanlake.net/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="http://littleswanlake.net/rules.html">Rules & Regulations </a></li>
+      <li class="active"><a href="/">Home </a></li>
+      <li><a href="/news.html">News </a></li>
+      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
+      <li><a href="/lakehomesforsale.html">For Sale </a></li>
+      <li><a href="/rules.html">Rules & Regulations </a></li>
       <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="http://littleswanlake.net/directions.html">Directions </a></li>
-      <li><a href="http://littleswanlake.net/contacts.html">Contact </a></li>
+      <li><a href="/directions.html">Directions </a></li>
+      <li class="has-nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+          <span class="nav-dropdown-label">
+            <span class="nav-label">Contact</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </span>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="/contacts.html">Contacts</a></li>
+          <li><a href="/memberinfo.html">Member Information</a></li>
+        </ul>
+      </li>
       <li class="mobile-only has-submenu">
         <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
         <ul class="submenu">
-          <li><a href="http://littleswanlake.net/">Home</a></li>
-          <li><a href="../memberinfo.html">Member Information</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="../siltation.html">Siltation Committee</a></li>
           <li><a href="../photos.html">Photos & Lake Map</a></li>
           <li><a href="../news.html">LSL Newsletter and other News</a></li>
           <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="http://littleswanlake.net/lol-news.html">(Monthly News)</a></li>
+          <li><a href="/lol-news.html">(Monthly News)</a></li>
           <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
           <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
           <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
@@ -110,24 +123,42 @@ Description: A two-column fixed-width template suitable for small websites.
       <li class="mobile-only has-submenu">
         <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
         <ul class="submenu">
-          <li><a href="http://littleswanlake.net/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
+          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
         </ul>
       </li>
     </ul>
   </div>
   <!-- end div#menu -->
-  <div id="splash"><img src="images/heading2.jpg" width="940" height="274" alt="" /></div>
+  <div id="splash"><img src="images/LSLWebsiteBanner.png" width="940" height="274" alt="" /></div>
   <div id="page">
     <div id="page-bgtop">
-      <div id="content">
+      <div class="home-toolbar">
+        <div class="home-toolbar-left">
+          <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">
+            Side Menu
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="home-toolbar-right">
+          <form class="site-search" action="https://www.google.com/search" method="get" target="_blank" rel="noopener">
+            <input type="hidden" name="q" value="site:littleswanlake.net" />
+            <input type="text" name="q" placeholder="Search the site" aria-label="Search the site" />
+            <button type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="content" class="home-content">
         <div class="post">
+          <p><a href="/siltation-minutes.html" target="_blank">Siltation Committee Minutes</a> | <a href="/siltation-docs.html" target="_blank">Siltation Documents - Klingner LSL Study</a> | <a href="/siltation-activities.html" target="_blank">Siltation Activities</a></p>
           <h2 class="title"><a href="#">Siltation Information</a></h2>
           <p class="byline">Update August 2018</p>
 		  <p>The Siltation Committee mission is to study and make recommendations to the LSL Board regarding silt entering the lake and how to remedy 
 		     the situation and to make recommendations on how to remove existing silt from Little Swan Lake.</p>
         <p><span class="style1">Klingner and Associates Siltation Engineering Study. Click on Siltation Documents on the Left Menu.</span></p> 		     
          
-		  <p>Seveal <a href="http://littleswanlake.net/siltation-pictures.html">pictures</a> were taken to illustrate the amount of silt in the west end of the lake. </p>
+		  <p>Seveal <a href="/siltation-pictures.html">pictures</a> were taken to illustrate the amount of silt in the west end of the lake. </p>
          
         </div>
         <div class="post">
@@ -161,42 +192,49 @@ Aug 20 <br />
       <!-- end div#content -->
 
       <div id="sidebar">
+        <div class="sidebar-header">
+          <h2 class="sidebar-menu-title">Menu</h2>
+          <button class="sidebar-close" type="button" aria-label="Close sections">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </button>
+        </div>
         <ul>
-<!--      <li id="search"> 
-          </li>
--->
-<h2>Search</h2>
-<script async src="https://cse.google.com/cse.js?cx=1bf3659cc2e477f5c"></script>
-<div class="gcse-search"></div>               
-		
-		  
           <li>
-            <h2><strong>Menu</strong></h2>
-           <ul>
-              <li><a href="http://littleswanlake.net/">Home</a></li>
-              <li><a href="http://littleswanlake.net/siltation-minutes.html" target="_blank">Siltation Committee Minutes</a></li>
-              <li><a href="http://littleswanlake.net/siltation-docs.html" target="_blank">Siltation Documents - Klingner LSL Study</a></li>
-              <li><a href="http://littleswanlake.net/siltation-activities.html" target="_blank">Siltation Activities</a></li>
-              
-<!--               <li><a href="../04-Rules&Regs-Orig.pdf" target="_blank">Original Rules & Regulations</a></li> 
-                   <li><a href="forms/forms.html">Forms</a></li> -->
-<!--               <li><a href="../boating.html">Boating Rules </a></li>
-              <li><a href="../fishing.html">Fishing Rules </a></li>
-              <li><a href="../swimming.html">Swimming Rules</a></li>
-<!--              <li><a href="#">Fishing Rules</a></li> 
-              <li><a href="#">Fishing Rules</a></li> -->
-           </ul>
-          </li>
-<!--           <li>
-            <h2>Proposed Changes</h2>
             <ul>
-              <li><a href="../ByLaws-2015010-31.pdff" target="_blank">Proposed Changes to Bylaws effective 10/31/2015</a></li>
-              <li><a href="../02-Overview150912-ByLaws.pdf" target="_blank">Overview of Bylaw changes</a></li>
-         <li><a href="../Covenants-2015-08-03.pdf" target="_blank">FINAL Covenants 08/03/2015</a></li>
-              <li><a href="../Overview-Covenants-Nov2014.html" target="_blank">Summary of  Changes</a></li> 
-            </ul>-->
+              <li><a href="siltation.html">Siltation Committee</a></li>
+              <li><a href="photos.html">Photos &amp; Lake Map</a></li>
+              <li><a href="news.html">LSL Newsletter and other News </a></li>
+              <li><a href="lol-activities.html">Ladies of the Lake</a><a href="/lol-news.html">(Monthly News)</a></li>
+              <li><a href="merchandise.html">For Sale: Lake Merchandise </a></li>
+              <li><a href="lakehomesforsale.html">For Sale or Lease: Homes and Lots </a></li>
+              <li><a href="classifieds.html">For Sale: Items for sale &amp; Classifieds</a></li>
+              <li><a href="jobs.html">Job Listing </a></li>
+              <li><a href="history.html">History</a></li>
+            </ul>
           </li>
-
+          <li>
+            <h2>Upcoming Events </h2>
+            <ul>
+              <li><a href="board.html">Board Meetings</a></li>
+              <li><a href="lol-activities.html">Ladies of the Lake Activities</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Lake Rules </h2>
+            <ul>
+              <li><a href="rules.html">Bylaws, Covenants &amp; Rules</a></li>
+              <li><a href="boating.html">Boating</a></li>
+              <li><a href="fishing.html">Fishing</a></li>
+              <li><a href="swimming.html">Swimming</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>LSL Sanitary (water) District</h2>
+            <span class="style1">(Not associated with the LSL Club)</span>
+            <ul>
+              <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <!-- end div#sidebar -->
@@ -205,71 +243,17 @@ Aug 20 <br />
   </div>
   <!-- end div#page -->
   <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
+    <p><a href="mailto:r-andersen@wiu.edu">Contact the LSL Webmaster</a> <br />
+      Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. ---<a href="https://littlesw.ipage.com/stats/" title="STATS" target="_blank">STATS</a>---</p>
   </div>
   <!-- end div#footer -->
 </div>
 <!-- end div#wrapper -->
 
-<script type="text/javascript">
-  (function() {
-    var menu = document.getElementById("menu");
-    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
-    var list = document.getElementById("menu-list");
-    if (!menu || !toggle || !list) return;
-
-    function setOpen(isOpen) {
-      menu.classList.toggle("menu-open", isOpen);
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      if (!isOpen) {
-        var openSubs = list.querySelectorAll(".submenu-open");
-        for (var i = 0; i < openSubs.length; i++) {
-          openSubs[i].classList.remove("submenu-open");
-        }
-        var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
-        for (var j = 0; j < subToggles.length; j++) {
-          subToggles[j].setAttribute("aria-expanded", "false");
-        }
-      }
-    }
-
-    toggle.addEventListener("click", function() {
-      setOpen(!menu.classList.contains("menu-open"));
-    });
-
-    document.addEventListener("click", function(e) {
-      if (!menu.classList.contains("menu-open")) return;
-      if (menu.contains(e.target)) return;
-      setOpen(false);
-    });
-
-    list.addEventListener("click", function(e) {
-      if (e.target && e.target.tagName === "A") {
-        setOpen(false);
-      }
-    });
-
-    list.addEventListener("click", function(e) {
-      var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
-        ? e.target
-        : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
-      if (!toggleBtn) return;
-      var item = toggleBtn.closest("li");
-      if (!item) return;
-      var isOpen = item.classList.contains("submenu-open");
-      item.classList.toggle("submenu-open", !isOpen);
-      toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
-      e.preventDefault();
-    });
-
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Escape") {
-        setOpen(false);
-      }
-    });
-  })();
-</script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
+
+
+
 

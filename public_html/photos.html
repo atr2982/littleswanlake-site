@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -20,6 +20,9 @@ Description: A two-column fixed-width template suitable for small websites.
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" href="images/logo1.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+<link href="index.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style193 {
@@ -41,7 +44,7 @@ Description: A two-column fixed-width template suitable for small websites.
 -->
 </style>
 </head>
-<body>
+<body class="home-page">
 <div id="wrapper">
   <div id="topbar">
     <div class="topbar-inner">
@@ -60,24 +63,34 @@ Description: A two-column fixed-width template suitable for small websites.
       <span class="sr-only">Menu</span>
     </button>
     <ul id="menu-list">
-      <li class="active"><a href="http://littleswanlake.net/">Home </a></li>
-      <li><a href="http://littleswanlake.net/news.html">News </a></li>
-      <li><a href="http://littleswanlake.net/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="http://littleswanlake.net/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="http://littleswanlake.net/rules.html">Rules & Regulations </a></li>
+      <li class="active"><a href="/">Home </a></li>
+      <li><a href="/news.html">News </a></li>
+      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
+      <li><a href="/lakehomesforsale.html">For Sale </a></li>
+      <li><a href="/rules.html">Rules & Regulations </a></li>
       <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="http://littleswanlake.net/directions.html">Directions </a></li>
-      <li><a href="http://littleswanlake.net/contacts.html">Contact </a></li>
+      <li><a href="/directions.html">Directions </a></li>
+      <li class="has-nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+          <span class="nav-dropdown-label">
+            <span class="nav-label">Contact</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </span>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="/contacts.html">Contacts</a></li>
+          <li><a href="/memberinfo.html">Member Information</a></li>
+        </ul>
+      </li>
       <li class="mobile-only has-submenu">
         <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
         <ul class="submenu">
-          <li><a href="http://littleswanlake.net/">Home</a></li>
-          <li><a href="../memberinfo.html">Member Information</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="../siltation.html">Siltation Committee</a></li>
           <li><a href="../photos.html">Photos & Lake Map</a></li>
           <li><a href="../news.html">LSL Newsletter and other News</a></li>
           <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="http://littleswanlake.net/lol-news.html">(Monthly News)</a></li>
+          <li><a href="/lol-news.html">(Monthly News)</a></li>
           <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
           <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
           <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
@@ -107,26 +120,41 @@ Description: A two-column fixed-width template suitable for small websites.
       <li class="mobile-only has-submenu">
         <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
         <ul class="submenu">
-          <li><a href="http://littleswanlake.net/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
+          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
         </ul>
       </li>
     </ul>
   </div>
   <!-- end div#menu -->
-  <div id="splash">
-    <div align="left"><img src="images/heading2.jpg" width="942" height="274" alt="" /></div>
-  </div>
+  <div id="splash"><img src="images/LSLWebsiteBanner.png" width="940" height="274" alt="" /></div>
 
   <div id="page">
     <div id="page-bgtop">
-      <div id="content-wide">
+      <div class="home-toolbar">
+        <div class="home-toolbar-left">
+          <button class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="false">
+            Side Menu
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="home-toolbar-right">
+          <form class="site-search" action="https://www.google.com/search" method="get" target="_blank" rel="noopener">
+            <input type="hidden" name="q" value="site:littleswanlake.net" />
+            <input type="text" name="q" placeholder="Search the site" aria-label="Search the site" />
+            <button type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="content" class="home-content">
         <div class="post">
           <h2 class="title"><a href="#">Pictures</a></h2>
           <p class="byline">August 2021</p>
           <div class="entry">
             <p class="style195">LITTLE SWAN LAKE Pictures </p>
             <p class="style195">&nbsp;</p>
-            <p class="style195"><a href="http://littleswanlake.net/boatramp.html" title="New Boat Ramp Photos" target="_blank">New Boat Ramp photos</a></p>
+            <p class="style195"><a href="/boatramp.html" title="New Boat Ramp Photos" target="_blank">New Boat Ramp photos</a></p>
             <p class="style195"><a href="images/LSL_MAP_04232017-L.JPG" title="LSL MAP" target="_blank">Little Swan Lake MAP</a></p>
             <p class="style195"><a href="aerialshots.html" title="Arial Photos" target="_blank">Arial Photos</a></p>
             <p class="style195"><a href="https://m.youtube.com/watch?v=QsJQSkASFQs" title="Little Swan Lake Utube Video" target="_blank">Little Swan Lake Utube Video</a></p>
@@ -214,6 +242,53 @@ Description: A two-column fixed-width template suitable for small websites.
       </div>
       <!-- end div#content -->
 
+      <div id="sidebar">
+        <div class="sidebar-header">
+          <h2 class="sidebar-menu-title">Menu</h2>
+          <button class="sidebar-close" type="button" aria-label="Close sections">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </button>
+        </div>
+        <ul>
+          <li>
+            <ul>
+              <li><a href="siltation.html">Siltation Committee</a></li>
+              <li><a href="photos.html">Photos &amp; Lake Map</a></li>
+              <li><a href="news.html">LSL Newsletter and other News </a></li>
+              <li><a href="lol-activities.html">Ladies of the Lake</a><a href="/lol-news.html">(Monthly News)</a></li>
+              <li><a href="merchandise.html">For Sale: Lake Merchandise </a></li>
+              <li><a href="lakehomesforsale.html">For Sale or Lease: Homes and Lots </a></li>
+              <li><a href="classifieds.html">For Sale: Items for sale &amp; Classifieds</a></li>
+              <li><a href="jobs.html">Job Listing </a></li>
+              <li><a href="history.html">History</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Upcoming Events </h2>
+            <ul>
+              <li><a href="board.html">Board Meetings</a></li>
+              <li><a href="lol-activities.html">Ladies of the Lake Activities</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Lake Rules </h2>
+            <ul>
+              <li><a href="rules.html">Bylaws, Covenants &amp; Rules</a></li>
+              <li><a href="boating.html">Boating</a></li>
+              <li><a href="fishing.html">Fishing</a></li>
+              <li><a href="swimming.html">Swimming</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>LSL Sanitary (water) District</h2>
+            <span class="style1">(Not associated with the LSL Club)</span>
+            <ul>
+              <li><a href="sanitary-dist.html">Sanitary District Web Pages</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
 <!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
 <!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
 <!--
@@ -232,71 +307,17 @@ Description: A two-column fixed-width template suitable for small websites.
   </div>
   <!-- end div#page -->
   <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
+    <p><a href="mailto:r-andersen@wiu.edu">Contact the LSL Webmaster</a> <br />
+      Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. ---<a href="https://littlesw.ipage.com/stats/" title="STATS" target="_blank">STATS</a>---</p>
   </div>
   <!-- end div#footer -->
 </div>
 <!-- end div#wrapper -->
 
-<script type="text/javascript">
-  (function() {
-    var menu = document.getElementById("menu");
-    var toggle = menu ? menu.querySelector(".menu-toggle") : null;
-    var list = document.getElementById("menu-list");
-    if (!menu || !toggle || !list) return;
-
-    function setOpen(isOpen) {
-      menu.classList.toggle("menu-open", isOpen);
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      if (!isOpen) {
-        var openSubs = list.querySelectorAll(".submenu-open");
-        for (var i = 0; i < openSubs.length; i++) {
-          openSubs[i].classList.remove("submenu-open");
-        }
-        var subToggles = list.querySelectorAll(".submenu-toggle[aria-expanded='true']");
-        for (var j = 0; j < subToggles.length; j++) {
-          subToggles[j].setAttribute("aria-expanded", "false");
-        }
-      }
-    }
-
-    toggle.addEventListener("click", function() {
-      setOpen(!menu.classList.contains("menu-open"));
-    });
-
-    document.addEventListener("click", function(e) {
-      if (!menu.classList.contains("menu-open")) return;
-      if (menu.contains(e.target)) return;
-      setOpen(false);
-    });
-
-    list.addEventListener("click", function(e) {
-      if (e.target && e.target.tagName === "A") {
-        setOpen(false);
-      }
-    });
-
-    list.addEventListener("click", function(e) {
-      var toggleBtn = e.target && e.target.classList && e.target.classList.contains("submenu-toggle")
-        ? e.target
-        : (e.target && e.target.closest ? e.target.closest(".submenu-toggle") : null);
-      if (!toggleBtn) return;
-      var item = toggleBtn.closest("li");
-      if (!item) return;
-      var isOpen = item.classList.contains("submenu-open");
-      item.classList.toggle("submenu-open", !isOpen);
-      toggleBtn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
-      e.preventDefault();
-    });
-
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Escape") {
-        setOpen(false);
-      }
-    });
-  })();
-</script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
+
+
+
 
