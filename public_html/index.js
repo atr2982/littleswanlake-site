@@ -133,6 +133,30 @@
     target.parentNode.replaceChild(clone, target);
   }
 
+  function syncHeadFromTemplate(templateDoc, baseUrl) {
+    if (!templateDoc || !document.head) return;
+
+    var templateTitle = templateDoc.querySelector("title");
+    if (templateTitle) {
+      document.title = templateTitle.textContent || "Little Swan Lake";
+    }
+
+    var templateIcon = templateDoc.querySelector('link[rel~="icon"]');
+    if (!templateIcon) return;
+
+    var iconHref = toAbsolutePathLike(templateIcon.getAttribute("href"), baseUrl);
+    if (!iconHref) return;
+
+    var currentIcon = document.querySelector('link[rel~="icon"]');
+    if (!currentIcon) {
+      currentIcon = document.createElement("link");
+      currentIcon.setAttribute("rel", "icon");
+      currentIcon.setAttribute("type", "image/png");
+      document.head.appendChild(currentIcon);
+    }
+    currentIcon.setAttribute("href", iconHref);
+  }
+
   function replaceHomeToolbar(templateDoc, baseUrl) {
     var sourceToolbar = templateDoc.querySelector(".home-toolbar");
     var targetToolbar = document.querySelector(".home-toolbar");
@@ -153,9 +177,11 @@
     }
 
     return fetchTemplateDocument().then(function (payload) {
+      syncHeadFromTemplate(payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("topbar", payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("menu", payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("splash", payload.doc, payload.baseUrl);
+      replaceNodeFromTemplate("sidebar", payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("footer", payload.doc, payload.baseUrl);
       replaceHomeToolbar(payload.doc, payload.baseUrl);
     });

@@ -1,0 +1,39 @@
+.rummage-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.rummage-page #wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rummage-page #page {
+  flex: 1 0 auto;
+}
+
+.rummage-page #footer {
+  margin-top: 20px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.rummage-page .rummage-hero {
+  margin-bottom: 4px;
+}
+
+.rummage-page .rummage-center {
+  text-align: center;
+}
+
+.rummage-page .rummage-main p {
+  margin-bottom: 10px;
+}
+
+.rummage-page .rummage-alert {
+  color: #8a1111;
+}

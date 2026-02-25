@@ -1,0 +1,96 @@
+.lol-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lol-page #wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.lol-page #page {
+  flex: 1 0 auto;
+}
+
+.lol-page #footer {
+  margin-top: 20px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.lol-page .lol-hero {
+  margin-bottom: 4px;
+}
+
+.lol-page .lol-content {
+  overflow-wrap: anywhere;
+}
+
+.lol-page .lol-content p {
+  margin-bottom: 12px;
+  line-height: 1.75;
+}
+
+.lol-page .lol-content ul {
+  margin: 0 0 14px 18px;
+  padding: 0;
+  list-style: disc;
+}
+
+.lol-page .lol-content li {
+  margin-bottom: 7px;
+  line-height: 1.65;
+}
+
+.lol-page .image-table {
+  margin: 6px 0 12px 0;
+}
+
+.lol-page .image-table table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.lol-page .image-table td {
+  vertical-align: top;
+  padding: 4px 6px;
+  text-align: center;
+}
+
+.lol-page .lol-content img {
+  width: min(100%, 300px);
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.lol-page .image-table p {
+  margin: 2px 0 0 0;
+  line-height: 1.45;
+}
+
+.lol-page .directory-note {
+  margin-top: -4px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 800px) {
+  .lol-page .image-table table,
+  .lol-page .image-table tbody,
+  .lol-page .image-table tr,
+  .lol-page .image-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .lol-page .image-table td {
+    padding: 8px 0;
+  }
+}
