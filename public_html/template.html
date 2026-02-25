@@ -7,6 +7,10 @@
   <title>Little Swan Lake</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
+  <link rel="preload" as="image" href="/images/banner/img1.jpg" />
+  <link rel="preload" as="image" href="/images/banner/img2.PNG" />
+  <link rel="preload" as="image" href="/images/banner/img3.jpeg" />
+  <link rel="preload" as="image" href="/images/banner/img4.jpeg" />
   <link href="default.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/png" href="images/logo1.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
@@ -120,7 +124,13 @@
       </ul>
     </div>
 
-    <div id="splash"><img src="images/LSLWebsiteBanner.png" width="940" height="274" alt="" /></div>
+    <div id="splash" class="banner-strip">
+      <div class="banner-tile tile-1"><img src="/images/banner/img1.jpg" alt="" loading="eager" decoding="async" fetchpriority="high" /></div>
+      <div class="banner-tile tile-2"><img src="/images/banner/img2.PNG" alt="" loading="eager" decoding="async" fetchpriority="high" /></div>
+      <div class="banner-tile tile-3"><img src="/images/banner/img3.jpeg" alt="" loading="eager" decoding="async" fetchpriority="high" /></div>
+      <div class="banner-tile tile-4"><img src="/images/banner/img4.jpeg" alt="" loading="eager" decoding="async" fetchpriority="high" /></div>
+      <div class="banner-label"><span>Little Swan Lake</span></div>
+    </div>
 
     <div id="page">
       <div id="page-bgtop">
