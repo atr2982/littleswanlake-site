@@ -287,7 +287,7 @@ a:hover {
 #menu > ul > li > .nav-dropdown-toggle .nav-dropdown-label {
 	display: inline-flex;
 	align-items: center;
-	gap: 8px;
+	gap: 4px;
 	line-height: 1;
 	position: relative;
 }
@@ -348,7 +348,7 @@ a:hover {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	min-width: 220px;
+	min-width: max-content;
 	margin: 0;
 	padding: 8px 0;
 	line-height: normal;
@@ -383,6 +383,7 @@ a:hover {
 	letter-spacing: 0.2px;
 	font-family: "Work Sans", Arial, Helvetica, sans-serif;
 	text-transform: none;
+	white-space: nowrap;
 }
 
 #menu > ul > li > .nav-dropdown a:hover {
@@ -476,7 +477,7 @@ a:hover {
 	height: clamp(220px, 34vw, 360px);
 	overflow: hidden;
 	background: #2e13d0;
-	column-gap: 10px;
+	column-gap: 5px;
 	/* Per-image vertical nudge controls. Negative moves image up, positive moves it down. */
 	--tile-1-shift: 0px;
 	--tile-2-shift: 0px;
@@ -837,6 +838,7 @@ table {
 @media (max-width: 640px) {
 	#splash.banner-strip {
 		--label-scale: 0.62;
+		column-gap: 5px;
 	}
 
 	#splash.banner-strip .banner-label {
@@ -1005,6 +1007,16 @@ table {
 	#menu > ul > li > .nav-dropdown a {
 		padding: 12px 18px;
 		font-size: 13px;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	#menu > ul > li > .nav-dropdown li {
+		text-align: center;
+	}
+
+	#menu > ul > li > .nav-dropdown .submenu-note {
+		text-align: center;
 	}
 
 	#menu > ul > li + li {

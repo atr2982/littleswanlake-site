@@ -112,6 +112,7 @@
     position: relative;
     overflow: hidden;
     background: #ffffff;
+    padding-top: 8px;
   }
 
     .home-page .home-main {
@@ -351,6 +352,115 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
+    }
+
+    .home-page .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .home-page .gallery-card {
+      overflow: hidden;
+    }
+
+    .home-page .gallery-card figcaption {
+      color: var(--lake-ink);
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .home-page .gallery-link {
+      display: block;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+
+    .home-page .gallery-link img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 180ms ease;
+    }
+
+    .home-page .gallery-link:hover img,
+    .home-page .gallery-link:focus-visible img {
+      transform: scale(1.02);
+    }
+
+    .home-page .link-list-card {
+      display: grid;
+      gap: 10px;
+    }
+
+    .home-page .link-list-card a {
+      color: #0b4dff;
+      text-decoration: underline;
+    }
+
+    .home-page .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(8, 14, 24, 0.86);
+      z-index: 2000;
+    }
+
+    .home-page .lightbox.is-open {
+      display: flex;
+    }
+
+    .home-page .lightbox[hidden] {
+      display: none;
+    }
+
+    .home-page .lightbox-dialog {
+      position: relative;
+      max-width: min(96vw, 1200px);
+      max-height: 90vh;
+      display: grid;
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .home-page .lightbox-image {
+      display: block;
+      max-width: 100%;
+      max-height: calc(90vh - 52px);
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      background: #ffffff;
+    }
+
+    .home-page .lightbox-caption {
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      max-width: 80ch;
+    }
+
+    .home-page .lightbox-close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #1b2733;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     }
 
     .home-page ol,

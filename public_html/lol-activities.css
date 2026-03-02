@@ -81,6 +81,10 @@
   margin-bottom: 14px;
 }
 
+.lol-page .gallery-grid {
+  margin: 8px 0 22px 0;
+}
+
 @media (max-width: 800px) {
   .lol-page .image-table table,
   .lol-page .image-table tbody,

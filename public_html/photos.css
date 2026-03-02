@@ -1,0 +1,134 @@
+.photos-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.photos-page #wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.photos-page #page {
+  flex: 1 0 auto;
+}
+
+.photos-page #footer {
+  margin-top: 20px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.photos-page .photos-links {
+  display: grid;
+  gap: 14px;
+}
+
+.photos-page .photos-links p {
+  margin: 0;
+}
+
+.photos-page .photos-links .card {
+  padding: 18px;
+}
+
+.photos-page .gallery-grid-compact {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: start;
+}
+
+.photos-page .video-link {
+  position: relative;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.photos-page .video-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photos-page .video-link-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(rgba(9, 15, 23, 0.22), rgba(9, 15, 23, 0.58));
+}
+
+.photos-page .video-play {
+  width: 68px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(204, 0, 0, 0.92);
+  position: relative;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.photos-page .video-play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+.photos-page .video-link:hover .video-link-overlay,
+.photos-page .video-link:focus-visible .video-link-overlay {
+  background: linear-gradient(rgba(9, 15, 23, 0.14), rgba(9, 15, 23, 0.5));
+}
+
+.photos-page .video-link:hover img,
+.photos-page .video-link:focus-visible img {
+  transform: none;
+}
+
+.photos-page .video-link:focus-visible {
+  outline: 3px solid #0b4dff;
+  outline-offset: -3px;
+}
+
+.photos-page .video-link:focus-visible .video-play,
+.photos-page .video-link:hover .video-play {
+  transform: scale(1.03);
+}
+
+.photos-page .video-link,
+.photos-page .video-link img,
+.photos-page .video-play {
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.photos-page .video-link img,
+.photos-page .video-link-overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.photos-page .photo-caption {
+  text-align: center;
+}
+
+.photos-page .gallery-card img {
+  background: #edf2f6;
+}
+
+@media (max-width: 640px) {
+  .photos-page .photos-links .card {
+    padding: 16px;
+  }
+
+  .photos-page .gallery-link img {
+    height: 200px;
+  }
+}

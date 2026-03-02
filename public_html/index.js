@@ -412,6 +412,7 @@
         closeNavDropdowns();
         navItem.classList.toggle("nav-dropdown-open", !currentState);
         navToggleBtn.setAttribute("aria-expanded", !currentState ? "true" : "false");
+        navToggleBtn.blur();
         e.preventDefault();
       });
 
@@ -475,6 +476,79 @@
           setTimeout(function () {
             input.value = "";
           }, 0);
+        }
+      });
+    }
+
+    var lightbox = document.querySelector("[data-lightbox]");
+    if (lightbox) {
+      var lightboxImage = lightbox.querySelector("[data-lightbox-image]");
+      var lightboxCaption = lightbox.querySelector("[data-lightbox-caption]");
+      var lightboxClose = lightbox.querySelector("[data-lightbox-close]");
+      var lastTrigger = null;
+
+      function closeLightbox() {
+        if (!lightbox.classList.contains("is-open")) return;
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("hidden", "");
+        lightbox.setAttribute("aria-hidden", "true");
+        if (lightboxImage) {
+          lightboxImage.setAttribute("src", "");
+          lightboxImage.setAttribute("alt", "");
+        }
+        if (lightboxCaption) {
+          lightboxCaption.textContent = "";
+        }
+        if (lastTrigger && typeof lastTrigger.focus === "function") {
+          lastTrigger.focus();
+        }
+        lastTrigger = null;
+      }
+
+      function openLightbox(trigger) {
+        if (!trigger || !lightboxImage) return;
+        var href = trigger.getAttribute("href");
+        if (!href) return;
+
+        lastTrigger = trigger;
+        lightboxImage.setAttribute("src", href);
+        lightboxImage.setAttribute("alt", trigger.getAttribute("data-lightbox-alt") || trigger.textContent.trim() || "Expanded image");
+        if (lightboxCaption) {
+          lightboxCaption.textContent = trigger.getAttribute("data-lightbox-caption") || "";
+        }
+        lightbox.removeAttribute("hidden");
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        if (lightboxClose && typeof lightboxClose.focus === "function") {
+          lightboxClose.focus();
+        }
+      }
+
+      document.addEventListener("click", function (e) {
+        var trigger =
+          e.target && e.target.closest
+            ? e.target.closest("[data-lightbox-trigger]")
+            : null;
+        if (trigger) {
+          e.preventDefault();
+          openLightbox(trigger);
+          return;
+        }
+
+        if (!lightbox.classList.contains("is-open")) return;
+        if (lightboxClose && lightboxClose.contains(e.target)) {
+          e.preventDefault();
+          closeLightbox();
+          return;
+        }
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeLightbox();
         }
       });
     }
