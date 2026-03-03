@@ -1,509 +1,538 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
--->
-
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Current and archived Little Swan Lake homes and lots for sale." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .lakehomes-page .home-main {
+      gap: 20px;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .lakehomes-page .home-hero {
+      display: grid;
+      gap: 18px;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style193 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:justify;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
-.style195 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:center;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
--->
-</style>
+    .lakehomes-page .hero-copy {
+      display: grid;
+      gap: 12px;
+    }
+
+    .lakehomes-page .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+    }
+
+    .lakehomes-page .stat-card {
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+      padding: 14px 16px;
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+    }
+
+    .lakehomes-page .stat-label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #0b4dff;
+    }
+
+    .lakehomes-page .stat-value {
+      display: block;
+      font-size: 26px;
+      line-height: 1.1;
+      font-weight: 700;
+      color: var(--lake-ink);
+    }
+
+    .lakehomes-page .stat-note {
+      margin: 6px 0 0 0;
+      font-size: 13px;
+      color: var(--lake-muted);
+    }
+
+    .lakehomes-page .listing-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .lakehomes-page .listing-tab {
+      border: 1px solid #c6d3e3;
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--lake-ink);
+      padding: 10px 16px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+    }
+
+    .lakehomes-page .listing-tab:hover,
+    .lakehomes-page .listing-tab:focus-visible {
+      border-color: #2e13d0;
+      color: #2e13d0;
+    }
+
+    .lakehomes-page .listing-tab.is-active {
+      background: #2e13d0;
+      border-color: #2e13d0;
+      color: #ffffff;
+    }
+
+    .lakehomes-page .tab-panel[hidden="hidden"] {
+      display: none;
+    }
+
+    .lakehomes-page .panel-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .lakehomes-page .panel-header p {
+      margin: 0;
+      color: var(--lake-muted);
+    }
+
+    .lakehomes-page .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .lakehomes-page .listing-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      overflow: hidden;
+    }
+
+    .lakehomes-page .listing-media {
+      margin: -16px -16px 14px -16px;
+      background: #dde7f1;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .lakehomes-page .listing-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .lakehomes-page .listing-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .lakehomes-page .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .lakehomes-page .badge-active {
+      background: #e7f5ea;
+      color: #1c6b34;
+    }
+
+    .lakehomes-page .badge-pending {
+      background: #fff3df;
+      color: #9b5a00;
+    }
+
+    .lakehomes-page .badge-archived {
+      background: #eef2f7;
+      color: #506070;
+    }
+
+    .lakehomes-page .listing-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .lakehomes-page .listing-details {
+      display: grid;
+      gap: 8px;
+      color: var(--lake-muted);
+    }
+
+    .lakehomes-page .listing-price {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--lake-ink);
+    }
+
+    .lakehomes-page .listing-actions {
+      margin-top: auto;
+      padding-top: 14px;
+    }
+
+    .lakehomes-page .listing-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    .lakehomes-page .empty-state {
+      border: 1px dashed #bfd0e2;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #fbfdff 0%, #f0f6fb 100%);
+      padding: 22px;
+    }
+
+    .lakehomes-page .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .lakehomes-page .archive-grid > .card {
+      padding-top: 14px;
+      border-width: 2px;
+    }
+
+    .lakehomes-page .subsection-title {
+      margin-bottom: 4px;
+    }
+
+    .lakehomes-page .archive-note {
+      font-size: 13px;
+      color: var(--lake-muted);
+      margin: 0 0 14px 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--lake-border);
+    }
+
+    .lakehomes-page .mini-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 0;
+    }
+
+    .lakehomes-page .mini-list-item {
+      border-top: 1px solid var(--lake-border);
+      padding-top: 14px;
+      padding-bottom: 6px;
+    }
+
+    .lakehomes-page .mini-list-item:first-child {
+      border-top: 0;
+      padding-top: 4px;
+    }
+
+    .lakehomes-page .mini-list-item strong {
+      color: var(--lake-ink);
+    }
+
+    .lakehomes-page .mini-list-item p {
+      margin: 8px 0 0 0;
+      line-height: 1.5;
+    }
+
+    .lakehomes-page .archive-status {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 8px;
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: #eef2f7;
+      color: #506070;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .lakehomes-page .archive-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .lakehomes-page .panel-header {
+        flex-direction: column;
+      }
+
+      .lakehomes-page .listing-tab {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .lakehomes-page .stat-value {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
+
+<body class="home-page lakehomes-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
+
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Lake Homes &amp; Lots for Sale</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Homes and lots listed on this page</p>
+              </div>
+
+              <div class="hero-copy">
+                <p>Little Swan Lake offers full-time homes, weekend places, and waterfront property in west central Illinois. This page now separates current inventory from archived listings so active homes are easy to scan.</p>
+                <p class="highlight-text">Current homes and archived listings are organized on this page for quick browsing.</p>
+              </div>
+
+              <div class="stat-grid">
+                <div class="stat-card">
+                  <span class="stat-label">Active Homes</span>
+                  <span class="stat-value">2</span>
+                  <p class="stat-note">Current home listings shown on this page</p>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Active Lots</span>
+                  <span class="stat-value">0</span>
+                  <p class="stat-note">No current lot listings posted</p>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Archived Section</span>
+                  <span class="stat-value">Homes + Lots</span>
+                  <p class="stat-note">Inactive, pending, or older page entries</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <div class="listing-tabs" role="tablist" aria-label="Property sections">
+                  <button class="listing-tab is-active" type="button" role="tab" id="tab-homes" aria-selected="true" aria-controls="panel-homes" data-tab-target="homes">Current Homes</button>
+                  <button class="listing-tab" type="button" role="tab" id="tab-lots" aria-selected="false" aria-controls="panel-lots" data-tab-target="lots">Current Lots</button>
+                  <button class="listing-tab" type="button" role="tab" id="tab-archived" aria-selected="false" aria-controls="panel-archived" data-tab-target="archived">Old Listings</button>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section tab-panel" id="panel-homes" role="tabpanel" aria-labelledby="tab-homes">
+              <div class="card">
+                <div class="panel-header">
+                  <div>
+                    <h2>Current Homes</h2>
+                    <p>These are the homes currently listed on this page.</p>
+                  </div>
+                </div>
+
+                <div class="listing-grid">
+                  <article class="card listing-card">
+                    <div class="listing-media">
+                      <a href="https://www.realtor.com/realestateandhomes-detail/140-Palemino-Dr_Avon_IL_61415_M75191-19688" target="_blank" rel="noopener">
+                        <img src="images/140Paleminno2.jpg" alt="140 Palemino Drive at Little Swan Lake" loading="lazy" />
+                      </a>
+                    </div>
+                    <div class="listing-meta">
+                      <span class="badge badge-active">Active</span>
+                      <span class="badge badge-archived">MLS PA1264240</span>
+                    </div>
+                    <h3>140 Palemino Drive</h3>
+                    <div class="listing-details">
+                      <p class="listing-price">$579,900</p>
+                      <p>4 bed, 3 bath lakefront home in Avon, Illinois.</p>
+                    </div>
+                    <div class="listing-actions">
+                      <a class="listing-link" href="https://www.realtor.com/realestateandhomes-detail/140-Palemino-Dr_Avon_IL_61415_M75191-19688" target="_blank" rel="noopener">View Realtor.com listing <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                  </article>
+
+                  <article class="card listing-card">
+                    <div class="listing-media">
+                      <a href="https://www.realtor.com/realestateandhomes-detail/21-Bricker-Cir_Avon_IL_61415_M80932-46138" target="_blank" rel="noopener">
+                        <img src="images/21Bricker.jpg" alt="21 Bricker Circle at Little Swan Lake" loading="lazy" />
+                      </a>
+                    </div>
+                    <div class="listing-meta">
+                      <span class="badge badge-active">Active</span>
+                      <span class="badge badge-archived">MLS PA1262042</span>
+                    </div>
+                    <h3>21 Bricker Circle</h3>
+                    <div class="listing-details">
+                      <p class="listing-price">$239,000</p>
+                      <p>2 bed, 1 bath home with active listing details on Realtor.com.</p>
+                    </div>
+                    <div class="listing-actions">
+                      <a class="listing-link" href="https://www.realtor.com/realestateandhomes-detail/21-Bricker-Cir_Avon_IL_61415_M80932-46138" target="_blank" rel="noopener">View Realtor.com listing <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section tab-panel" id="panel-lots" role="tabpanel" aria-labelledby="tab-lots" hidden="hidden">
+              <div class="card">
+                <div class="panel-header">
+                  <div>
+                    <h2>Current Lots</h2>
+                    <p>Separated into its own tab so visitors do not have to scroll past the homes.</p>
+                  </div>
+                </div>
+
+                <div class="empty-state">
+                  <h3>No current lot listings</h3>
+                    <p>There are no lots currently posted for sale on this page.</p>
+                  <p class="archive-note">If that changes, new lots can be added here without mixing them into the archived section.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section tab-panel" id="panel-archived" role="tabpanel" aria-labelledby="tab-archived" hidden="hidden">
+              <div class="card">
+                <div class="panel-header">
+                  <div>
+                    <h2>Old Listings</h2>
+                    <p>These entries are older references kept separate from the current featured listings.</p>
+                  </div>
+                </div>
+
+                <div class="archive-grid">
+                  <section class="card">
+                    <h3 class="subsection-title">Archived Houses</h3>
+                    <p class="archive-note">Older house listings kept for reference.</p>
+
+                    <div class="mini-list">
+                      <div class="mini-list-item">
+                        <span class="archive-status">Archived House</span>
+                        <strong>380 McGrew Drive</strong>
+                        <p>Older listing reference.</p>
+                        <a class="archive-link" href="https://www.realtor.com/realestateandhomes-detail/380-McGrew-Dr_Avon_IL_61415_M71093-52464" target="_blank" rel="noopener">View listing page <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                      </div>
+                      <div class="mini-list-item">
+                        <span class="archive-status">Archived House</span>
+                        <strong>88 Oak Lane</strong>
+                        <p>Older listing reference.</p>
+                        <a class="archive-link" href="https://www.realtor.com/realestateandhomes-detail/88-Oak-Ln_Avon_IL_61415_M81193-87447" target="_blank" rel="noopener">View listing page <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                      </div>
+                      <div class="mini-list-item">
+                        <span class="archive-status">Archived House</span>
+                        <strong>45 Bricker Circle</strong>
+                        <p>Older listing reference.</p>
+                        <a class="archive-link" href="https://www.realtor.com/realestateandhomes-detail/45-Bricker-Cir_Avon_IL_61415_M77401-94955" target="_blank" rel="noopener">View listing page <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="card">
+                    <h3 class="subsection-title">Archived Lots</h3>
+                    <p class="archive-note">Older lot listings kept for reference.</p>
+
+                    <div class="mini-list">
+                      <div class="mini-list-item">
+                        <span class="archive-status">Archived Lot</span>
+                        <strong>59 Bricker Circle</strong>
+                        <p>Prior lot listing from an older version of the page.</p>
+                      </div>
+                      <div class="mini-list-item">
+                        <span class="archive-status">Archived Lots</span>
+                        <strong>Lots 402, 403 &amp; 404</strong>
+                        <p>Older multi-lot listing retained in the archive.</p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
     </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
+
+    <div id="footer"></div>
   </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-    
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">LAKE PROPERTY FOR SALE </a></h2>
-          <p class="byline">May 2025</p>
-          
-          <!--  content - START  -->
-    <p>If you are looking for a place on a beautiful lake where you can fish, boat, ski, kayak or just sit and watch sunrises and sunsets, 
-       this is your lake. Whether you want a weekend/summer place, full-time living or retirement, Little Swan Lake in West Central Illinois 
-       could be your answer. It's only about a 3 hour drive from the Southern part of Chicago. It's about 20 miles from Macomb, 25 miles from 
-       Galesburg, 25 miles from Monmouth and about 50 miles from Peoria. Check out the homes and building lots that are for sale. It's 
-       affordable living on a lake that lets you relax and have fun.</p>
-    <p>Little Swan Lake is served by the Abingdon-Avon CUSD #276 school   district which has an elementary school and the district middle school 
-       in Avon and the high school in nearby Abingdon. For more information go to: <a href="http://www.d276.net/" target="_blank" class="style4">http://www.d276.net</a>.</p>
-    <p class="f-lp"><span class="style175">
-    <strong><span class="style238">It's like living on vacation!</span></strong></span></p>
+  <script type="text/javascript">
+    (function () {
+      function activateTab(name) {
+        var tabs = document.querySelectorAll(".listing-tab");
+        var panels = document.querySelectorAll(".tab-panel");
 
-    <p align="left"><span class="style238">For Rent: </span><span class="style140">Lots 502, 503 and 506 on Little Swan Lake for 2013 season. 
-       $600.00 per lot, plus applicable Little Swan Lake Fees. Please contact Patrick at 309-313-2040 for additional information. </span></p>
+        for (var i = 0; i < tabs.length; i++) {
+          var tab = tabs[i];
+          var isActive = tab.getAttribute("data-tab-target") === name;
+          tab.classList.toggle("is-active", isActive);
+          tab.setAttribute("aria-selected", isActive ? "true" : "false");
+        }
 
+        for (var j = 0; j < panels.length; j++) {
+          var panel = panels[j];
+          var panelName = panel.id.replace("panel-", "");
+          if (panelName === name) {
+            panel.removeAttribute("hidden");
+          } else {
+            panel.setAttribute("hidden", "hidden");
+          }
+        }
+      }
 
-    <p align="center">Click on HOMES<a name="HOMES" id="HOMES"></a> or <a href="#LOTS">LOTS</a> to navigate. 
-       Click on the picture to go to the realtor or sales site. </p>
- 
-   <!-- homes - TOP -->  
- <div align="center">		  
-<table width="624" border="1" cellspacing="2" cellpadding="2" align="center">
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/140-Palemino-Dr_Avon_IL_61415_M75191-19688?from=srp-list-card">
-    <img src="images/140Paleminno2.jpg " border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">140 Palemino Lane</span>
-      <p class="style238">Asking Price: $650,000 MLS 1259312<br /> Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.troykerrn.com/homes-for-sale/IL/avon/61415/380-mcgrew-dr/bid-425-PA1260392">
-    <img src="images/380-McGrew2.jpg" border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">380 McGrew Dr, Avon, IL 61415</span>
-      <p class="style238">Asking Price: $315,000 <br /> Contact Troy Kerrn 309-282-1555 or klrw633@kw.com to see! <br /> 
-         Keller Williams Premier Realty </p>
-  </td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/88-Oak-Ln_Avon_IL_61415_M81193-87447?from=srp-list-card">
-    <img src="images/88OakLane2.jpg" border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">88 Oak Lane</span>
-      <p class="style238">Asking Price: $275,000 MLS 1259470 <br /> Contact Gene Curtis to see!<br /> 255-0227</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/45-Bricker-Cir_Avon_IL_61415_M77401-94955?from=srp-list-card">
-    <img src="images/45BrickerCircle.jpg" border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">45 Bricker Circle, Avon</span>
-      <p class="style238">Asking Price: $180,000 <br /> Contact Sara Varner to see!<br /> (309) 335-3573</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/21-Bricker-Cir_Avon_IL_61415_M80932-46138?from=srp-list-card">
-    <img src="images/21Bricker.jpg" border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">21 Bricker Circle, Avon</span>
-      <p class="style238">Asking Price: $272,500 <br /> MLS #PA1253854<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
+      function initTabs() {
+        var tabs = document.querySelectorAll(".listing-tab");
+        if (!tabs.length) return;
 
-<!--
-  <tr>
-    <td width="302"><a href="https://www.lakehomes.com/illinois/little-swan-lake/1272-swan-lake-road-avon-il-61415-lhrmls-01786923">
-    <img src="images/Miller-A-Frame.jpg" border=0 width=303 height=150 alt="1272 Swan Lake Road, Avon, IL 61415" style="float0:left"></a></td>
-    <td width="302"><span class="style238">1272 Swan Lake Road, Avon, IL 61415</span>
-      <p class="style238">Asking Price: $260,000<br />Contact Crossroads Real Estate<br />(309) 333-3588</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/366-McGrew-Dr_Avon_IL_61415_M80691-69035?from=srp-list-card">
-    <img src="images/366McGrew.jpg" border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">366 McGrew Drive, Avon</span>
-      <p class="style238">Asking Price: $475,000 MLS PA1258168 <br /> Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/45-Bricker-Cir_Avon_IL_61415_M77401-94955">
-    <img src="images/45BrickerCircle.jpg" border=0 width=303 height=150 alt="45 Bricker Circle" style="float0:left"></a></td>
-    <td width="302"><span class="style238">45 Bricker Circle, Avon, IL</span>
-      <p class="style238">MLS: PA1241227<br /> Asking Price: $193,900<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>0
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/M8069839822">
-    <img src="images/483-Mockingbird.jpg" border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">483 Mockingbird Trail</span>
-      <p class="style238">Asking Price: $80,000<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-  <tr>
-  <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/23-Spring-Ln_Avon_IL_61415_M81620-35764?ex=2942059068">
-    <img src="images/23SpringLn.jpg" border=0 width=303 height=150 alt="" style="float0:left"></a></td>
-    <td width="302"><span class="style238">23 Spring Lane, Avon, IL</span>
-      <p class="style238">MLS PA1233145 <br /> Asking Price: $415,000<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-   <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/337-Lakeview-Dr_Avon_IL_61415_M77971-63361">
-    <img src="images/337Lakeview.jpg" border=0 width=303 height=150 alt="" style="float:left"></a></td>
-    <td width="302"><span class="style238">337 Lakeview  MLS #pa1218258</span>
-      <p class="style238">Asking Price: $299,900<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
- <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/80-Wingate-Dr_Avon_IL_61415_M80669-33078">
-    <img src="images/80WingateDr.JPG" border=0 width=303 height=150 alt="" style="float:left"></a></td>
-    <td width="302"><span class="style238">80 Wingate Drive (MLS #1215798)</span>
-      <p class="style238">Asking Price: $119,900<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/520-Kramer-Rd_Avon_IL_61415_M77973-86957">
-    <img src="images/520KaramerRoad.jpg" border=0 width=303 height=150 alt="520 Kramer Road" style="float:left"></a></td>
-    <td width="302"><span class="style238">520 Kramer Road</span>
-      <p class="style238">Asking Price: $595,000<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/143-Palemino-Dr_Avon_IL_61415_M75207-59389">
-    <img src="images/143PalaminoLane.JPG" border=0 width=303 height=150 alt="143 Palamino" style="float:left"></a></td>
-    <td width="302"><span class="style238">143 Palamino</span>
-      <p class="style238">Asking Price: $387,500<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/336-Lakeview-Dr_Avon_IL_61415_M80045-31182">
-    <img src="images/336LakeviewDr.jpg" border=0 width=303 height=150 alt="336 Lakeview Dr" style="float:left"></a></td>
-    <td width="302"><span class="style238">336 Lakeview Dr</span>
-      <p class="style238">Price Reduced! Asking Price: $239,900<br /> Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/466-Brookhart-Bnd_Avon_IL_61415_M79453-32751">
-    <img src="images/466BrookhartBend.jpg" border=0 width=303 height=150 alt="466 Brookhart Bend" style="float:left"></a></td>
-    <td width="302"><span class="style238">466 Brookhart Bend</span>
-      <p class="style238">Price reduced! Asking Price: $132,000<br />Contact Gene Curtis to see!<br /> 309-837-2273</p></td>
-  </tr>
-   <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/101-Wingate-Dr_Avon_IL_61415_M77965-29840">
-    <img src="images/101WingateDr.jpg" border=0 width=303 height=150 alt="101 Wingate Dr" style="float:left"></a></td>
-    <td width="302"><span class="style238">101 Wingate Dr</span>
-      <p class="style238">Asking Price: $114,900<br /> Contact Becky Peabody to see!<br /> 309-333-8900</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/443-Horseshoe-Dr_Avon_IL_61415_M88859-88818">
-    <img src="images/443HorseshoeDr.jpg" border=0 width=303 height=150 alt="443 Horseshoe Dr" style="float:left"></a></td>
-    <td width="302"><span class="style238">443 Horseshoe Dr/span>
-      <p class="style238">Asking Price: $109,900<br /> Contact Nick Curtis to see!<br /> 309-255-6731</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/352-McGrew-Dr_Avon_IL_61415_M73826-05676">
-    <img src="images/352McGrew.JPG" border=0 width=303 height=150 alt="352 McGrew" style="float:left"></a></td>
-    <td width="302"><span class="style238">352 McGrew</span>
-      <p class="style238">Asking Price: $84,900<br /> Contact Nick Curtis to see!<br /> 309-255-6731</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://bushnellrealty.com/index.php/2018/02/08/three-bedrooms-little-swan-lake-wingate-drive-avon-il/">
-    <img src="images/101Wingate.jpg" border=0 width=303 height=150 alt="100 Wingate Dr., Click for more pictures" style="float:left">
-    click for more pictures</a></td>
-    <td width="302"><span class="style238">100 Wingate Drive</span>
-       <p class="style238">Asking Price: $99,900 for House on Lot 101 <br /> and $19,900 for waterfront lot 100<br /> Contact Bushnell Realty to see!
-       <br />(309)-772-3663  or burealty@bushnell.net</p></td>
-    </td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/352-McGrew-Dr_Avon_IL_61415_M73826-05676">
-    <img src="images/352McGrewDrive.jpg" border=0 width=303 height=150 alt="352 McGrew Dr., Click for more pictures" style="float:left">click for more pictures</a></td>
-    <td width="302"><span class="style238">352 McGrew Drive</span>
-       <p class="style238">Asking Price: $89,900<br /> Contact Nick Curtis to see!<br /> 309-255-6731</p></td>
-    </td>
-  </tr>
-  <tr>
-    <td width="302"><a href="/525KramerRoad.html">
-        <img src="images/525Kramer_03.jpg" border=0 width=303 height=150 alt="525 Kramer Road" style="float:left">click for more pictures</a></td>
-    <td width="302"><span class="style238">525 Kramer Road <br />
-       <p>Best lakefront location</p>
-       </span>
-       <p class="style238">Asking Price: $220,000 <br /> Contact Craig or Linda Unrath to see!<br />309-368-5634 or 309-335-2233<br />
-       lynnunrath@gmail.com or CUnrath@heylroyster.com</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/443-Horseshoe-Dr_Avon_IL_61415_M88859-88818">
-    <img src="images/443Horseshoe.jpg" border=0 width=303 height=150 alt="143 Palamino Lane" style="float:left"></a></td>
-    <td width="302"><span class="style238">443 Horseshoe Drive</span>
-      <p class="style238">Asking Price: $99,900<br />Contact Nick at 309-255-6731</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="McGrew352homesforsale.html"><img src="images/McGrew352_0282.jpg" border=0 width=303 height=150 alt="352 McGrew Dr., Click for more pictures" style="float:left">click for more pictures</a></td>
-    <td width="302"><span class="style238">352 McGrew Drive</span>
-      <p class="style238">
-      For Sale -- Best Offer/Possible Lease -- Make an Offer</p>
-      <p>3 Bedroom home plus den at Little Swan Lake! Also has newer addition with 2 car garage and huge attic.<br />
-			Newer remodel with HAAC system, plus water system with filter. <br />
-			All appliances included. Completely move in ready.  Stair railing and flooring will be complete soon.<br />
-			Golf course in back yard, a short walk to a boat dock. Pontoon and trailer included.<br /> 
-         Call Chris Reed at 309-255-9167 for more information.</p></td>
-  </tr>
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].addEventListener("click", function () {
+            var target = this.getAttribute("data-tab-target");
+            if (!target) return;
+            activateTab(target);
+          });
+        }
+      }
 
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/180-Wilkins-Cir_Avon_IL_61415_M77969-39766"><img src="images/87508.JPG" border=0 width=303 height=150 alt="180 WILKINS CIRCLE" style="float:left"></a></td>
-    <td width="302"><span class="style238">180 WILKINS CIRCLE</span>
-      <p class="style238">Asking Price: $270,000</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/380-McGrew-Dr_Avon_IL_61415_M71093-52464">
-    <img src="images/380McGrew.jpg" border=0 width=303 height=150 alt="images/380McGrew.jpg" style="float:left"></a></td>
-    <td width="302"><span class="style238">380 McGrew Dr</span>
-      <p class="style238">Asking Price: $169,000</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://www.lakehouse.com/page-464166.html"><img src="images/120MustangLane.jpg" border=0 width=303 height=225 
-        alt="120 Mustang Lane" style="float:left"></a></td>
-    <td width="302"><span class="style238">120 Mustang Lane</span>
-      <p>Stunning Timber Frame at 120 Mustang Lane! We took a Timber Beam house and completely renovated it 
-      from the roof to the basement! A labor of love. It has loads of charm in all the right spots. 
-      There are 30 pictures on LakeHouse.com ad #464166. The house is on Little Swan Lake 4 miles west of Avon, IL. 
-      (Between Galesburg and Macomb) You will LOVE the lake and the people!
-
-      <strong>IMPORTANT</strong>: We are hosting an Open House on Saturday (Aug 6) from 4-6pm. 
-      Take a little drive to come and see this beautiful place. We're a few blocks 
-      west of the water tower on the north side of the lake. Sit on the patio at 
-      the water and soak it in! Everyone is welcome.</p>
-     
-      <p>Bruce and Lisa Schafman <br/>
-         (309)236-0022 <br/>
-         artoncart@aol.com</p>
-      <p class="style238">Asking Price: $349,000</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/335-Lakeview-Dr_Avon_IL_61415_M77970-51564"><img src="images/335LakeviewDr.jpg" border=0 width=303 height=150 alt="335 Lakeview Dr" style="float:left"></a></td>
-    <td width="302"><span class="style238">335 Lakeview Dr</span>
-      <p class="style238">Asking Price: $120,000</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://keyhomes4sale.com/homes-for-sale-details/579-CIRCLE-C-COURT-AVON-IL-61415/1177840/137/">
-    <img src="images/579CircleC.jpg" border=0 width=303 height=150 alt="579 CIRCLE C COURT" style="float:left"></a>
-    </td>
-    <td width="302"><span class="style238">579 CIRCLE C COURT</span>
-      <p class="style238">
-      PRICE JUST DRASTICALLY REDUCED! $99,900! (MLS # 1177840)</p>
-      <p>3 Bedroom, 2 Bath Home at Little Swan Lake!
-      Get all the Little Swan Lake advantages with an economical mortgage payment. Quad-level house has newly installed waterheater, furnace and air conditioner. Large master bedroom with jet-tub & seperate shower plus double sinks. Freddie Mac disclosures and add'l addendum.
-      <br />
-      Call Jan Entwistle at 309-318-0219 or Key Realtors at 309-837-6464 for more information.</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/1264-Swan-Lake-Rd_Avon_IL_61415_M80683-11918"><img src="images/87829.JPG" border=0 width=303 height=150 alt="1264 SWAN LAKE ROAD" style="float:left"></a></td>
-    <td width="302"><span class="style238">1264 SWAN LAKE ROAD</span>
-      <p class="style238">Asking Price: $154,900</p></td>
-  </tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/336-Lakeview-Dr_Avon_IL_61415_M80045-31182"><img src="images/23SpringLane.JPG" border=0 width=303 height=150 alt="23 Spring Lane" style="float:left"></a></td>
-    <td width="302"><span class="style238">23 Spring Lane</span>
-      <p class="style238">Asking Price: $289,900</p></td>
-  </tr>
-
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/83-Oak-Ln_Avon_IL_61415_M80669-70344">
-    <img src="images/PEORIA1167573.JPG" border=0 width=303 height=150 alt="" style="float:left"></a></td>
-      <td width="302"><span class="style238">83 OAK LANE</span>
-      <p class="style238">Asking Price: $168,000</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/196-Feather-Ln_Avon_IL_61415_M89616-77902">
-    <img src="images/87129.jpg" border=0 width=303 height=150 alt="196 FEATHER LANE" style="float:left"></a></td>
-    <td width="302"><span class="style238">196 FEATHER LANE</span>
-      <p class="style238">Asking Price: $135,000</p></td>
-  </tr>
-  <tr>
-    <td width="302"><a href="http://peoria.paragonrels.com/publink/default.aspx?GUID=84987bd9-b280-44e6-b940-d130395de40f&Report=Yes">
-    <img src="images/87160.jpg" border=0 width=303 height=150 alt="407 MCGREW DRIVE" style="float:left"></a></td>
-    <td width="302"><span class="style238">407 MCGREW DRIVE</span>
-      <p class="style238">Asking Price: $109,900</p></td>
-  </tr>
-
-  <tr>
-    <td width="302"><a href="http://www.realtor.com/realestateandhomes-detail/469-Brookhart-Bnd_Avon_IL_61415_M81971-70793"><img src="images/LAMOINE87145.JPG" border=0 width=303 height=150 alt="469 Brookhart Bend" style="float:left"></a></td>
-    <td width="302"><span class="style238">469 Brookhart Bend</span>
-      <p class="style238">Asking Price: $139,900</p></td>
-  </tr>
-
-
-  <tr>
-    <td width="302"><a href="http://peoria.paragonrels.com/publink/default.aspx?GUID=39f571ad-8bc4-45ce-9c5a-635ca62ba56d&Report=Yes"><img src="images/LAMOINE86723.JPG" border=0 width=303 height=150 alt="1314 SWAN LAKE ROAD" style="float:left"></a></td>
-    <td width="302"><span class="style238">1314 SWAN LAKE ROAD</span>
-      <p class="style238">Asking Price: $245,000</p></td>
-  </tr>
-
-  <tr>
-    <td width="302"><a href="http://peoria.paragonrels.com/publink/default.aspx?GUID=9742065e-9cf9-4279-a0aa-9e3386668587&Report=Yes"><img src="images/87733.JPG" border=0 width=303 height=150 alt="477 MOCKINGBIRD TRAIL" style="float:left"></a></td>
-    <td width="302"><span class="style238">477 MOCKINGBIRD TRAIL</span>
-      <p class="style238">Asking Price: $249,900</p></td>
-  </tr>
-
-  <tr>
-    <td><img src="images/FeatherLaneCabin.jpg" border=0 width=305 height=156 alt="For Sale by Owner" style="float:left"></a></td>
-    <td><p class="style238">Cute cabin</p><p class="style238">1192 Feather Lane
-        $115,000 – For Sale by Owner<br />
-        Log Cabin with large 2 car garage on 2 lots. 2 bedrooms, 1 bathroom, open concept kitchen-eating-living space
-        Comes turn-key. All furniture, lawnmower and contents included<br /> Call or text Karen at 309-221-5975</p>
-    </td>
-  </tr>  
-
-  <tr>
-    <td><a href="http://www.remax-unified-macomb-il.com/display.php?prop=1374010403_30578"><img src="images/lakeho8.jpeg" border=0 width=303 height=157 alt="item8" style="float:left"></a></td>
-    <td><p class="style238">1314 Swan Lake Rd - $249,900</p></td>
-  </tr>
-
-  <tr>
-    <td>&nbsp;</td>
-    <td><p class="style238">&nbsp;</p></td>
-  </tr> 
--->
-<!--  
-  <td width="299"><p class="style238">NO PICTURE</p></td>
-    <td width="300"><p class="style238">Lot #442 For Sale</p>
-      <p class="style238">The lot in on Horseshoe Bend </p>
-      <p class="style238">Please call for Price</p>
-      <p class="style238">If interested, call Terry Lynn at 309-265-6715 </p></td>
-  </tr>
-   <tr>
-     <td width="302"><a href="https://www.realtor.com/realestateandhomes-detail/M9885931289">
-        <img src="images/59BrickerCircle.jpg" border=0 width=303 height=150 alt="Lot 572" style="float:left"></a></td>
-     <td width="302"><span class="style238">59 Bricker Circle, Avon, IL 61415</span>
-        <p class="style238">Asking Price: $4,500<br />Contact Gene Curtis to see!<br /> 309-255-0227</p></td>
-   </tr>
--->  
-</table>
-
-<p>&nbsp;</p>
-
- <p align="center">Click on <a href="#HOMES">HOMES</a> or LOTS<a name="LOTS" id="LOTS"></a> to navigate. 
-    Click on the picture to go to the realtor or sales site. </p>
- <table width="619" border="1" cellspacing="2" cellpadding="2" align="center">
-<div>
-  <tr>
-    <td width="300"><p class="style238">No Current Lot Listings</p></td>
-  </tr) 
-</div>
-
-<</table>
-<p>&nbsp;</p>
- 
-   <!-- homes - BOTTOM -->  
-          
-          <!--  content -END -->     
-          
-       <!--    end div#content -->
-
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
-
-<script type="text/javascript" src="index.js"></script>
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initTabs);
+      } else {
+        initTabs();
+      }
+    })();
+  </script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-

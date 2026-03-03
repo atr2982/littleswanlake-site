@@ -1,228 +1,174 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake siltation committee documents and study files." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .siltation-docs-page .home-main {
+      gap: 22px;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .siltation-docs-page .doc-sections {
+      display: grid;
+      gap: 16px;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style193 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:justify;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
-.style195 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:center;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
--->
-</style>
+    .siltation-docs-page .doc-section {
+      display: grid;
+      gap: 10px;
+    }
+
+    .siltation-docs-page .doc-section h3,
+    .siltation-docs-page .doc-section p {
+      margin: 0;
+    }
+
+    .siltation-docs-page .doc-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .siltation-docs-page .doc-links li {
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      background: var(--lake-panel);
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+      transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+    }
+
+    .siltation-docs-page .doc-links li:hover {
+      transform: translateY(-1px);
+      border-color: var(--lake-border);
+      box-shadow: 0 8px 18px rgba(25, 45, 50, 0.1);
+    }
+
+    .siltation-docs-page .doc-links a {
+      display: block;
+      padding: 13px 14px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #0b4dff;
+      border-radius: 8px;
+      transition: background-color 120ms ease, box-shadow 120ms ease;
+    }
+
+    .siltation-docs-page .doc-links a:hover {
+      text-decoration: none;
+      background-color: #eef4ff;
+      box-shadow: inset 3px 0 0 #0b4dff;
+    }
+
+    .siltation-docs-page .doc-links a:focus-visible {
+      text-decoration: none;
+      background-color: #eef4ff;
+      box-shadow: inset 3px 0 0 #0b4dff, 0 0 0 2px rgba(11, 77, 255, 0.18);
+      outline: none;
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
-      </div>
-    </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">Siltation Committee Documents</a></h2>
-          <p class="byline">Auguest 2018</p>
-          <div class="entry">
-            <p class="style195">LITTLE SWAN LAKE SILTATION DOCUMENTS </p>
-            <p class="style195"><a href="images/RequestForProposal20171015.pdf" target="_blank" name="RFP">
-            Request for Proposal - October 2017 </a></p>
-            <p class="style195">&nbsp;</p>
-            <p class="style195">Klingner and Associates Engineering - Summer 2018 Siltation Engineering Study </p>
-            <p class="style195">Klingner and Associates Initial Fingings</p>
-            <p class="style195"><a href="images/Little-Swan-LakeFINAL2.pdf" target="_blank" name="August Findings">
-            PowerPoint - Preliminary Findings - August 2018</a></p>
-            <p class="style195"><a href="images/Little-Swan-Lake-InspectionReport_FINAL.pdf" target="_blank" name="LSL Inspection">
-            Lake and Dam Inspection</a></p>
-            <p class="style195"><a href="images/EX2B_KlingnerSurvey.pdf" target="_blank" name="Lake Surver">
-            Lake Survey</a></p>
-            <p class="style195"><a href="images/EX3_NetSiltation.pdf" target="_blank" name="Net Siltation">
-            Net Siltation Findings</a></p>
-            <p class="style195"><a href="images/EX4_CrossSections.pdf" target="_blank" name="Siltation Cross Section">
-            Siltation Cross Section</a></p>
-            <p class="style195"><a href="images/EX4B_CompiledCrossSections.pdf" target="_blank" name="Compiled Cross Sections">
-            Compiled Cross Sections</a></p>
-            <p class="style195"><a href="images/EX5_Soils.pdf" target="_blank" name="Soils">
-            Soils</a></p>
-            <p class="style195"><a href="images/EX6_Slope.pdf" target="_blank" name="Slope">
-            Slope</a></p>
-            <p class="style195"><a href="images/EX7_Landcover.pdf" target="_blank" name="Land Cover">
-            Land Cover</a></p>
-            <p class="style195"><a href="images/Little Swan Lake Gradations.pdf" target="_blank" name="Gradations">
-            LSL Gradations</a></p>
-            <p class="style195"><a href="images/Little Swan Lake Atts.pdf" target="_blank" name="Atterberg tests">
-            Atterberg Limits Test Report </a></p>
-            <p class="style195"><a href="images/Funding Ops.pdf" target="_blank" name="Funding Ops">
-            Funding Options</a></p>
-            <p class="style195">&nbsp;</p>
-            <p class="style195"><a href="images/LittleSwanLakeWatershedManagement Plan_ Second Draft20181001.pdf" 
-               target="_blank" name="Watershed Management Plan - Second Draft">
-            Final Watershed Management Plan - Second Draft</a></p>
-            <p class="style195"><a href="images/20181028Little SwanLake_SecondDRAFTPPT.pdf" target="_blank" name="Watershed Management Plan Power Point - 2nd Draft">
-            Watershed Management Plan Power Point - 2nd Draft</a></p>
+<body class="home-page siltation-docs-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
 
-                     
-            <p class="style195">&nbsp;</p>
-            <p class="style195">&nbsp;</p>
-            <p class="style195">Archived Documents</p>
-            <p class="style195"><a href="images/SiltationLetterOct2016.pdf"target="_blank" name="Conservation Letter">
-                                <strong>Letter from the Warren County Soil and Water Conservation District</strong></a></p>
-            <p class="style195">&nbsp;</p>
-            <p class="style195">Articles and studies on Dredging </p>
-            <p class="style195"><a href="images/NALMS-DredgingArticle.pdf">Dredging Article</a></p>
-            <p class="style195"><a href="images/NALMS-PlanningImplementingDredgingProject.pdf">Planning and Implementing a Lake Dredging Project</a></p>
-          </div>
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Siltation Committee Documents</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">August 2018</p>
+              </div>
+              <p>This page includes the request for proposal, Klingner study files, watershed planning documents, archived material, and dredging references related to the Little Swan Lake siltation work.</p>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Siltation Documents</h2>
+                <div class="doc-sections">
+                  <section class="doc-section">
+                    <h3>Request for Proposal</h3>
+                    <ul class="doc-links">
+                      <li><a href="images/RequestForProposal20171015.pdf" target="_blank" rel="noopener">Request for Proposal - October 2017</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="doc-section">
+                    <h3>Klingner Engineering Study</h3>
+                    <p>Klingner and Associates Engineering - Summer 2018 siltation engineering study and initial findings.</p>
+                    <ul class="doc-links">
+                      <li><a href="images/Little-Swan-LakeFINAL2.pdf" target="_blank" rel="noopener">PowerPoint - Preliminary Findings - August 2018</a></li>
+                      <li><a href="images/Little-Swan-Lake-InspectionReport_FINAL.pdf" target="_blank" rel="noopener">Lake and Dam Inspection</a></li>
+                      <li><a href="images/EX2B_KlingnerSurvey.pdf" target="_blank" rel="noopener">Lake Survey</a></li>
+                      <li><a href="images/EX3_NetSiltation.pdf" target="_blank" rel="noopener">Net Siltation Findings</a></li>
+                      <li><a href="images/EX4_CrossSections.pdf" target="_blank" rel="noopener">Siltation Cross Section</a></li>
+                      <li><a href="images/EX4B_CompiledCrossSections.pdf" target="_blank" rel="noopener">Compiled Cross Sections</a></li>
+                      <li><a href="images/EX5_Soils.pdf" target="_blank" rel="noopener">Soils</a></li>
+                      <li><a href="images/EX6_Slope.pdf" target="_blank" rel="noopener">Slope</a></li>
+                      <li><a href="images/EX7_Landcover.pdf" target="_blank" rel="noopener">Land Cover</a></li>
+                      <li><a href="images/Little Swan Lake Gradations.pdf" target="_blank" rel="noopener">LSL Gradations</a></li>
+                      <li><a href="images/Little Swan Lake Atts.pdf" target="_blank" rel="noopener">Atterberg Limits Test Report</a></li>
+                      <li><a href="images/Funding Ops.pdf" target="_blank" rel="noopener">Funding Options</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="doc-section">
+                    <h3>Watershed Management Plan</h3>
+                    <ul class="doc-links">
+                      <li><a href="images/LittleSwanLakeWatershedManagement Plan_ Second Draft20181001.pdf" target="_blank" rel="noopener">Final Watershed Management Plan - Second Draft</a></li>
+                      <li><a href="images/20181028Little SwanLake_SecondDRAFTPPT.pdf" target="_blank" rel="noopener">Watershed Management Plan Power Point - 2nd Draft</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="doc-section">
+                    <h3>Archived Documents</h3>
+                    <ul class="doc-links">
+                      <li><a href="images/SiltationLetterOct2016.pdf" target="_blank" rel="noopener">Letter from the Warren County Soil and Water Conservation District</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="doc-section">
+                    <h3>Articles and Studies on Dredging</h3>
+                    <ul class="doc-links">
+                      <li><a href="images/NALMS-DredgingArticle.pdf" target="_blank" rel="noopener">Dredging Article</a></li>
+                      <li><a href="images/NALMS-PlanningImplementingDredgingProject.pdf" target="_blank" rel="noopener">Planning and Implementing a Lake Dredging Project</a></li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
-      <!-- end div#content -->
-
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
     </div>
-  </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+    <div id="footer"></div>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

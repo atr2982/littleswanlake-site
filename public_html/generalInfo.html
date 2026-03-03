@@ -11,9 +11,34 @@
   <link rel="icon" type="image/png" href="images/logo1.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
   <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .general-info-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .general-info-page #wrapper {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .general-info-page #page {
+      flex: 1 0 auto;
+    }
+
+    .general-info-page #footer {
+      margin-top: 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+  </style>
 </head>
 
-<body class="home-page">
+<body class="home-page general-info-page">
   <div id="wrapper">
     <div id="topbar"></div>
     <div id="menu"></div>

@@ -1,203 +1,206 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake siltation committee meeting minutes." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .siltation-minutes-page .home-main {
+      gap: 22px;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .siltation-minutes-page .minutes-search-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      max-width: 420px;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style193 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:justify;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
-.style195 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:left;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
--->
-</style>
+    .siltation-minutes-page .minutes-search-bar input[type="text"] {
+      height: 32px;
+      min-width: 260px;
+      padding: 0 10px;
+      border: 1px solid var(--lake-border);
+      border-radius: 6px;
+      background: #ffffff;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .siltation-minutes-page .minutes-search-bar input[type="text"]:focus {
+      outline: none;
+      border-color: #4a5a6a;
+      box-shadow: none;
+    }
+
+    .siltation-minutes-page .minutes-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .siltation-minutes-page .minutes-status {
+      margin: 0;
+      color: var(--lake-muted);
+      font-size: 13px;
+    }
+
+    .siltation-minutes-page .minutes-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .siltation-minutes-page .minutes-item {
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      background: var(--lake-panel);
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+      transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+    }
+
+    .siltation-minutes-page .minutes-item:hover {
+      transform: translateY(-1px);
+      border-color: var(--lake-border);
+      box-shadow: 0 8px 18px rgba(25, 45, 50, 0.1);
+    }
+
+    .siltation-minutes-page .minutes-item a {
+      display: block;
+      padding: 13px 14px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #0b4dff;
+      border-radius: 8px;
+      transition: background-color 120ms ease, box-shadow 120ms ease;
+    }
+
+    .siltation-minutes-page .minutes-item a:hover {
+      text-decoration: none;
+      background-color: #eef4ff;
+      box-shadow: inset 3px 0 0 #0b4dff;
+    }
+
+    .siltation-minutes-page .minutes-item a:focus-visible {
+      text-decoration: none;
+      background-color: #eef4ff;
+      box-shadow: inset 3px 0 0 #0b4dff, 0 0 0 2px rgba(11, 77, 255, 0.18);
+      outline: none;
+    }
+
+    .siltation-minutes-page .minutes-item.hidden {
+      display: none;
+    }
+
+    .siltation-minutes-page .minutes-empty {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-left: 4px solid #5b6770;
+      border-radius: 6px;
+      background: #f4f6f8;
+    }
+
+    @media (max-width: 640px) {
+      .siltation-minutes-page .minutes-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .siltation-minutes-page .minutes-search-bar input[type="text"] {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
-      </div>
-    </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">Siltation Committee Meeting Minutes</a></h2>
-          <p class="byline">October 2017</p>
-          <div class="entry">
-            <p class="style195">LITTLE SWAN LAKE SILTATION MINUTES </p>
-            <p class="style195"><a href="images/Draft-SiltationMeetingMinutes08-20-2018.pdf"target="_blank" name="Draft 8-20-2018 Minutes">
-                      Draft Meeting Minutes 8-20-2018</a></p>
-            <p class="style195"><a href="images/SiltationMeetingMinutes07-16-2018.pdf"target="_blank" name="7-16-2018 Minutes">
-                      Meeting Minutes 7-16-2018</a></p>
-            <p class="style195"><a href="images/SiltationMeetingMinutes04-23-2018.pdf"target="_blank" name="4-23-2018 Minutes">
-                      Meeting Minutes 4-23-2018</a></p>
-            <p class="style195"><a href="images/SiltationMeetingMinutes03-27-2018.pdf"target="_blank" name="3-27-2018 Minutes">
-                      Meeting Minutes 3-27-2018</a></p>
-            <p class="style195"><a href="images/SiltationMeetingMinutes03-19-2018.pdf"target="_blank" name="3-29-2018 Minutes">
-                      Meeting Minutes 3-19-2018</a></p>
-            <p class="style195"><a href="images/SiltationMeetingMinutes02-22-2018.pdf"target="_blank" name="2-22-2018 Minutes">
-                      Meeting Minutes 2-22-2018</a></p>
-            <p class="style195"><a href="images/SiltationMeetingMinutes01-22-2018.pdf"target="_blank" name="1-22-2018 Minutes">
-                      Meeting Minutes 1-22-2018</a></p>
-            <p class="style195"><a href="images/SiltationMeetingMinutes09-18-2017.pdf"target="_blank" name="9-18-2017 Minutes">
-                      Meeting Minutes 9-18-2017</a></p>
-            <p class="style195">&nbsp;</p>
-            <p class="style195">&nbsp;</p>
-<!--        <p class="style195">Previous Minutes </p>
-            <p class="style195"><a href="images/">Minutes 1</a></p>
-            <p class="style195"><a href="images/">Minutes 2</a></p> -->
-          </div>
+<body class="home-page siltation-minutes-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
+
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Siltation Committee Meeting Minutes</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Archived committee minutes</p>
+              </div>
+
+              <form id="minutes-filter-search" class="minutes-search-bar" action="#" method="get">
+                <label class="sr-only" for="minutes-filter-input">Filter meeting minutes</label>
+                <input id="minutes-filter-input" type="text" placeholder="Filter minutes by keyword"
+                  aria-label="Filter meeting minutes by keyword" />
+              </form>
+              <p>This page includes the archived minutes currently posted for the Little Swan Lake Siltation Committee.</p>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <div class="minutes-header">
+                  <h2>Meeting Minutes</h2>
+                  <p id="minutes-status" class="minutes-status">Showing 0 meeting minutes</p>
+                </div>
+                <ul id="minutes-list" class="minutes-list">
+                  <li class="minutes-item" data-name="Draft Meeting Minutes 8-20-2018">
+                    <a href="images/Draft-SiltationMeetingMinutes08-20-2018.pdf" target="_blank" rel="noopener">Draft Meeting Minutes 8-20-2018</a>
+                  </li>
+                  <li class="minutes-item" data-name="Meeting Minutes 7-16-2018">
+                    <a href="images/SiltationMeetingMinutes07-16-2018.pdf" target="_blank" rel="noopener">Meeting Minutes 7-16-2018</a>
+                  </li>
+                  <li class="minutes-item" data-name="Meeting Minutes 4-23-2018">
+                    <a href="images/SiltationMeetingMinutes04-23-2018.pdf" target="_blank" rel="noopener">Meeting Minutes 4-23-2018</a>
+                  </li>
+                  <li class="minutes-item" data-name="Meeting Minutes 3-27-2018">
+                    <a href="images/SiltationMeetingMinutes03-27-2018.pdf" target="_blank" rel="noopener">Meeting Minutes 3-27-2018</a>
+                  </li>
+                  <li class="minutes-item" data-name="Meeting Minutes 3-19-2018">
+                    <a href="images/SiltationMeetingMinutes03-19-2018.pdf" target="_blank" rel="noopener">Meeting Minutes 3-19-2018</a>
+                  </li>
+                  <li class="minutes-item" data-name="Meeting Minutes 2-22-2018">
+                    <a href="images/SiltationMeetingMinutes02-22-2018.pdf" target="_blank" rel="noopener">Meeting Minutes 2-22-2018</a>
+                  </li>
+                  <li class="minutes-item" data-name="Meeting Minutes 1-22-2018">
+                    <a href="images/SiltationMeetingMinutes01-22-2018.pdf" target="_blank" rel="noopener">Meeting Minutes 1-22-2018</a>
+                  </li>
+                  <li class="minutes-item" data-name="Meeting Minutes 9-18-2017">
+                    <a href="images/SiltationMeetingMinutes09-18-2017.pdf" target="_blank" rel="noopener">Meeting Minutes 9-18-2017</a>
+                  </li>
+                </ul>
+                <p id="minutes-empty" class="minutes-empty" hidden>No meeting minutes match your search.</p>
+              </div>
+            </section>
+          </main>
         </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
-      <!-- end div#content -->
-
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
     </div>
-  </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+    <div id="footer"></div>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

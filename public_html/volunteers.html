@@ -1,264 +1,433 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Volunteer opportunities and committee roles at Little Swan Lake." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .volunteers-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .volunteers-page #wrapper {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style195 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:center;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
-.style1 {
-	color: #000;
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-	margin-top: 0px;
-	margin-bottom: 0.1px;
-	font-size: 18px;
-	font-weight: bold;
-}
--->
-</style>
+    .volunteers-page #page {
+      flex: 1 0 auto;
+    }
+
+    .volunteers-page #footer {
+      margin-top: 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    .volunteers-page .home-main {
+      gap: 22px;
+    }
+
+    .volunteers-page .home-hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 16px;
+    }
+
+    .volunteers-page .home-hero::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      bottom: -70px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(11, 77, 255, 0.16), rgba(11, 77, 255, 0));
+      pointer-events: none;
+    }
+
+    .volunteers-page .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .volunteers-page .hero-cta {
+      margin: -4px 0 -2px;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      line-height: 1.05;
+    }
+
+    .volunteers-page .hero-story {
+      display: grid;
+      gap: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--lake-border);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(243, 247, 252, 0.92));
+    }
+
+    .volunteers-page .hero-story p {
+      margin: 0;
+    }
+
+    .volunteers-page .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .volunteers-page .hero-stat {
+      display: grid;
+      gap: 4px;
+      padding: 12px 14px;
+      border: 1px solid var(--lake-border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.58);
+      backdrop-filter: blur(2px);
+    }
+
+    .volunteers-page .hero-stat strong,
+    .volunteers-page .hero-stat span {
+      margin: 0;
+    }
+
+    .volunteers-page .hero-stat strong {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .volunteers-page .hero-stat span {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4a5b70;
+    }
+
+    .volunteers-page .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .volunteers-page .info-card {
+      display: grid;
+      gap: 8px;
+      align-content: start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .volunteers-page .info-card::after {
+      content: "";
+      position: absolute;
+      right: -18px;
+      bottom: -22px;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(44, 182, 125, 0.14), rgba(44, 182, 125, 0));
+      pointer-events: none;
+    }
+
+    .volunteers-page .info-card h3,
+    .volunteers-page .info-card p {
+      margin: 0;
+    }
+
+    .volunteers-page .committee-sections {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .volunteers-page .committee-group {
+      display: grid;
+      gap: 14px;
+      padding: 16px;
+      border: 1px solid var(--lake-border);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(241, 246, 252, 0.82));
+    }
+
+    .volunteers-page .committee-group-header {
+      display: grid;
+      gap: 4px;
+    }
+
+    .volunteers-page .committee-group-header h3,
+    .volunteers-page .committee-group-header p {
+      margin: 0;
+    }
+
+    .volunteers-page .committee-group-header p {
+      color: #4e5f74;
+    }
+
+    .volunteers-page .committee-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .volunteers-page .committee-card {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .volunteers-page .committee-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, #0b4dff, #2cb67d);
+    }
+
+    .volunteers-page .committee-label {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin-left: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(11, 77, 255, 0.08);
+      color: #0c3777;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .volunteers-page .committee-card h3 {
+      margin: 0;
+      padding-left: 8px;
+    }
+
+    .volunteers-page .committee-list {
+      margin: 0;
+      padding-left: 22px;
+      display: grid;
+      gap: 8px;
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
-      </div>
-    </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">VOLUNTEERS </a></h2>
-          <p class="byline">March 2015</p>
-          <div class="entry">
-            <p class="style1">LITTLE SWAN LAKE IS CALLING FOR VOLUNTEERS </p>
-            <p class="style195">&nbsp;</p>
-            <p align="center">Volunteers are critical partners of the Little  Swan Lake Community,<strong> </strong><br />
-                <strong>We need YOU!</strong> </p>
-            <div align="center">
-              <table border="0" cellspacing="12" cellpadding="0">
-                <tr>
-                  <td colspan="2" valign="top"><br />
-                    Have you ever wondered why Little Swan Lake is such a gem?  It’s because of people – Volunteers – who    take pride in maintaining all the good things we enjoy about our community—such    as the beautiful lake, the fishing &amp; boating, skiing &amp; tubing, the    clubhouse &amp; gardens, the out-lots and roads. We owe a lot to our current    volunteers and we would like to offer YOU the chance to take part in    preserving all the great things you enjoy about Little Swan Lake. There are    spots open on many committees, so please look over the list below and let us    know what you might be interested in volunteering for. Several Board    positions will also be open next Fall 2015. Please consider being part of the    bigger picture – become a Little Swan Lake volunteer.
-                    <p align="center"><strong>Little Swan Lake    Committees / Volunteer Opportunities</strong><br />
-                      If interested, please email : <a href="mailto:LSLClerk%40hotmail.com">LSLClerk@hotmail.com</a><strong><br />
-                  </strong><strong> </strong></p></td>
-                </tr>
-                <tr>
-                  <td width="357" valign="top"><p><strong>Fishing</strong></p>
-                      <ol>
-                        <li>Works    closely with DNR to keep the lake stocked with game fish  &amp; manages fish numbers</li>
-                        <li>Updates    Illinois &amp; LSL fishing rules </li><br />
-                      </ol></td>
-                  <td width="401" valign="top"><p><strong>Mowing</strong> </p>
-                      <ol>
-                        <li>Secures    bids for seasonal mowing</li>
-                        <li>Inspects    mowing on lake properties</li>
-                        <li>Notifies    owners if lots are not mowed</li>
-                  </ol></td>
-                </tr>
-                <tr>
-                  <td width="357" valign="top"><p><strong>Boating</strong> </p>
-                      <ol>
-                        <li>Registers    all LSL watercraft <strong></strong></li>
-                        <li>Distributes    LSL watercraft stickers<strong></strong></li>
-                        <li>Notifies    members of changes to government rules and regulations<strong></strong></li>
-                      </ol></td>
-                  <td width="401" valign="top"><p><strong>Road Maintenance &amp; Snowplowing</strong> </p>
-                      <ol>
-                        <li>Identifies potential bidders &amp; secures bids for road maintenance &amp; snowplowing</li>
-                        <li>Assesses    the need for lake road and culvert repairs, &amp; road resurfacing</li>
-                        <li>Maintains    lake culverts &amp; roadway lights</li><br />
-                  </ol></td>
-                </tr>
-                <tr>
-                  <td width="357" valign="top"><p><strong>Memorial Garden</strong> </p>
-                      <ol>
-                        <li>Helps    maintain the Memorial Garden area surrounding the LSL clubhouse</li>
-                        <li>Offers    suggestions for garden improvements</li><br />
-                      </ol></td>
-                  <td width="401" valign="top"><p><strong>Siltation</strong> </p>
-                      <ol>
-                        <li>Monitors    &amp; manages levels of silt in the lake</li>
-                        <li>Works    with state &amp; federal agencies to improve lake water quality</li>
-                        <li>Maintains    the shorelines of the LSL out-lots</li>
-                  </ol></td>
-                </tr>
-                <tr>
-                  <td width="357" valign="top"><p><strong>Lake and Dam</strong> </p>
-                      <ol>
-                        <li>Maintains    the LSL dam structure &amp; spillway</li>
-                        <li>Monitors    &amp; adjusts the lake levels </li>
-                        <li>Seasonal    installation &amp; removal of LSL docks</li><br />
-                      </ol></td>
-                  <td width="401" valign="top"><p><strong>Lake Operations</strong> </p>
-                      <ol>
-                        <li>Maintains    LSL structures including the clubhouse, out-lot pavilions &amp; boat ramp</li>
-                        <li>Maintains    signs &amp; security lights</li>
-                  </ol></td>
-                </tr>
-                <tr>
-                  <td width="357" valign="top"><p><strong>Long Range Planning</strong> </p>
-                      <ol>
-                        <li>Financial    planning for the future of LSL</li>
-                        <li>Major    project analysis ( i.e. creating additional parking by the Clubhouse, new    boat ramp)</li>
-                      </ol></td>
-                  <td width="401" valign="top"><p><strong>Building Permits</strong> </p>
-                      <ol>
-                        <li>Reviews    remodeling &amp; new construction plans with homeowners</li>
-                        <li>Handles    building permits after the initial reviews</li>
-                  </ol></td>
-                </tr>
-              </table>
-            </div>
-            <p class="style195">&nbsp;</p>
-            <p class="style195"></p>
-          </div>
+<body class="home-page volunteers-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
+
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Volunteers</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Updated March 2026</p>
+              </div>
+              <p class="hero-cta">We Need You</p>
+              <p>Volunteers help keep Little Swan Lake running, from fishing and boating to roads, clubhouse grounds, lake operations, and long-range planning. If you want to help preserve the community and support lake projects, there are several ways to get involved.</p>
+              <div class="hero-story">
+                <p>Have you ever wondered why Little Swan Lake is such a gem? It's because of people, volunteers, who take pride in maintaining all the good things we enjoy about our community such as the beautiful lake, the fishing and boating, skiing and tubing, the clubhouse and gardens, the outlots, and the roads.</p>
+                <p>We owe a lot to our current volunteers and would like to offer you the chance to take part in preserving all the great things you enjoy about Little Swan Lake. There are spots open on many committees, so please look over the list below and let us know what you might be interested in volunteering for. Board and committee needs change over time, so if you want to be part of the bigger picture, become a Little Swan Lake volunteer.</p>
+              </div>
+              <p class="highlight-neutral">Committee openings and board support needs can change over time. If a role below interests you, reach out and the club can point you to the right committee or current opening.</p>
+              <div class="hero-actions">
+                <a class="button-link" href="mailto:LSLClerk@hotmail.com">Email LSLClerk@hotmail.com</a>
+              </div>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <strong>10</strong>
+                  <span>Volunteer Areas</span>
+                </div>
+                <div class="hero-stat">
+                  <strong>Lakewide</strong>
+                  <span>Outdoor and Facility Roles</span>
+                </div>
+                <div class="hero-stat">
+                  <strong>2026</strong>
+                  <span>Current Contact Point</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Why Volunteer</h2>
+                <div class="info-grid">
+                  <div class="card info-card">
+                    <h3>Lake Care</h3>
+                    <p>Volunteers help protect the lake, shoreline, fish population, and overall water quality.</p>
+                  </div>
+                  <div class="card info-card">
+                    <h3>Community Spaces</h3>
+                    <p>Committees support the clubhouse, memorial garden, outlots, signs, lighting, and shared areas.</p>
+                  </div>
+                  <div class="card info-card">
+                    <h3>Future Planning</h3>
+                    <p>Volunteer groups also help evaluate larger projects, maintenance priorities, and long-term needs.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Committee and Volunteer Opportunities</h2>
+                <p>Little Swan Lake depends on people who take pride in maintaining the lake, roads, clubhouse, outlots, and shared amenities. The committee list below reflects the standing volunteer areas currently described by the club.</p>
+
+                <div class="committee-sections">
+                  <section class="committee-group">
+                    <div class="committee-group-header">
+                      <h3>Lake and Recreation</h3>
+                      <p>Committees focused on fish management, recreation rules, water quality, and lake conditions.</p>
+                    </div>
+                    <div class="committee-grid">
+                      <div class="card committee-card">
+                        <span class="committee-label">Recreation</span>
+                        <h3>Fishing</h3>
+                        <ol class="committee-list">
+                          <li>Works closely with DNR to help keep the lake stocked with game fish and manage fish numbers.</li>
+                          <li>Updates Illinois and Little Swan Lake fishing rules.</li>
+                        </ol>
+                      </div>
+                      <div class="card committee-card">
+                        <span class="committee-label">Recreation</span>
+                        <h3>Boating</h3>
+                        <ol class="committee-list">
+                          <li>Registers all Little Swan Lake watercraft.</li>
+                          <li>Distributes Little Swan Lake watercraft stickers.</li>
+                          <li>Notifies members of changes to government rules and regulations.</li>
+                        </ol>
+                      </div>
+                      <div class="card committee-card">
+                        <span class="committee-label">Environment</span>
+                        <h3>Siltation</h3>
+                        <ol class="committee-list">
+                          <li>Monitors and manages levels of silt in the lake.</li>
+                          <li>Works with state and federal agencies to improve lake water quality.</li>
+                          <li>Maintains the shorelines of the Little Swan Lake outlots.</li>
+                        </ol>
+                      </div>
+                      <div class="card committee-card">
+                        <span class="committee-label">Infrastructure</span>
+                        <h3>Lake and Dam</h3>
+                        <ol class="committee-list">
+                          <li>Maintains the Little Swan Lake dam structure and spillway.</li>
+                          <li>Monitors and adjusts lake levels.</li>
+                          <li>Handles seasonal installation and removal of lake docks.</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="committee-group">
+                    <div class="committee-group-header">
+                      <h3>Grounds and Facilities</h3>
+                      <p>Hands-on roles that support shared property, common spaces, roads, and routine maintenance.</p>
+                    </div>
+                    <div class="committee-grid">
+                      <div class="card committee-card">
+                        <span class="committee-label">Grounds</span>
+                        <h3>Mowing</h3>
+                        <ol class="committee-list">
+                          <li>Secures bids for seasonal mowing.</li>
+                          <li>Inspects mowing on lake properties.</li>
+                          <li>Notifies owners if lots are not mowed.</li>
+                        </ol>
+                      </div>
+                      <div class="card committee-card">
+                        <span class="committee-label">Facilities</span>
+                        <h3>Road Maintenance and Snowplowing</h3>
+                        <ol class="committee-list">
+                          <li>Identifies potential bidders and secures bids for road maintenance and snowplowing.</li>
+                          <li>Assesses the need for lake road and culvert repairs and road resurfacing.</li>
+                          <li>Maintains lake culverts and roadway lights.</li>
+                        </ol>
+                      </div>
+                      <div class="card committee-card">
+                        <span class="committee-label">Grounds</span>
+                        <h3>Memorial Garden</h3>
+                        <ol class="committee-list">
+                          <li>Helps maintain the memorial garden area surrounding the clubhouse.</li>
+                          <li>Offers suggestions for garden improvements.</li>
+                        </ol>
+                      </div>
+                      <div class="card committee-card">
+                        <span class="committee-label">Facilities</span>
+                        <h3>Lake Operations</h3>
+                        <ol class="committee-list">
+                          <li>Maintains shared structures including the clubhouse, outlot pavilions, and boat ramp.</li>
+                          <li>Maintains signs and security lights.</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="committee-group">
+                    <div class="committee-group-header">
+                      <h3>Planning and Review</h3>
+                      <p>Volunteer roles that help guide future projects, finances, and property review work.</p>
+                    </div>
+                    <div class="committee-grid">
+                      <div class="card committee-card">
+                        <span class="committee-label">Planning</span>
+                        <h3>Long Range Planning</h3>
+                        <ol class="committee-list">
+                          <li>Supports financial planning for the future of Little Swan Lake.</li>
+                          <li>Reviews larger project ideas such as parking improvements or boat ramp work.</li>
+                        </ol>
+                      </div>
+                      <div class="card committee-card">
+                        <span class="committee-label">Review</span>
+                        <h3>Building Permits</h3>
+                        <ol class="committee-list">
+                          <li>Reviews remodeling and new construction plans with homeowners.</li>
+                          <li>Handles building permits after the initial reviews.</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
-      <!-- end div#content -->
-
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
     </div>
-  </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+    <div id="footer"></div>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

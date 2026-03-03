@@ -1,262 +1,229 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake covenants, bylaws, rules, and regulations." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .rules-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<!DOCTYPE html>
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .rules-page #wrapper {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style1 {color: #FF0000}
-.style3 {
-	font-size: 18;
-	font-weight: bold;
-}
-.style6 {	color: #0000FF;
-	font-weight: bold;
-}
-.style7 {color: #66FF00}
--->
-</style>
+    .rules-page #page {
+      flex: 1 0 auto;
+    }
+
+    .rules-page #footer {
+      margin-top: 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    .rules-page .home-main {
+      gap: 22px;
+    }
+
+    .rules-page .hero-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .rules-page .doc-card {
+      display: grid;
+      gap: 8px;
+    }
+
+    .rules-page .doc-card h3,
+    .rules-page .doc-card p {
+      margin: 0;
+    }
+
+    .rules-page .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .rules-page .doc-link-card {
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .rules-page .doc-link-card h3,
+    .rules-page .doc-link-card p {
+      margin: 0;
+    }
+
+    .rules-page .doc-list {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .rules-page .official-doc-list {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .rules-page .official-doc-list p {
+      margin: 0;
+    }
+
+    @media (min-width: 720px) {
+      .rules-page .official-doc-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .rules-page .text-section {
+      display: grid;
+      gap: 12px;
+    }
+
+    .rules-page .text-section h2,
+    .rules-page .text-section p {
+      margin: 0;
+    }
+
+    .rules-page .guest-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .rules-page .guest-list li {
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-<div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
+
+<body class="home-page rules-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
+
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Rules &amp; Regulations</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Updated May 2021</p>
+              </div>
+              <p>The Committee on Rules and Regulations reviewed the current rules and made recommendations to the membership to remove duplicates, use clearer language, and update outdated information.</p>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Official Rule Documents</h2>
+                <div class="official-doc-list">
+                  <p><a href="/Covenants-2015-08-03.pdf" target="_blank" rel="noopener">Covenants effective 08/03/2015</a></p>
+                  <p><a href="/02-ByLaws-2017-updated-2024.pdf" target="_blank" rel="noopener">Bylaws effective from 2017, updated 2024</a></p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Lake Rules by Topic</h2>
+                <div class="doc-grid">
+                  <div class="card doc-link-card">
+                    <h3>Water Use</h3>
+                    <div class="doc-list">
+                      <p><a href="/images/Boating-2014-11-20.pdf" target="_blank" rel="noopener">Boating Rules</a></p>
+                      <p><a href="/images/Fishing-2014-11-16.pdf" target="_blank" rel="noopener">Fishing Rules</a></p>
+                      <p><a href="/images/Swimming-2018-05.pdf" target="_blank" rel="noopener">Swimming Rules</a></p>
+                      <p><a href="/images/LakeDam-2013-04.pdf" target="_blank" rel="noopener">Lake &amp; Dam Rules</a></p>
+                    </div>
+                  </div>
+                  <div class="card doc-link-card">
+                    <h3>Property &amp; Facilities</h3>
+                    <div class="doc-list">
+                      <p><a href="/images/Building-2014-11-18(update 03052021).pdf" target="_blank" rel="noopener">Building Rules</a></p>
+                      <p><a href="/images/ClubhouseRental2016.pdf" target="_blank" rel="noopener">Clubhouse Rules</a></p>
+                      <p><a href="/images/Mowing-2013-04.pdf" target="_blank" rel="noopener">Mowing Rules</a></p>
+                      <p><a href="/images/Outlots-2013-04.pdf" target="_blank" rel="noopener">Outlot Rules</a></p>
+                    </div>
+                  </div>
+                  <div class="card doc-link-card">
+                    <h3>Guest &amp; Activity Rules</h3>
+                    <div class="doc-list">
+                      <p><a href="/images/Guest-Member-Responsibilities.pdf" target="_blank" rel="noopener">Guest-Member Responsibilities</a></p>
+                      <p><a href="/images/HuntingTrapping-2013-04.pdf" target="_blank" rel="noopener">Hunting &amp; Trapping Rules</a></p>
+                      <p><a href="/images/OtherSportVehicles-2014-11-15.pdf" target="_blank" rel="noopener">Other Sport Vehicle Rules</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card text-section">
+                <h2>Guest-Member Responsibilities</h2>
+                <p>As stated in the Little Swan Lake Club Covenants, it is the responsibility of the Little Swan Lake member to make sure that guests are aware of and abide by all Little Swan Lake rules and regulations, along with applicable state and local laws. The LSL rules are posted on the website. Below are a few requirements of special note for guests using LSL facilities, including the lake.</p>
+                <ol class="guest-list">
+                  <li>Clubhouse: the Little Swan Lake member reserving the clubhouse must be present during the event.</li>
+                  <li>Fishing: a Little Swan Lake member must be present when a guest is fishing either in a boat or on the shoreline, unless the shoreline is the member's property. The fisher must be properly licensed by the State of Illinois in all cases.</li>
+                  <li>Boating: a Little Swan Lake member must be present at the lake when a guest is using the member's motorized boat. Guest boats are not allowed.</li>
+                  <li>Other sport use: a Little Swan Lake member must accompany the guest when snowmobiles, four-wheelers, and similar vehicles are used on any LSL property, including the lake. No vehicles are allowed on the dam without express permission of the LSL Board.</li>
+                  <li>Swimming: guests may swim no further than 100 feet from shore off a member's property with no member present. There is no swimming off boats in the wake zone or off outlots. When swimming off a member's boat in the no-wake zone, a member must be present at the lake.</li>
+                </ol>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card text-section">
+                <h2>Important Boating Reminders</h2>
+                <p><strong>Tubing or Skiing:</strong> Illinois law requires a flag flying at the highest part of your boat while pulling skiers or tubers, or when skiers or tubers are in the water. While skiing or tubing, be sure to have a responsible spotter. The driver cannot be considered a spotter. Boat in a counter-clockwise pattern. Children under 13 must wear life preservers. Lights must be used after dark.</p>
+                <p><strong>Boat Ramp Parking:</strong> Please be sure boat trailers are parked at the ramp area rather than at the clubhouse. The clubhouse is often reserved for other functions, and those parking spaces are needed. One or two trailers can take up many spaces. Additional trailer parking has been discussed as a long-range planning issue, and anyone interested in working on the project should contact a board member.</p>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card text-section">
+                <h2>Membership &amp; Boating Forms</h2>
+                <p>The membership and boating forms have been sent out. If you have not received the documents, or if you are new to Little Swan Lake, please send an email request to Sharon at <a href="mailto:LSLClerk@hotmail.com">LSLClerk@hotmail.com</a>.</p>
+                <p><a href="forms/forms.html">Go to Forms</a></p>
+              </div>
+            </section>
+          </main>
+        </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
     </div>
+
+    <div id="footer"></div>
   </div>
-<!--  <div id="header">
-    <div id="logo">
-      <h1><a href="#">Lily Pads</a></h1>
-      <h2><a href="http://www.freecsstemplates.org/">By Free CSS Templates</a></h2>
-    </div>
-    <!-- end div#logo -->
-<!--  </div> -->
-  
-  <!-- end div#header -->
-  <div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content">
-        <div class="post">
-          <h2 class="title"><a href="#">LSL Covenants, Bylaws, Rules, Regulations</a></h2>
-          <p class="byline">Update May 2021</p>
-		  <p>The Committee on Rules and Regualtions has reviewed the current rules and has made several recommendations
-		     to the membership. These changes include removing duplicate or redundant information, making it readable 
-		     by using common language, and updating incorrect information and rules.</p>
-		  </br>
-<!--		  
-          <div class="meta">
-          <h2 align="left" class="title"><a href="#">SWIMMING RULES  IN THE <span class="style7">NO WAKE ZONE</span></a></h2>         
-            <div align="left">
-              <ol>
-                <li>■ Boats must be anchored and motor turned off</li>
-                <li>■ Boats must stay in the center of the no wake  zone not in the traffic lanes</li>
-                <li>■ Swimming will only be allowed from 30 minutes before sunrise until 30 minutes after sunset. <span class="style6">Note: if you are swimming within 100' of your own shoreline property there are no hour restrictions.</span></li>
-                <li>■ Swimmers must stay within 30’ of the boat</li>
-                <li>■ A responsible person, 18 years or older must  stay in the boat</li>
-                <li>■ NO DIVING allowed</li>
-                <li>Be sure to inform anyone in your boat of these rules. BE SMART - BE SAFE!</li>
-              </ol>  
-            <span class="style1">Rules will be strictly enforced with a minimum fine  of $25 for the first offense and repeated offenses could lead to loss of lake  privileges.</span></div>
-           </div>
--->           
-        </div>
 
-		  <div class="post">
-             <h2 align="left" class="title"><a href="#">Guest-Member Reponsibilites</span></a></h2>         
-            <div align="left">
-            As stated in the Little Swan Lake Club (LSL) Covenants, it is the responsibility of the Little Swan Lake Member to make sure that guests are aware of and abide by all the rules and regulations of Little Swan Lake as well as state and local laws and regulations. The LSL rules are posted on our web site http://littleswanlake.net. Below are a few requirements of special note for guests to use the LSL facilities, including the lake. Most of these are listed also in the various specific sections with more detail, but are gathered here for convenience. 
-              <ol>
-                <li>■ Clubhouse: the LSL member reserving the clubhouse must be present during the event.</li>
-                <li>■ Fishing: a LSL member must be present when a guest is fishing either in a boat or on the shoreline, unless the shoreline is the member’s property. The fisher must be properly licensed by the State of Illinois in all cases.</li>
-                <li>■ Boating: a LSL member must be present at the lake when a guest is using the member’s motorized boat. No guest boats are allowed. </li>
-                <li>■ Other sport use: a LSL member must accompany the guest when snowmobiles, 4-wheelers etc. are used on any LSL property, including the lake. No vehicles are allowed on the dam without express permission of the LSL board.</li>
-                <li>■ Swimming: It is fine for guests to swim no further than 100 feet from shore off a member’s property with no member present. There is no swimming off boats in the Wake Zone or off outlots. When swimming off a member’s boat in the no-wake zone a member must be present at the lake.</li>
-              </ol>  
-        </div>
-        </div>  
-
-        <div class="post">
-          <h2 class="title"><a href="#">IMPORTANT BOATING REMINDERS</a></h2>
-          <div class="entry">
-            <p><strong>Tubing or Skiing</strong> - There is a new law which  requires a flag flying at the highest part of your boat while pulling or when tubers  or skiers are in the water. While skiing or tubing, be sure to have a  responsible spotter and the driver <strong>cannot</strong> be considered a spotter. Boat in a counter-clock-wise patter. Children under 13  must wear life preservers. Lights must be used after dark.</p>
-            <p><span class="style3">Boat  Ramp Parking</span> – Please be sure boat trailers are parked at the ramp area rather  that at the Clubhouse. The Clubhouse is often reserved for other functions and  the parking spaces are needed. One or two trailers can take up a lot of parking  spots. We realize at times additional trailer parking could be used and we are  considering options in the Long Range Planning Committee. Anyone interested in  working on the project, please contact a Board Member. </p>
-          </div>
-        </div>
-        <div class="post">
-          <h2 class="title"><a href="#">Membership &amp; Boating Forms </a></h2>
-          <p class="byline">May 2021</p>
-          <div class="entry">
-            <p>The membership and boating <a href="forms/forms.html" title="LSL forms" target="_blank">forms</a> have been sent out. If you have not received the documents or are new to Little Swan Lake, please send an email with your request to Sharon (LSLClerk@hotmail.com). </p>
-          </div>
-        </div>
-      </div>
-      <!-- end div#content -->
-
-      <div id="sidebar">
-        <ul>
-<!--      <li id="search"> 
-          </li>
--->
-
-<h2>Search</h2>
-<script async src="https://cse.google.com/cse.js?cx=1bf3659cc2e477f5c"></script>
-<div class="gcse-search"></div>               
-
-
-          <li>
-            <h2><strong>Menu</strong></h2>
-           <ul>
-              <li><a href="/">Home</a></li>
-          </ul>
-            <h2>Lake Rules </h2>
-           <ul>
-              <li><a href="../Covenants-2015-08-03.pdf" target="_blank">Covenants effective 08/03/2015</a></li>
-              <li><a href="../02-ByLaws-2017-updated-2024.pdf" target="_blank">Bylaws effective from 2017 updated 2022</a></li>
-<!--            <li><a href="../ByLaws-2017-10-29.pdf" target="_blank">Bylaws effective 10/29/2017</a></li> -->
-              <li><a href="../Rules&Regulations.html" target="_blank">Current Rules</a></li>
-              
-<!--               <li><a href="../04-Rules&Regs-Orig.pdf" target="_blank">Original Rules & Regulations</a></li> 
-                   <li><a href="forms/forms.html">Forms</a></li> -->
-<!--               <li><a href="../boating.html">Boating Rules </a></li>
-              <li><a href="../fishing.html">Fishing Rules </a></li>
-              <li><a href="../swimming.html">Swimming Rules</a></li>
-<!--              <li><a href="#">Fishing Rules</a></li> 
-              <li><a href="#">Fishing Rules</a></li> -->
-           </ul>
-          </li>
-<!--           <li>
-            <h2>Proposed Changes</h2>
-            <ul>
-              <li><a href="../ByLaws-2015010-31.pdff" target="_blank">Proposed Changes to Bylaws effective 10/31/2015</a></li>
-              <li><a href="../02-Overview150912-ByLaws.pdf" target="_blank">Overview of Bylaw changes</a></li>
-         <li><a href="../Covenants-2015-08-03.pdf" target="_blank">FINAL Covenants 08/03/2015</a></li>
-              <li><a href="../Overview-Covenants-Nov2014.html" target="_blank">Summary of  Changes</a></li> 
-            </ul>-->
-          </li>
-
-        </ul>
-      </div>
-      <!-- end div#sidebar -->
-      <div style="clear: both; height: 1px"></div>
-    </div>
-  </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
-
-<script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
