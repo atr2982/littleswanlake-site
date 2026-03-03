@@ -48,6 +48,25 @@
   color: #1a2b3a;
 }
 
+.memberinfo-page .utility-row .link-list .contact-group {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.memberinfo-page .utility-row .link-list .contact-group + .contact-group {
+  padding-top: 10px;
+  border-top: 1px solid #e6ecf2;
+}
+
+.memberinfo-page .utility-row .link-list .contact-group p {
+  margin: 0;
+}
+
+.memberinfo-page .utility-row .link-list .contact-subline {
+  margin-top: 4px;
+  color: #4c5a67;
+}
+
 .memberinfo-page .library-panel {
   border: 1px solid #cfdbea;
   border-radius: 12px;
@@ -64,54 +83,12 @@
   margin: 0;
 }
 
-.memberinfo-page .mowing-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 18px;
-}
-
-.memberinfo-page .mowing-feature {
-  border: 1px solid #d6e3f0;
-  border-radius: 12px;
-  padding: 20px;
-  background: #ffffff;
-}
-
-.memberinfo-page .mowing-feature h3 {
-  margin-top: 0;
-}
-
-.memberinfo-page .mowing-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.memberinfo-page .mowing-item {
-  border: 1px solid #d7dee6;
-  border-radius: 12px;
-  padding: 16px;
-  background: #ffffff;
-}
-
-.memberinfo-page .mowing-item h3 {
-  margin-top: 0;
-}
-
-.memberinfo-page .mowing-item p:last-child,
-.memberinfo-page .mowing-feature p:last-child {
-  margin-bottom: 0;
-}
-
 .memberinfo-page #footer {
   margin-top: 20px;
 }
 
 @media (max-width: 980px) {
   .memberinfo-page .utilities-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .memberinfo-page .mowing-layout {
     grid-template-columns: 1fr;
   }
 }
@@ -121,9 +98,5 @@
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 14px;
-  }
-
-  .memberinfo-page .mowing-grid {
-    grid-template-columns: 1fr;
   }
 }
