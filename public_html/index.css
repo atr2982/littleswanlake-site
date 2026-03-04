@@ -112,7 +112,7 @@
     position: relative;
     overflow: hidden;
     background: #ffffff;
-    padding-top: 8px;
+    padding-top: 16px;
   }
 
     .home-page .home-main {
@@ -502,11 +502,7 @@
     padding: 6px 0;
   }
   .home-page .home-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin: 6px 0;
+    display: none;
   }
   .home-page .home-toolbar-left {
     display: inline-flex;

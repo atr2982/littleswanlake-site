@@ -1,204 +1,179 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake fishing rules, limits, and member responsibilities." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .fishing-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .fishing-page #wrapper {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style84 {color:#099; font-family:Times,Times New Roman,serif; font-size:14px; margin-left:0px; margin-right:0px; text-indent:0px; text-align:left; margin-top:1px; margin-bottom:1px }
--->
-</style>
+    .fishing-page #page {
+      flex: 1 0 auto;
+    }
+
+    .fishing-page #footer {
+      margin-top: 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    .fishing-page .home-main {
+      gap: 22px;
+    }
+
+    .fishing-page .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .fishing-page .hero-actions-secondary {
+      margin-top: 10px;
+    }
+
+    .fishing-page .rule-section {
+      display: grid;
+      gap: 14px;
+    }
+
+    .fishing-page .rule-section h2,
+    .fishing-page .rule-section p {
+      margin: 0;
+    }
+
+    .fishing-page .rule-list {
+      margin: 0;
+      padding-left: 22px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .fishing-page .callout {
+      padding: 14px 16px;
+      border: 1px solid var(--lake-border);
+      border-radius: 14px;
+      background: rgba(16, 74, 146, 0.06);
+      display: grid;
+      gap: 8px;
+    }
+
+    .fishing-page .callout p {
+      margin: 0;
+    }
+
+    .fishing-page .fishing-regs-card {
+      display: grid;
+      gap: 14px;
+    }
+
+    .fishing-page .fish-image-large {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 16px;
+      border: 1px solid var(--lake-border);
+      display: block;
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
-      </div>
-    </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">Fishing</a></h2>
-          <p class="byline">April 2021</p>
-          <div class="entry">
-		  
-            <h2 align="center">FISHING RULES<br /></h2>
-			<span class="byline" style="font-size: 16px"><a href="/fishcaught.html" title="Fish caught on Little Swan Lake">FISHING PICTURES</a></span>
-            <ol>
-              <li>■ All members and guests must be licensed by the  Illinois Department of Natural Resources. <br />
-              </li>
-              <li>■ State of Illinois laws must be observed, as  enforced by Ill. Dept. of Conservation.<br />
-              </li>
-              <li>■ Fishing shall be limited to pole and line only.  All other means are prohibited, except by permit, issued by the Board of  Directors. <br />
-              </li>
-              <li>■ No live bait is to be used, with the exception  of worms, crayfish, and minnows. <br />
-              </li>
-              <li>■ The daily catch limit generally follows  recommendations of the Illinois Department of Natural Resources. See the signs  posted at the boat launch and at outlot DD for the current limits.<br />
-              </li>
-              <li>■ Fishing rights are for members and their guests  only. Guests must be accompanied by a member at all times. <br />
-              </li>
-              <li>■ Please dispose of dead fish immediately by  placing them in containers provided for this purpose on the outlots.<br />
-              </li>
-              <li>■ Absolutely no fish are to be stocked. <br />
-              </li>
-              <li>■ Bullfrogs may be harvested within the season and  limits as established by the Illinois Department of Natural Resources. <br />
-              </li>
-              <li>■ Please don’t litter, or trespass on others property. <br />
-              </li>
-              <li>■ A $25.00 fine will be assessed to anyone  violating the above fishing rules. </li>
-            </ol>
-            <p>■ Anyone who believes that these fishing privileges are being  abused or that trespassing is occurring should notify the patrolman. Members  should carry the issued membership cards for identification as a Little Swan  Lake Club Member. <br />
-                <br />
-                <strong>Citations will be  issued by the patrolman for violations of the fishing rules.</strong></p>
-            <p class="style84">&nbsp;</p>
- 
- 		  <table width="636" border="0" align="center">
-           <tr>
-              <td width="591" height="179"><img src="images/Fishing-Regs.JPG" alt="Fishing Regulations 2021" height="300"/></td>
-           </tr>
-        </table>
+<body class="home-page fishing-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
 
-            <p>&nbsp;</p>
-          </div>
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Fishing</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Updated April 2021</p>
+              </div>
+              <p>Fishing at Little Swan Lake is limited to members and their guests, with Illinois licensing and state fishing laws still applying. Review the current lake rules, catch-limit guidance, and member responsibilities before fishing.</p>
+              <div class="hero-actions">
+                <a class="button-link" href="/images/Fishing-2014-11-16.pdf" target="_blank" rel="noopener">Open Fishing Rules PDF</a>
+              </div>
+              <div class="hero-actions hero-actions-secondary">
+                <a class="button-link" href="/photos.html#gallery-section-fish-caught-on-little-swan-lake">View Fishing Pictures</a>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card rule-section">
+                <h2>Fishing Rules</h2>
+                <ol class="rule-list">
+                  <li>All members and guests must be licensed by the Illinois Department of Natural Resources.</li>
+                  <li>State of Illinois fishing laws must be observed, as enforced by the Illinois Department of Conservation.</li>
+                  <li>Fishing is limited to pole and line only. All other means are prohibited except by permit issued by the Board of Directors.</li>
+                  <li>No live bait is to be used, with the exception of worms, crayfish, and minnows.</li>
+                  <li>The daily catch limit generally follows recommendations of the Illinois Department of Natural Resources. See the signs posted at the boat launch and at outlot DD for the current limits.</li>
+                  <li>Fishing rights are for members and their guests only. Guests must be accompanied by a member at all times.</li>
+                  <li>Please dispose of dead fish immediately by placing them in containers provided for this purpose on the outlots.</li>
+                  <li>Absolutely no fish are to be stocked.</li>
+                  <li>Bullfrogs may be harvested within the season and limits established by the Illinois Department of Natural Resources.</li>
+                  <li>Please do not litter or trespass on other people's property.</li>
+                  <li>A $25 fine will be assessed to anyone violating the fishing rules.</li>
+                </ol>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card rule-section">
+                <h2>Enforcement &amp; Member Responsibilities</h2>
+                <div class="callout">
+                  <p>Anyone who believes that fishing privileges are being abused or that trespassing is occurring should notify the patrolman.</p>
+                  <p>Members should carry their issued membership cards for identification as a Little Swan Lake Club member.</p>
+                  <p><strong>Citations will be issued by the patrolman for violations of the fishing rules.</strong></p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card fishing-regs-card">
+                <h2>Current Fishing Regulations Sign</h2>
+                <p>The lake signs posted at the boat launch and outlot DD should be treated as the current source for catch limits.</p>
+                <img class="fish-image-large" src="images/Fishing-Regs.JPG" alt="Fishing regulations sign at Little Swan Lake" />
+              </div>
+            </section>
+          </main>
         </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
-      <!-- end div#content -->
-
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
     </div>
-  </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+    <div id="footer"></div>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

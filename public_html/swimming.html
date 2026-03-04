@@ -1,221 +1,166 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake swimming rules for the no wake zone." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .swimming-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .swimming-page #wrapper {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style4 {color: #7EBA25}
-.style6 {color: #0000FF;
-	font-weight: bold;
-}
-.style7 {color: #FF0000}
--->
-</style>
+    .swimming-page #page {
+      flex: 1 0 auto;
+    }
+
+    .swimming-page #footer {
+      margin-top: 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    .swimming-page .home-main {
+      gap: 22px;
+    }
+
+    .swimming-page .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .swimming-page .rule-section {
+      display: grid;
+      gap: 14px;
+    }
+
+    .swimming-page .rule-section h2,
+    .swimming-page .rule-section p {
+      margin: 0;
+    }
+
+    .swimming-page .rule-list {
+      margin: 0;
+      padding-left: 22px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .swimming-page .hero-warning {
+      margin: 0;
+    }
+
+    .swimming-page .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .swimming-page .quick-card {
+      display: grid;
+      gap: 6px;
+      align-content: start;
+    }
+
+    .swimming-page .quick-card h3,
+    .swimming-page .quick-card p {
+      margin: 0;
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
+
+<body class="home-page swimming-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
+
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Swimming</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Updated May 2018</p>
+              </div>
+              <p>Swimming rules on Little Swan Lake focus on safety in the no wake zone. Review the time limits, boat positioning, and supervision requirements before swimming from a boat.</p>
+              <p class="highlight-warm hero-warning">Rules will be strictly enforced with a minimum fine of $25 for the first offense, and repeated offenses could lead to loss of lake privileges.</p>
+              <div class="hero-actions">
+                <a class="button-link" href="/images/Swimming-2018-05.pdf" target="_blank" rel="noopener">Open Swimming Rules PDF</a>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Quick Reminders</h2>
+                <div class="quick-grid">
+                  <div class="card quick-card">
+                    <h3>Boats Must Be Anchored</h3>
+                    <p>Boats must be anchored and the motor turned off before swimmers enter the water.</p>
+                  </div>
+                  <div class="card quick-card">
+                    <h3>No Wake Zone Only</h3>
+                    <p>Swimming from boats is limited to the no wake zone and boats must stay out of traffic lanes.</p>
+                  </div>
+                  <div class="card quick-card">
+                    <h3>Adult Supervision</h3>
+                    <p>A responsible person age 18 or older must stay in or be tethered to the boat.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card rule-section">
+                <h2>Swimming Rules in the No Wake Zone</h2>
+                <ol class="rule-list">
+                  <li>Boats must be anchored and the motor turned off.</li>
+                  <li>Boats must stay in the center of the no wake zone, not in the traffic lanes.</li>
+                  <li>Swimming is allowed only from 30 minutes before sunrise until 30 minutes after sunset. If you are swimming within 100 feet of your own shoreline property, there are no hour restrictions.</li>
+                  <li>Swimmers must stay within 30 feet of the boat.</li>
+                  <li>A responsible person age 18 or older must stay in or be tethered to the boat.</li>
+                  <li>No diving is allowed.</li>
+                  <li>Be sure to inform everyone in your boat of these rules. Be smart and be safe.</li>
+                </ol>
+              </div>
+            </section>
+
+          </main>
+        </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
     </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
+
+    <div id="footer"></div>
   </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">SWIMMING</a></h2>
-          <p class="byline">May 2018</p>
-          <p></p>
-		  <div class="meta">
-             <h2 align="left" class="title"><a href="#">SWIMMING RULES  IN THE <span class="style7">NO WAKE ZONE</span></a></h2>         
-            <div align="left">
-              <ol>
-                <li>■ Boats must be anchored and motor turned off</li>
-                <li>■ Boats must stay in the center of the no wake  zone not in the traffic lanes</li>
-                <li>■ Swimming will only be allowed from 30 minutes before sunrise until 30 minutes after sunset. <span class="style6">Note: if you are swimming within 100' of your own shoreline property there are no hour restrictions.</span></li>
-                <li>■ Swimmers must stay within 30’ of the boat</li>
-                <li>■ A responsible person, 18 years or older must stay in or be tethered to the boat</li>
-                <li>■ NO DIVING allowed</li>
-                <li>Be sure to inform anyone in your boat of these rules. BE SMART - BE SAFE!</li>
-                <li>Updated 5/7/2018</li>
-              </ol>  
-            <span class="style1">Rules will be strictly enforced with a minimum fine  of $25 for the first offense and repeated offenses could lead to loss of lake  privileges.</span></div>
-        </div>
-        </div>
-
-
- <!-- 
-
-          <div class="meta">
-          <h2 align="left" class="title"><a href="#">SWIMMING RULES FOR SWIMMING IN NO WAKE ZONE</a></h2>         
-            <div align="left">
-              <ol>
-                <li>■ Boats must be anchored and motor turned off</li>
-                <li>■ Boats must stay in the center of the no wake  zone not in the traffic lanes</li>
-                <li>■ Swimming will only be allowed from 30 minutes before sunrise until 30 minutes after sunset. <br/> <span class="style6">  Note: if you are swimming within 100' of your own shoreline property there are no hour restrictions.</span></li>
-                <li>■ Swimmers must stay within 30’ of the boat</li>
-                <li>■ A responsible person, 18 years or older must  stay in the boat</li>
-                <li>■ NO DIVING allowed</li>
-                <li><span class="style6">Be sure to inform anyone in your boat of these rules. BE SMART - BE SAFE!</span></li>
-              </ol>  
-            <span class="style6">Rules will be strictly enforced with a minimum fine  of $25 for the first offense and repeated offenses could lead to loss of lake  privileges.</span></div>
-           </div>
-
- 
-         <div class="entry">
-            <H2 class="style4">NEW SWIMMING RULES<br />
-              FOR SWIMMING IN NO WAKE ZONE</H2>
-            <br /><br />
-              <ol>
-                <li>■ Boats must be anchored and motor turned off</li>
-                <li>■ Boats must stay in the center of the no wake  zone not in the traffic lanes</li>
-                <li>■ Swimming will only be allowed from 30 minutes before sunrise until 30 minutes after sunset. <span class="style6">Note: if you are swimming within 100' of your own shoreline property there are no hour restrictions.</span></li>
-                <li>■ Swimmers must stay within 30’ of the boat</li>
-                <li>■ A responsible person, 18 years or older must  stay in the boat</li>
-                <li>■ NO DIVING allowed</li>
-                <li>Be sure to inform anyone in your boat of these rules. BE SMART - BE SAFE!</li>
-              </ol>  
-            <span class="style1 style7">Rules will be strictly enforced with a minimum fine  of $25 for the first offense and repeated offenses could lead to loss of lake  privileges.</span>
-            </div> -->
-        </div>
-        </div>
-      </div>
-      <!-- end div#content -->
-
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
-    </div>
-  </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
-
-<script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

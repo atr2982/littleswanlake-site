@@ -1,107 +1,195 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<!DOCTYPE html>
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="icon" type="image/png" href="images/logo1.png" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<link href="index.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-<!--
-.style1 {color: #FF0000}
-.style3 {
-	font-size: 18;
-	font-weight: bold;
-}
-.style6 {	color: #0000FF;
-	font-weight: bold;
-}
-.style7 {color: #66FF00}
--->
-</style>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake siltation committee information, meeting dates, documents, and silt photos." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .siltation-page .home-main {
+      gap: 22px;
+    }
+
+    .siltation-page .date-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .siltation-page .date-list p {
+      margin: 0;
+    }
+
+    .siltation-page .doc-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .siltation-page .doc-list a {
+      font-weight: 600;
+    }
+
+    .siltation-page .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .siltation-page .gallery-card {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .siltation-page .gallery-card figcaption {
+      display: none;
+    }
+
+    .siltation-page .gallery-link img {
+      width: 100%;
+    }
+
+    @media (max-width: 640px) {
+      .siltation-page .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
 </head>
-<body class="home-page">
-<div id="wrapper">
-<div id="topbar"></div>
+
+<body class="home-page siltation-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
     <div id="menu"></div>
     <div id="splash" class="banner-strip"></div>
-    <div id="page">
-    <div id="page-bgtop">
-      <div class="home-toolbar"></div>
-      <div id="content" class="home-content">
-        <div class="post">
-          <p><a href="/siltation-minutes.html" target="_blank">Siltation Committee Minutes</a> | <a href="/siltation-docs.html" target="_blank">Siltation Documents - Klingner LSL Study</a> | <a href="/siltation-activities.html" target="_blank">Siltation Activities</a></p>
-          <h2 class="title"><a href="#">Siltation Information</a></h2>
-          <p class="byline">Update August 2018</p>
-		  <p>The Siltation Committee mission is to study and make recommendations to the LSL Board regarding silt entering the lake and how to remedy 
-		     the situation and to make recommendations on how to remove existing silt from Little Swan Lake.</p>
-        <p><span class="style1">Klingner and Associates Siltation Engineering Study. Click on Siltation Documents on the Left Menu.</span></p> 		     
-         
-		  <p>Seveal <a href="/siltation-pictures.html">pictures</a> were taken to illustrate the amount of silt in the west end of the lake. </p>
-         
-        </div>
-        <div class="post">
-          <h2 class="title"><a href="#">Siltation Committee Meeting Dates</a></h2>
-          <p class="byline">October 2017</p>
-          <div class="entry">
-            <p><strong>The Siltation Committee will meet at the Clubhouse at 6:30 to 8:30 PM, on the following dates: <br />
-Sept 18  -  already reserved <br />
-Oct 16 <br />
-Nov 16 - a Thursday <br />
-Dec 14 - a Thursday <br />
-Jan 22 <br />
-Feb 15 - a Thursday <br />
-Mar 19 <br />
-Apr 16 <br />
-May 21 <br />
-Jun 18 <br />
-Jul 16 <br /> 
-Aug 20 <br />
-</strong> - Info Info Info  </p>
-          </div>
-        </div>
-        <div class="post">
-          <h2 class="title"><a href="#">Siltation Documents</a></h2>
-          <p class="byline">September 2017</p>
-          <div class="entry">
-            <p>Information2 <a href="forms/forms.html" title="LSL forms" target="_blank">sample HREF </a> info info info </p>
-          </div>
-        </div>
-      </div>
-      <!-- end div#content -->
 
-      <div id="sidebar"></div>
-      <div style="clear: both; height: 1px"></div>
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Siltation Committee</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Update August 2018</p>
+              </div>
+
+              <p>The Siltation Committee studies the silt entering Little Swan Lake, reviews ways to reduce future buildup, and makes recommendations to the Board on potential remedies and removal options.</p>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Siltation Committee Meeting Dates</h2>
+                <div class="date-list">
+                  <p>Current meeting dates are not available at the moment.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Meeting Minutes</h2>
+                <div class="doc-list">
+                  <p><a href="/siltation-minutes.html">Siltation Committee Minutes</a></p>
+                  <p>Archived committee minutes.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Siltation Documents</h2>
+                <div class="doc-list">
+                  <p><a href="/siltation-docs.html">Klingner LSL Study and supporting documents</a></p>
+                  <p>The linked page includes the request for proposal, preliminary findings, lake and dam inspection, survey material, soil and slope reports, funding options, and watershed planning files.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Silt Photos</h2>
+                <p>Seveal pictures were taken to illustrate the amount of silt in the west end of the lake.</p>
+                <div class="gallery-grid">
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_7997-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 1 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_7997-sm.jpg" alt="Silt photo 1 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_7998-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 2 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_7998-sm.jpg" alt="Silt photo 2 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_7999-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 3 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_7999-sm.jpg" alt="Silt photo 3 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_8001-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 4 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_8001-sm.jpg" alt="Silt photo 4 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_8002-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 5 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_8002-sm.jpg" alt="Silt photo 5 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_8003-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 6 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_8003-sm.jpg" alt="Silt photo 6 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_8005-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 7 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_8005-sm.jpg" alt="Silt photo 7 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_8006-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 8 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_8006-sm.jpg" alt="Silt photo 8 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/IMG_8007-sm.jpg" data-lightbox-trigger="true" data-lightbox-alt="Silt photo 9 from the west end of Little Swan Lake" data-lightbox-caption="Silt photo from the west end of Little Swan Lake.">
+                      <img src="images/IMG_8007-sm.jpg" alt="Silt photo 9 from the west end of Little Swan Lake" />
+                    </a>
+                  </figure>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <div class="lightbox" data-lightbox="true" hidden="hidden" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo">
+      <button class="lightbox-close" type="button" data-lightbox-close="true" aria-label="Close expanded photo">&times;</button>
+      <img class="lightbox-image" src="" alt="" data-lightbox-image="true" />
+      <div class="lightbox-caption" data-lightbox-caption="true"></div>
     </div>
   </div>
-  <!-- end div#page -->
-  <div id="footer"></div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-

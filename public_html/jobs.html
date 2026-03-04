@@ -1,216 +1,244 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake job listings and seasonal openings." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .jobs-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .jobs-page #wrapper {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style195 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:center;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
-.style1 {
-	font-size: 16px;
-	font-weight: bold;
-}
--->
-</style>
+    .jobs-page #page {
+      flex: 1 0 auto;
+    }
+
+    .jobs-page #footer {
+      margin-top: 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    .jobs-page .home-main {
+      gap: 22px;
+    }
+
+    .jobs-page .job-selector-bar {
+      display: grid;
+      gap: 6px;
+      max-width: 360px;
+      margin-bottom: 16px;
+    }
+
+    .jobs-page .job-selector-bar label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lake-muted);
+    }
+
+    .jobs-page .job-selector-bar select {
+      width: 100%;
+      min-height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--lake-border);
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--lake-ink);
+      font: inherit;
+    }
+
+    .jobs-page .job-selector-bar select:focus {
+      outline: none;
+      border-color: #4a5a6a;
+    }
+
+    .jobs-page .job-panel[hidden] {
+      display: none;
+    }
+
+    .jobs-page .job-card {
+      display: grid;
+      gap: 14px;
+    }
+
+    .jobs-page .job-card h2,
+    .jobs-page .job-card h3,
+    .jobs-page .job-card p {
+      margin: 0;
+    }
+
+    .jobs-page .job-meta {
+      color: var(--lake-muted);
+      font-weight: 600;
+    }
+
+    .jobs-page .job-pay {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--lake-ink);
+    }
+
+    .jobs-page .job-update {
+      padding: 12px 14px;
+      border-left: 4px solid #0b4dff;
+      border-radius: 6px;
+      background: var(--lake-accent-soft);
+    }
+
+    .jobs-page .job-update p {
+      margin: 0;
+    }
+
+    .jobs-page .job-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+      gap: 16px;
+    }
+
+    .jobs-page .contact-card {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .jobs-page .contact-card h3,
+    .jobs-page .contact-card p {
+      margin: 0;
+    }
+
+    .jobs-page .job-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .jobs-page .job-list li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 780px) {
+      .jobs-page .job-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
-      </div>
-    </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">JOBS </a></h2>
-          <p class="byline">posted 1/7/2019</p>
-          <div class="entry">
-            <p class="style195">LITTLE SWAN LAKE AVAILABLE JOBS </p>
-<!--            
-            <p><span class="style1">Little Swan Lake Bookkeeper Position Open</span><br />
-              The position is a full-year, part-time position and the salary is $600/month.<br />
-              Qualifications:</p>
-            <ul>
-              <li> - Member of Little Swan Lake</li>
-              <li> - Knowledge of bookkeeping principles</li>
-              <li> - Strong spreadsheet skills</li>
-              <li> - Good word processing (Word) skills</li>
-              <li> - Good verbal and writing skills</li>
-            </ul><br />
-            <p>If you are interested in applying for the position, 
-            please contact Bob Andersen at (217) 649-1304 or email a resume to r-andersen@wiu.edu. 
-            This position will be posted for one week and a selection will be made on Tuesday, August 11, 2015. 
-             </p>
--->             
+<body class="home-page jobs-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
 
-           <p><span class="style1">Little Swan Lake Patrol Position Open</span><br />
-              Little Swan Lake (LSL) is located 22 miles northeast of  Macomb and 4 miles west of Avon, IL<br />
-              Part-time position, May through October. Hourly wage is $12-15/hour. Patrolman average 10-20 hours per week. Most patrolling is done during the highest activity times, specifically weekends and holidays, weekday hours are also required.<br />
-            Qualifications:</p>
-            <ul>
-              <li>■ 21 years of age or older</li>
-              <li>■ Good people skills required</li>
-              <li>■ Familiar with the IL Department of Natural  Resources (IDNR) rules</li>
-              <li>■ Familiar with LSL club  rules &amp; regulations</li>
-              <li>■ Able to work flexible schedule</li>
-              <li>■ Ability to operate watercraft</li>
-              <li>■ Good references</li>
-              <li>■ Ability to be bonded</li>
-              <li>■ Prefer LSL Member in good standing</li>
-            </ul><br/>
-            <p>Anyone interested in working as Lake Patrol should contact  a Board Member or leave a message with the LSL Clerk (309)465-6734. Board  Member contact information can be found at <a href="/contacts.html">http://littleswanlake.net/contacts.html</a>.</p>
-            <p class="style195">&nbsp;</p>
-            <p class="style195"> </p>
-            <p class="style195"></p>
-         
-          </div>
-		  </div>
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Job Listings</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Updated Feb 23, 2026</p>
+              </div>
+              <p>Current seasonal and lake operations job openings for Little Swan Lake. Pay, schedule, and qualifications may vary by position. See the current listings below for details.</p>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <div class="job-selector-bar">
+                  <label for="job-selector">Current Openings</label>
+                  <select id="job-selector" data-job-selector="true">
+                    <option value="lake-patrol">Lake Patrol (Most Recent)</option>
+                  </select>
+                </div>
+                <p class="job-meta">The most recent opening is shown by default.</p>
+
+                <div class="job-panel" data-job-panel="lake-patrol">
+                  <div class="job-grid">
+                    <div class="card job-card">
+                      <div>
+                        <h2>Lake Patrol Position Open</h2>
+                        <p class="job-meta">Seasonal position, boating season is just around the corner.</p>
+                      </div>
+
+                      <div class="job-update">
+                        <p><strong>Facebook update posted February 23, 2026:</strong> We’re hiring. We are looking for a few individuals that are interested in Lake Patrol. $20 an hour. Hours per week are negotiable. If you are interested, please email <a href="mailto:lslclerk@hotmail.com">lslclerk@hotmail.com</a>.</p>
+                      </div>
+
+                      <p>Little Swan Lake (LSL) is located 22 miles northeast of Macomb and 4 miles west of Avon, Illinois. This is a part-time position that typically runs from May through October. Patrolman average 10 to 20 hours per week, with most patrolling during the highest activity times, especially weekends and holidays. Weekday hours are also required.</p>
+
+                      <p class="job-pay">$20 an hour</p>
+
+                      <div>
+                        <h3>Qualifications</h3>
+                        <ul class="job-list">
+                          <li>21 years of age or older</li>
+                          <li>Good people skills required</li>
+                          <li>Familiar with Illinois Department of Natural Resources rules</li>
+                          <li>Familiar with Little Swan Lake club rules and regulations</li>
+                          <li>Able to work a flexible schedule</li>
+                          <li>Ability to operate watercraft</li>
+                          <li>Good references</li>
+                          <li>Ability to be bonded</li>
+                          <li>Little Swan Lake member in good standing preferred</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h3>Schedule Notes</h3>
+                        <p>Hours per week are negotiable, but coverage is most important during weekends, holidays, and other high-traffic lake times.</p>
+                      </div>
+                    </div>
+
+                    <div class="card contact-card">
+                      <h3>How to Apply</h3>
+                      <p>If you are interested, please email <a href="mailto:lslclerk@hotmail.com">lslclerk@hotmail.com</a>.</p>
+                      <p>Board member contact information is available on the <a href="/contacts.html">Contacts page</a>.</p>
+
+                      <h3>Position Summary</h3>
+                      <p>Lake Patrol helps support safe boating activity and lake rule compliance during the busiest parts of the season.</p>
+
+                      <h3>Season</h3>
+                      <p>May through October</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
-      <!-- end div#content -->
-
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
     </div>
-  </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+    <div id="footer"></div>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

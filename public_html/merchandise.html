@@ -1,212 +1,264 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake merchandise, pricing, and contact information." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .merchandise-page .home-main {
+      gap: 22px;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .merchandise-page .home-hero {
+      display: grid;
+      gap: 18px;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style193 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:justify;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
-.style195 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:center;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-	font-weight: bold;
-}
-.f-lp {margin-bottom:0px }
-.style45 {color:#099; font-family:Times,Times New Roman,serif; font-size:18px; text-align:center }
-.style47 {color:#099; font-family:Times,Times New Roman,serif; font-size:18px }
--->
-</style>
+    .merchandise-page .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .merchandise-page .stat-card {
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+      padding: 14px 16px;
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+    }
+
+    .merchandise-page .stat-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #0b4dff;
+      margin-bottom: 4px;
+    }
+
+    .merchandise-page .stat-value {
+      display: block;
+      font-size: 26px;
+      line-height: 1.1;
+      font-weight: 700;
+      color: var(--lake-ink);
+    }
+
+    .merchandise-page .stat-note {
+      margin: 6px 0 0 0;
+      color: var(--lake-muted);
+    }
+
+    .merchandise-page .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .merchandise-page .gallery-card {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .merchandise-page .gallery-card figcaption {
+      display: none;
+    }
+
+    .merchandise-page .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+
+    .merchandise-page .price-card {
+      display: grid;
+      gap: 8px;
+    }
+
+    .merchandise-page .price-card h3 {
+      margin: 0;
+    }
+
+    .merchandise-page .price-line {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 7px 0;
+      border-top: 1px solid var(--lake-border);
+    }
+
+    .merchandise-page .price-line:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .merchandise-page .price-line strong {
+      color: var(--lake-ink);
+    }
+
+    .merchandise-page .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .merchandise-page .contact-card {
+      display: grid;
+      gap: 6px;
+    }
+
+    .merchandise-page .contact-card h3,
+    .merchandise-page .contact-card p {
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .merchandise-page .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .merchandise-page .stat-value {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
-      </div>
-    </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">MERCHANDISE</a></h2>
-          <p class="byline">February 2016</p>
-          <div class="entry">
-            <p class="style195">LITTLE SWAN LAKE MERCHANDISE </p>
-            <p class="style195">&nbsp;</p>
-            <div align="center">
-            <table align="center" border="0" cellspacing="2" cellpadding="2">
-              <tr>
-					 <td><img src="images/LSL_t-shirts_hats.jpg" border=0 alt="PBshirts 2015" style="float:left"></td>
-					 <p>&nbsp;</p>
-              </tr>
-            </table>
-            <table width="500" align="center" border="0" cellspacing="2" cellpadding="2">
-              <tr>
-                <td><img src="images/pb091074.jpeg" border=0 width=210 height=195 alt="PB091074" style="float:left"></td>
-                <td><img src="images/lslbag.gif" border=0 width=269 height=375 alt="LSLBag" style="float:left"></td>
-<!--	          <td><img src="images/directorycover.jpeg" border=0 width=244 height=316 alt="DirectoryCover" style="float:left"></td> -->
-              </tr>
-            </table>
-          <p>&nbsp;</p>
-		    <p class="style45">Sweatshirts $25 each &#8226; Polo shirts (wicking) $25 each &#8226; T-shirts $15 each ($2 extra for XXl & XXXL) &#8226; Hats $15 each</p>
-		    <p class="style45">Mugs $3 each &#8226; Tote Bags $4 each &#8226; Directories $10 each</p>
-<!--		    <p class="style45">Cookbooks by Ladies of the Lake $15 each</p> -->
-		    <p class="style47">To buy any of our merchandise, contact any of these people:</p>
-		    <p class="style47 f-lp">Barb Jonckheere 630-801-0243</p>
-		    <p class="style47 f-lp">Carlene Adams 309-465-9278</p>
-		    <p class="style47 f-lp">Patty Andersen 309-775-9008</p>
-		    <p class="style193">&nbsp;</p>	
-</div>
-			
-          </div>
+<body class="home-page merchandise-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
+
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
+
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Lake Merchandise</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Apparel, accessories, and lake items</p>
+              </div>
+
+              <p>Support Little Swan Lake with shirts, hats, mugs, tote bags, and more. This page combines the product photos, current price list, and contact information in one place.</p>
+
+              <div class="hero-stats">
+                <div class="stat-card">
+                  <span class="stat-label">Popular Items</span>
+                  <span class="stat-value">Shirts + Hats</span>
+                  <p class="stat-note">Apparel and lake gear shown on this page</p>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Accessories</span>
+                  <span class="stat-value">Mugs + Bags</span>
+                  <p class="stat-note">Small gift items and lake extras</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Merchandise Gallery</h2>
+                <div class="gallery-grid">
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/LSL_t-shirts_hats.jpg" data-lightbox-trigger="true" data-lightbox-alt="Little Swan Lake shirts and hats" data-lightbox-caption="Little Swan Lake shirts and hats.">
+                      <img src="images/LSL_t-shirts_hats.jpg" alt="Little Swan Lake shirts and hats" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/pb091074.jpeg" data-lightbox-trigger="true" data-lightbox-alt="Little Swan Lake mug" data-lightbox-caption="Little Swan Lake mug.">
+                      <img src="images/pb091074.jpeg" alt="Little Swan Lake mug" />
+                    </a>
+                  </figure>
+                  <figure class="gallery-card">
+                    <a class="gallery-link" href="images/lslbag.gif" data-lightbox-trigger="true" data-lightbox-alt="Little Swan Lake tote bag" data-lightbox-caption="Little Swan Lake tote bag.">
+                      <img src="images/lslbag.gif" alt="Little Swan Lake tote bag" />
+                    </a>
+                  </figure>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Pricing</h2>
+                <div class="price-grid">
+                  <div class="card price-card">
+                    <h3>Apparel</h3>
+                    <div class="price-line"><span>Sweatshirts</span><strong>$25</strong></div>
+                    <div class="price-line"><span>Polo shirts (wicking)</span><strong>$25</strong></div>
+                    <div class="price-line"><span>T-shirts</span><strong>$15</strong></div>
+                    <div class="price-line"><span>XXL and XXXL upcharge</span><strong>+$2</strong></div>
+                    <div class="price-line"><span>Hats</span><strong>$15</strong></div>
+                  </div>
+
+                  <div class="card price-card">
+                    <h3>Accessories</h3>
+                    <div class="price-line"><span>Mugs</span><strong>$3</strong></div>
+                    <div class="price-line"><span>Tote bags</span><strong>$4</strong></div>
+                    <div class="price-line"><span>Directories</span><strong>$10</strong></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="home-section">
+              <div class="card">
+                <h2>Who to Contact</h2>
+                <div class="contact-grid">
+                  <div class="card contact-card">
+                    <h3>Barb Jonckheere</h3>
+                    <p><a href="tel:16308010243">630-801-0243</a></p>
+                  </div>
+                  <div class="card contact-card">
+                    <h3>Carlene Adams</h3>
+                    <p><a href="tel:13094659278">309-465-9278</a></p>
+                  </div>
+                  <div class="card contact-card">
+                    <h3>Patty Andersen</h3>
+                    <p><a href="tel:13097759008">309-775-9008</a></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
-      </div>
-      <!-- end div#content -->
 
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <div class="lightbox" data-lightbox="true" hidden="hidden" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo">
+      <button class="lightbox-close" type="button" data-lightbox-close="true" aria-label="Close expanded photo">&times;</button>
+      <img class="lightbox-image" src="" alt="" data-lightbox-image="true" />
+      <div class="lightbox-caption" data-lightbox-caption="true"></div>
     </div>
   </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

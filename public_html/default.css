@@ -37,6 +37,10 @@ body {
 	color: #231F20;
 }
 
+:root {
+	--sticky-topbar-offset: 0px;
+}
+
 body.shared-chrome-pending {
 	overflow: hidden;
 }
@@ -116,6 +120,9 @@ a:hover {
 
 #topbar {
 	background: #EDEDED;
+	position: sticky;
+	top: 0;
+	z-index: 1200;
 }
 
 .topbar-inner {
@@ -202,7 +209,9 @@ a:hover {
 	min-height: 47px;
 	margin: 0 auto;
 	background: #2e13d0;
-	position: relative;
+	position: sticky;
+	top: var(--sticky-topbar-offset);
+	z-index: 1190;
 }
 
 #menu > ul {
@@ -409,6 +418,10 @@ a:hover {
 	background: transparent;
 	border: none;
 	cursor: pointer;
+}
+
+.menu-mobile-title {
+	display: none;
 }
 
 .menu-toggle-icon {
@@ -854,21 +867,23 @@ table {
 	}
 
 	.topbar-inner {
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
+		justify-content: space-between;
 		letter-spacing: 1px;
 		font-size: 10px;
-		text-align: center;
+		text-align: left;
+		padding: 5px 12px;
+		white-space: nowrap;
 	}
 
 	.topbar-left {
-		display: none;
+		display: block;
 	}
 
 	.topbar-right {
-		width: 100%;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 	}
 
 	#sidebar {
@@ -877,13 +892,17 @@ table {
 
 	#menu {
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		position: relative;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		position: sticky;
+		top: var(--sticky-topbar-offset);
+		padding: 0 10px;
 	}
 
 	.menu-toggle {
 		display: inline-flex;
+		margin: 3px 0 3px auto;
 	}
 
 	#menu > ul {
@@ -894,26 +913,25 @@ table {
 		align-items: flex-start;
 		gap: 0;
 		min-height: 0;
-		max-height: 0;
+		height: 0;
 		opacity: 0;
-		transform: translateY(-6px);
+		transform: translateY(-10px);
 		overflow: hidden;
 		pointer-events: none;
-		transition: max-height 250ms ease, opacity 200ms ease, transform 200ms ease;
+		transition: height 500ms ease, opacity 110ms ease, transform 500ms ease;
 		position: absolute;
 		left: 0;
-		top: 47px;
+		right: 0;
+		top: 100%;
 		background: #2e13d0;
 		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 		z-index: 50;
 	}
 
 	#menu.menu-open > ul {
-		max-height: none;
 		opacity: 1;
 		transform: translateY(0);
 		pointer-events: auto;
-		overflow-y: visible;
 	}
 
 	#menu > ul > li {
@@ -922,17 +940,8 @@ table {
 	}
 
 	#menu.menu-open > ul > li {
-		animation: menuItemIn 220ms ease both;
+		animation: none;
 	}
-
-	#menu.menu-open > ul > li:nth-child(1) { animation-delay: 20ms; }
-	#menu.menu-open > ul > li:nth-child(2) { animation-delay: 40ms; }
-	#menu.menu-open > ul > li:nth-child(3) { animation-delay: 60ms; }
-	#menu.menu-open > ul > li:nth-child(4) { animation-delay: 80ms; }
-	#menu.menu-open > ul > li:nth-child(5) { animation-delay: 100ms; }
-	#menu.menu-open > ul > li:nth-child(6) { animation-delay: 120ms; }
-	#menu.menu-open > ul > li:nth-child(7) { animation-delay: 140ms; }
-	#menu.menu-open > ul > li:nth-child(8) { animation-delay: 160ms; }
 
 	#menu > ul > li > a,
 	#menu > ul > li > .submenu-toggle,

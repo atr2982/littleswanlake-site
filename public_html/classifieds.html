@@ -1,386 +1,330 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Lily Pads
-Version    : 1.0
-Released   : 20100322
-Description: A two-column fixed-width template suitable for small websites.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="Little Swan Lake classifieds, items for sale, and local service listings." />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .classifieds-page .home-main {
+      gap: 22px;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- <title>Little Swan Lake</title> -->
-<title>Little Swan Lake</title>
-<meta name="keywords" content="" />
+    .classifieds-page .home-hero {
+      display: grid;
+      gap: 18px;
+    }
 
-  <link rel="icon" type="image/png" href="/images/logo1.png" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-<style type="text/css">
-<!--
-.style195 {
-	color:#000;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:center;
-	margin-top:0px;
-	margin-bottom:0.1px;
-	font-size: 16px;
-}
-.style140 {
-	color:#099;
-	font-weight:bold;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.style98 {color:#099 }
-.style201 {color: #000; font-family: Arial, Helvetica, sans-serif; text-align: center; margin-top: 0px; margin-bottom: 0.1px; font-size: 16px; font-weight: bold; }
-.style202 {
-	color: #099;
-	font-weight: bold;
-	font-size: 16px;
-}
-.style203 {font-size: 16px}
-.style204 {color: #000000}
--->
-</style>
+    .classifieds-page .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+    }
+
+    .classifieds-page .stat-card {
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+      padding: 14px 16px;
+      box-shadow: 0 6px 16px rgba(25, 45, 50, 0.06);
+    }
+
+    .classifieds-page .stat-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #0b4dff;
+      margin-bottom: 4px;
+    }
+
+    .classifieds-page .stat-value {
+      display: block;
+      font-size: 26px;
+      line-height: 1.1;
+      font-weight: 700;
+      color: var(--lake-ink);
+    }
+
+    .classifieds-page .stat-note {
+      margin: 6px 0 0 0;
+      color: var(--lake-muted);
+    }
+
+    .classifieds-page .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .classifieds-page .listing-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .classifieds-page .listing-card h3 {
+      margin: 0;
+    }
+
+    .classifieds-page .listing-price {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--lake-ink);
+      margin: 0;
+    }
+
+    .classifieds-page .listing-subtitle {
+      color: var(--lake-muted);
+      margin: 0;
+    }
+
+    .classifieds-page .contact-block {
+      display: grid;
+      gap: 4px;
+      padding: 12px 14px;
+      border: 1px solid var(--lake-border);
+      border-radius: 10px;
+      background: #f8fbff;
+    }
+
+    .classifieds-page .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .classifieds-page .photo-grid-compact {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .classifieds-page .photo-grid .gallery-link img {
+      height: 190px;
+    }
+
+    .classifieds-page .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .classifieds-page .service-card {
+      display: grid;
+      gap: 10px;
+    }
+
+    .classifieds-page .service-card h3 {
+      margin: 0;
+    }
+
+    .classifieds-page .service-card p {
+      margin: 0;
+    }
+
+    .classifieds-page .service-card .badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: #eef2f7;
+      color: #506070;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .classifieds-page .service-card .contact-line {
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .classifieds-page .photo-grid,
+      .classifieds-page .photo-grid-compact {
+        grid-template-columns: 1fr;
+      }
+
+      .classifieds-page .photo-grid .gallery-link img {
+        height: 220px;
+      }
+
+      .classifieds-page .stat-value {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
-<body>
-<div id="wrapper">
-  <div id="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">Little Swan Lake</div>
-      <div class="topbar-right">
-        <a href="https://maps.google.com/?q=229+140th+St,+Avon,+IL+61415" target="_blank" rel="noopener">
-          <span class="pin-icon" aria-hidden="true"></span>
-          229 140th St, Avon, IL 61415
-        </a>
-      </div>
-    </div>
-  </div>
-<div id="menu">
-    <button class="menu-toggle" type="button" aria-controls="menu-list" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <ul id="menu-list">
-      <li class="active"><a href="/">Home </a></li>
-      <li><a href="/news.html">News </a></li>
-      <li><a href="/boatingandfishin.html">Fishing & Boating </a></li>
-      <li><a href="/lakehomesforsale.html">For Sale </a></li>
-      <li><a href="/rules.html">Rules & Regulations </a></li>
-      <li><a href="forms/forms.html">Forms </a></li>
-      <li><a href="/directions.html">Directions </a></li>
-      <li class="has-nav-dropdown">
-        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-          <span class="nav-dropdown-label">
-            <span class="nav-label">Contact</span>
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </button>
-        <ul class="nav-dropdown">
-          <li><a href="/contacts.html">Contacts</a></li>
-          <li><a href="/memberinfo.html">Member Information</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Menu</button>
-        <ul class="submenu">
-          <li><a href="/">Home</a></li>
-          <li><a href="../siltation.html">Siltation Committee</a></li>
-          <li><a href="../photos.html">Photos & Lake Map</a></li>
-          <li><a href="../news.html">LSL Newsletter and other News</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake</a></li>
-          <li><a href="/lol-news.html">(Monthly News)</a></li>
-          <li><a href="/images/ClubhouseRental2016.pdf">Clubhouse Rental form and information</a></li>
-          <li><a href="../merchandise.html">For Sale: Lake Merchandise</a></li>
-          <li><a href="../lakehomesforsale.html">For Sale or Lease: Homes and Lots</a></li>
-          <li><a href="../classifieds.html">For Sale: Items for sale & Classifieds</a></li>
-          <li><a href="../jobs.html">Job Listing</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../directions.html">Directions</a></li>
-          <li><a href="../links.html">Local Links (schools and other sites)</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Upcoming Events</button>
-        <ul class="submenu">
-          <li><a href="../board.html">Board Meetings</a></li>
-          <li><a href="../lol-activities.html">Ladies of the Lake Activities</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">Lake Rules</button>
-        <ul class="submenu">
-          <li><a href="../rules.html">Bylaws, Covenants & Rules</a></li>
-          <li><a href="../boating.html">Boating</a></li>
-          <li><a href="../fishing.html">Fishing</a></li>
-          <li><a href="../swimming.html">Swimming</a></li>
-        </ul>
-      </li>
-      <li class="mobile-only has-submenu">
-        <button class="submenu-toggle" type="button" aria-expanded="false">LSL Sanitary (water)</button>
-        <ul class="submenu">
-          <li><a href="/sanitary-dist.html" target="_blank">Sanitary District Web Pages</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- end div#menu -->
-  <div id="splash" class="banner-strip">
-    <div class="banner-tile tile-1"><img src="images/banner/img1.jpg" alt="" /></div>
-    <div class="banner-tile tile-2"><img src="images/banner/img2.PNG" alt="" /></div>
-    <div class="banner-tile tile-3"><img src="images/banner/img3.jpeg" alt="" /></div>
-    <div class="banner-tile tile-4"><img src="images/banner/img4.jpeg" alt="" /></div>
-    <div class="banner-label"><span>Little Swan Lake</span></div>
-  </div>
 
-  <div id="page">
-    <div id="page-bgtop">
-      <div id="content-wide">
-        <div class="post">
-          <h2 class="title"><a href="#">CLASSIFIEDS</a></h2>
-          <p class="byline">March 2025</p>
-          <div class="entry">
-            <p class="style195" align="center"><strong>LITTLE SWAN LAKE CLASSIFIEDS </strong></p>
-            <p class="style140" align="center">Classified ads are free for all Little Swan Lake members. <strong><a href="mailto:r-andersen@wiu.edu"><span class="style98" style="text-decoration:underline">Send an email to Bob </span></a></strong> to place your ad. You may attach a photo if you like.</p>
-			<div align="center">
-        <p>&nbsp;</p> 
+<body class="home-page classifieds-page">
+  <div id="wrapper">
+    <div id="topbar"></div>
+    <div id="menu"></div>
+    <div id="splash" class="banner-strip"></div>
 
-        <p align="left"><span class="style201">For Sale - 1994 RANGER R70<br/>
-             SINGLE CONSOLE, 115 MERCURY ,FRONT & REAR LIVEWELLS<br/>  
-             WELL MAINTAINED $8500.00 OR B.O.<br/>
-           <span class="style140">Contact: TROY KRAUSE (309)697-1538 LEAVE MESSAGE or (309)699-0412 DAYS           
-        </span></p>
-          <table width="636" border="0" align="center">
-            <tr>
-              <td width="591" height="179"><img src="images/Krause-boat1.JPG" alt="1994 RANGER R70" height="200"/></td>
-              <td width="591" height="179"><img src="images/Krause-boat2.JPG" alt="1994 RANGER R70" height="200"/></td>
-            </tr>
-            <tr>
-              <td width="591" height="179"><img src="images/Krause-boat3.JPG" alt="1994 RANGER R70" height="200"/></td>
-            </tr>
-          </table>
-          <br/>
-       
-       <p align="left"><span class="style201">For Sale - 1996 Rinker 180 with trailer, 
-           135 hp I/O, 18 ft $5,000
-        </span> <br/>
-           <span class="style140">Trevor Sloan <br/>
-           309-337-8717      
-           </span></p>
-          <table width="636" border="0" align="center">
-            <tr>
-               <td><img src="images/SloanBoat0.jpeg" alt="12 foot Pelican" height="400"/></td>
-               <td><img src="images/SloanBoat1.jpeg" alt="12 foot Pelican" height="400"/></td>
-            </tr>
-            <tr>
-               <td><img src="images/SloanBoat2.jpeg" alt="12 foot Pelican" height="400"/></td>
-               <td><img src="images/SloanBoat3.jpeg" alt="12 foot Pelican" height="400"/></td>
-            </tr>
-          </table>
-          <br/>
-<!--
-        <p align="left"><span class="style201">For Sale - 2013 Tracker Targa 18, 150 HP Mercury, 
-             remote trolling motor, 2 live wells. Bimini top, rod rack and Lots of storage and extras.<br/>
-             Message for price<br/>
-           <span class="style140">Contact: Scott Weber, 309-337-2627 email: szljweber@yahoo.com,            
-        </span></p>
-          <table width="636" border="0" align="center">
-            <tr>
-              <td width="591" height="179"><img src="images/TrackerTarga18a.JPG" alt="2013 Tracker Targa 18" height="200"/></td>
-              <td width="591" height="179"><img src="images/TrackerTarga18b.JPG" alt="2013 Tracker Targa 18" height="200"/></td>
-            </tr>
-            <tr>
-              <td width="591" height="179"><img src="images/TrackerTarga18c.JPG" alt="2013 Tracker Targa 18" height="200"/></td>
-            </tr>
-          </table>
-          <p align="left"><span class="style201">For Sale - Hobie Cat Mirage Outback DLX-12ft<br/>
-             Hobie Cat Mirage Revolution 13 (can be used with sail kit - not included)<br/>
-             Hobie heavy duty wheeled cart<br/>
-             Both Kayaks have the pedals, sturdy removable and adjustable seats, covers and paddles<br/>
-             Asking price $1,500.00 Firm<br/>
-           <span class="style140">Charlotte Yeoman <br/> rorocyk@gmail.com           
-           </span></p>
-          <table width="636" border="0" align="center">
-            <tr>
-              <td width="591" height="179"><img src="images/Hobie-kayaks-for-sale.jpg" alt="Hobie Kayaks" height="200"/></td>
-            </tr>
-          </table>
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content">
+          <div class="home-toolbar"></div>
 
-        <p align="left"><span class="style201">PRICE DROP  For Sale - 12 foot Pelican, two trollong motors with foot switchs
-         and seperate batteries, live well with aireator, anchor, rod holders, tie ropes and launch rope,
-         and trailer, depth finder, paddles, and more. $2500.00
-        </span> <br/>
-           <span class="style140">Bernie Potter <br/>
-           309-264-4379      
-           </span></p>
-          <table width="636" border="0" align="center">
-            <tr>
-               <td><img src="images/12footPelican1.jpg" alt="12 foot Pelican" height="400"/></td>
-               <td><img src="images/12footPelican2.jpg" alt="12 foot Pelican" height="400"/></td>
-            </tr>
-            <tr>
-               <td><img src="images/12footPelican3.jpg" alt="12 foot Pelican" height="400"/></td>
-               <td><img src="images/12footPelican4.jpg" alt="12 foot Pelican" height="400"/></td>
-            </tr>
-          </table>
-          <br/>
+          <main class="home-main">
+            <section class="home-hero">
+              <div class="hero-title">
+                <h1>
+                  <span>Classifieds</span>
+                  <img class="hero-logo" src="images/logo1.png" alt="Little Swan Lake logo" />
+                </h1>
+                <p class="updated">Items for sale and local service listings</p>
+              </div>
 
-          <p align="left"><span class="style201">For Sale - 2015 Kennedy 11’ paddle pontoon with cover - excellent condition $2800 <br/>
-           <span class="style140">Debbie Jolly<br/>
-           815-867-6500           
-           </span></p>
-          <table width="636" border="0" align="center">
-            <tr>
-              <td width="591" height="179"><img src="images/peddlepontoon.jpeg" alt="paddle pontoon" height="200"/></td>
-            </tr>
-          </table>
+              <p>Classified ads are free for Little Swan Lake members. To place an ad, email <a href="mailto:r-andersen@wiu.edu">Bob</a> and include details and photos if you have them.</p>
 
-         <p align="left"><span class="style201">1993 suntracker fishing barge, 60hp Mercury outboard, scissors lift trailer (2009) for sale at $7,200.  New seats and reupholstered lounge.  <br/>
-           <span class="style140">Dave Will at willdp@yahoo.com<br/>
-           (309)258-3137      
-           </span></p>
-          <table width="636" border="0" align="center">
-            <tr>
-               <td><img src="images/Will-93pontoon.jpg" alt="1993 Suntracker Pontoon" height="500"/></td>
-            </tr>
-          </table>
-          <br/>
+              <div class="hero-stats">
+                <div class="stat-card">
+                  <span class="stat-label">Current Sale Listings</span>
+                  <span class="stat-value">2</span>
+                  <p class="stat-note">Boat listings currently shown on this page</p>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Local Service Providers</span>
+                  <span class="stat-value">5</span>
+                  <p class="stat-note">Dock, handyman, and lawn care contacts</p>
+                </div>
+              </div>
+            </section>
 
-          <p align="left"><span class="style201">FOR SALE: 2003 19 foot Hurricane Deck Boat,</span> <span class="style140">90HP Yamaha 4 stroke motor and trolling motor attached.  Good condition.  
-          Also an electric lift.  Everything can be seen at 175 Wilkins Circle.  Can negotiate boat/trailer by itself and boat/trailer/lift together.
-          Please call or email to discuss options.<br/>
-          Liesa Gordon<br/>
-          gordon8789@aol.com<br/>
-          773-405-2942 
-          </span></p>
--->          
- <!--        
-			<p align="left"><span class="style201">For Rent: </span><span class="style140">Lots 502, 503 and 506 on 
-			Little Swan Lake for 2013 season. $600.00 per lot, plus applicable Little Swan Lake Fees. 
-			Please contact Patrick at 309-313-2040 for additional information. </span></p>
+            <section class="home-section">
+              <div class="card">
+                <h2>Items for Sale</h2>
+                <div class="listing-grid">
+                  <article class="card listing-card">
+                    <div>
+                      <h3>1994 Ranger R70</h3>
+                      <p class="listing-subtitle">Single console, 115 Mercury, front and rear livewells</p>
+                    </div>
+                    <p class="listing-price">$8,500 or best offer</p>
+                    <div class="contact-block">
+                      <strong>Troy Krause</strong>
+                      <p><a href="tel:13096971538">(309) 697-1538</a> leave message</p>
+                      <p><a href="tel:13096990412">(309) 699-0412</a> days</p>
+                    </div>
+                    <div class="photo-grid photo-grid-compact">
+                      <a class="gallery-link" href="images/Krause-boat1.JPG" data-lightbox-trigger="true" data-lightbox-alt="1994 Ranger R70 photo 1" data-lightbox-caption="1994 Ranger R70">
+                        <img src="images/Krause-boat1.JPG" alt="1994 Ranger R70 photo 1" />
+                      </a>
+                      <a class="gallery-link" href="images/Krause-boat2.JPG" data-lightbox-trigger="true" data-lightbox-alt="1994 Ranger R70 photo 2" data-lightbox-caption="1994 Ranger R70">
+                        <img src="images/Krause-boat2.JPG" alt="1994 Ranger R70 photo 2" />
+                      </a>
+                      <a class="gallery-link" href="images/Krause-boat3.JPG" data-lightbox-trigger="true" data-lightbox-alt="1994 Ranger R70 photo 3" data-lightbox-caption="1994 Ranger R70">
+                        <img src="images/Krause-boat3.JPG" alt="1994 Ranger R70 photo 3" />
+                      </a>
+                    </div>
+                  </article>
 
-            
-        <p align="left"><span class="style201">1988 Catalina 14 Sailboat and trailer. </span><span class="style140">
-           Sailboat in very good shape.  $1200 OBO. Can be seen at 177 Wilkins. 
-           <br/>
-           John Hoppes<br/>
-           177 Wilkins<br/>
-           john.hoppes@outlook.com<br/>
-           971-226-4234           
-           </span></p>
-         <table width="636" border="0" align="center">
-            <tr>
-              <td width="591" height="179"><img src="images/Hoppes-truck,JPG.JPG" alt="1994 Ford F-150" height="200"/></td>
-            </tr>
-          </table>
-         <p align="left" class="style140"><span class="style195">Older Winnebago Camping Trailer</span> Everything works - Air, Furnace, Fridge, etc. - 2 single beds, 24 ft.<br/> Leave Message - 309-697-8029 - $800.00 obo</p>
+                  <article class="card listing-card">
+                    <div>
+                      <h3>1996 Rinker 180 with Trailer</h3>
+                      <p class="listing-subtitle">135 hp I/O, 18 foot boat</p>
+                    </div>
+                    <p class="listing-price">$5,000</p>
+                    <div class="contact-block">
+                      <strong>Trevor Sloan</strong>
+                      <p><a href="tel:13093378717">(309) 337-8717</a></p>
+                    </div>
+                    <div class="photo-grid">
+                      <a class="gallery-link" href="images/SloanBoat0.jpeg" data-lightbox-trigger="true" data-lightbox-alt="1996 Rinker 180 photo 1" data-lightbox-caption="1996 Rinker 180 with trailer">
+                        <img src="images/SloanBoat0.jpeg" alt="1996 Rinker 180 photo 1" />
+                      </a>
+                      <a class="gallery-link" href="images/SloanBoat1.jpeg" data-lightbox-trigger="true" data-lightbox-alt="1996 Rinker 180 photo 2" data-lightbox-caption="1996 Rinker 180 with trailer">
+                        <img src="images/SloanBoat1.jpeg" alt="1996 Rinker 180 photo 2" />
+                      </a>
+                      <a class="gallery-link" href="images/SloanBoat2.jpeg" data-lightbox-trigger="true" data-lightbox-alt="1996 Rinker 180 photo 3" data-lightbox-caption="1996 Rinker 180 with trailer">
+                        <img src="images/SloanBoat2.jpeg" alt="1996 Rinker 180 photo 3" />
+                      </a>
+                      <a class="gallery-link" href="images/SloanBoat3.jpeg" data-lightbox-trigger="true" data-lightbox-alt="1996 Rinker 180 photo 4" data-lightbox-caption="1996 Rinker 180 with trailer">
+                        <img src="images/SloanBoat3.jpeg" alt="1996 Rinker 180 photo 4" />
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
 
-         <p align="left"><span class="style201">Boat Trailer For Sale</span><br/>
-         <span class="style140"> Double Axle Pontoon Boat Trailer<br/>
-          Trailer is 28 foot long, fits a 24 foot boat<br/>
-          Asking Price:  $1500.<br/>
-          Contact:  Trevor Sloan    309-337-8717</span><br/></p>
+            <section class="home-section">
+              <div class="card">
+                <h2>Local Services</h2>
+                <div class="service-grid">
+                  <article class="card service-card">
+                    <span class="badge">Dock Sales</span>
+                    <h3>L&amp;N Docks</h3>
+                    <p><a href="https://lndocks.com/" target="_blank" rel="noopener">lndocks.com</a></p>
+                    <p class="contact-line">Kelsey Dolezal</p>
+                    <p><a href="tel:18005466985">800-546-6985</a></p>
+                  </article>
 
-			<p align="left"><span class="style201">Minn Kota Maxxum 70 SC Bow-Mount Trolling Motor for sale:</span><span class="style140">Trolling Motor with Hand Control and
-           Speed Coil (70-lb Thrust, 52" Shaft)
-           Almost new, only 15 hours use. $550.00
-           Call Kerry at (309) 333-1105 kdr@midwestcontrol.com </span></p>
+                  <article class="card service-card">
+                    <span class="badge">Handyman</span>
+                    <h3>Terry Cook Handyman</h3>
+                    <p>Reliable and trustworthy handyman service.</p>
+                    <p class="contact-line"><a href="tel:13093382002">309-338-2002</a></p>
+                  </article>
 
--->
-<!-- Docks -->
-			<p class="style195"><strong>Dock sales</strong></p>
-			<p align="left" class="style140"><span class="style202">L&N Docks<br/>lndocks.com <br/> 			  
-			  Call Kelsey Dolezal 800-546-6985</p>
+                  <article class="card service-card">
+                    <span class="badge">Mowing</span>
+                    <h3>Jake Pendarvis</h3>
+                    <p>Quality lawn care at a better price.</p>
+                    <p class="contact-line"><a href="tel:13093372380">309-337-2380</a></p>
+                    <p><a href="mailto:jakobpendarvis@gmail.com">jakobpendarvis@gmail.com</a></p>
+                  </article>
 
-<!-- Handyman -->			
-			<p class="style195"><strong>Handyman</strong></p>
-			<p align="left" class="style140"><span class="style202">Terry Cook Handyman <br/>  Are you looking for a reliable and trustworthy Handyman?<br/>			  
-			  Call Terry at 309-338-2002</p>
+                  <article class="card service-card">
+                    <span class="badge">Mowing</span>
+                    <h3>Two Teachers Lawn Services</h3>
+                    <p>Free estimates for mowing, trimming, and gutter cleaning.</p>
+                    <p class="contact-line">Ryan Wilson: <a href="tel:13098366049">309-836-6049</a></p>
+                    <p class="contact-line">Brian Langworthy: <a href="tel:13092550140">309-255-0140</a></p>
+                  </article>
 
-<!-- mowing -->			
-			<p class="style195"><strong>MOWING</strong></p>
-			<p align="left" class="style140"><span class="style202">Jake Pendarvis</span>	<br/>
-			   “Quality lawn care at a better price” <br/>Jake Pendarvis: 309-337-2380; Email:     
-			   <a href="mailto:jakobpendarvis@gmail.com">jakobpendarvis@gmail.com</a></p>
+                  <article class="card service-card">
+                    <span class="badge">Mowing</span>
+                    <h3>Lawn Care Solutions</h3>
+                    <p>Reliable, honest, and fully insured mowing and trim work.</p>
+                    <p class="contact-line">Jamie</p>
+                    <p>469 Brookhart Bend</p>
+                    <p><a href="tel:13197594890">(319) 759-4890</a></p>
+                    <p><a href="mailto:jamie.hallowell@yahoo.com">jamie.hallowell@yahoo.com</a></p>
+                  </article>
 
-			<p align="left" class="style140"><span class="style202">Two Teacher’s Lawn Services</span>	<br/>		  Are you looking for a reliable and trustworthy lawn service?<br/>			  
-			   Call today for a free estimate! <br/>Ryan Wilson: 309-836-6049 • 
-			   Brian Langworthy: 309-255-0140 <br/>	Mowing, Trimming, Clean Gutters</p>
-
-			<p align="left" class="style140">
-			<span class="style203">Lawn Care Solutions</span> <br/>
-			  We do mowing and trim work big and small. We are reliable, honest and Fully insured<br/>
-			  Contact Jamie for estimates<br/>
-			  469 Brookhart Bend <br/>
-			  (319)759-4890<br/>
-			  jamie.hallowell@yahoo.com</p>
-			  
-			<p align="left" class="style140">
-			  <span class="style203">Craver Mowing</span>			  <br/>
-			   Frank Craver 309-368-3786</p>
-			   
-         <p align="left" class="style140">
-			  <span class="style203">Kramer Mowing</span>			  <br/>			
-            Phil Kramer (309)368-4439</p>			
-			</div>
-			<div>
-            <p class="style140">&nbsp;</p>
-			
-            <p class="style140"></p>
-          </div>
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
+
+        <div id="sidebar"></div>
+        <div style="clear: both; height: 1px"></div>
       </div>
-      <!-- end div#content -->
-      
-<!--         <img src="images/JensenPontoon.jpg" border=0 width=303 height=150 alt="1994 18ft Landau Bandit pontoon" style="float:right">			
-         <p align="left"><span class="style201">1994 18ft Landau Bandit pontoon with 40 hp Yamaha For Sale</span>	  <br/>	
-		   <span class="style140">Excellent condition. Call Jeff at 309-337-8185 - Asking $5,000.00</span></p>
+    </div>
 
-         <p align="left"><span class="style201">Bayliner Model 2003 For Sale</span><br/>		  
-         <span class="style140">17.5 ft Open Bow Runabout-Ski Boat<br/>	
-          2010 135 HP Inboard/Outboard (IO) <br/>	
-          New cover purchased last year.<br/>	
-          Runs good, great for tubing, only used 6 times last year.<br/>	
-          Asking $5,500 - Call 309-368-3181</span></p>
--->
+    <div id="footer"></div>
+  </div>
 
-<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
-<!-- The terms of service are available at http://www.google.com//cse/docs/tos.html -->
-<!--
-<form name="cse" id="searchbox_demo" action="http://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-12" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fwww.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
--->
-<!-- end div#sidebar -->
-<div style="clear: both; height: 1px"></div>
+  <div class="lightbox" data-lightbox="true" hidden="hidden" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo">
+      <button class="lightbox-close" type="button" data-lightbox-close="true" aria-label="Close expanded photo">&times;</button>
+      <img class="lightbox-image" src="" alt="" data-lightbox-image="true" />
+      <div class="lightbox-caption" data-lightbox-caption="true"></div>
     </div>
   </div>
-  <!-- end div#page -->
-  <div id="footer">
-    <p>Copyright &copy; 2007 Lily Pads. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. </p>
-  <!--  <p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p> -->
-  </div>
-  <!-- end div#footer -->
-</div>
-<!-- end div#wrapper -->
 
-<script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
