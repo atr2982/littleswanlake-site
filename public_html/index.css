@@ -108,11 +108,19 @@
   .home-page #content.home-content {
     width: 100%;
   }
+  .home-page #shared-search {
+    width: 100%;
+    max-width: 940px;
+    margin: 10px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
   .home-page #page {
     position: relative;
     overflow: hidden;
     background: #ffffff;
-    padding-top: 16px;
+    padding-top: 0;
+    padding-bottom: 20px;
   }
 
     .home-page .home-main {
@@ -502,7 +510,11 @@
     padding: 6px 0;
   }
   .home-page .home-toolbar {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
   }
   .home-page .home-toolbar-left {
     display: inline-flex;
@@ -546,9 +558,9 @@
   .home-page .site-search button {
     height: 32px;
     width: 32px;
-    border: 1px solid #2e13d0;
+    border: 1px solid #2713d0;
     border-radius: 6px;
-    background: #2e13d0;
+    background: #2713d0;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
@@ -556,8 +568,8 @@
     cursor: pointer;
   }
   .home-page .site-search button:disabled {
-    border-color: #2e13d0;
-    background: #2e13d0;
+    border-color: #2713d0;
+    background: #2713d0;
     color: #ffffff;
     cursor: not-allowed;
   }

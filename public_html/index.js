@@ -33,6 +33,38 @@
     var mask = document.createElement("div");
     mask.id = MASK_ID;
     mask.setAttribute("aria-hidden", "true");
+    mask.innerHTML =
+      '<div class="chrome-loader-shell">' +
+      '<div class="chrome-loader-banner"></div>' +
+      '<div class="chrome-loader-content">' +
+      '<div class="chrome-loader-search-row"><div class="chrome-loader-search"></div></div>' +
+      '<div class="chrome-loader-card">' +
+      '<div class="chrome-loader-kicker"></div>' +
+      '<div class="chrome-loader-title"></div>' +
+      '<div class="chrome-loader-line chrome-loader-line-wide"></div>' +
+      '<div class="chrome-loader-line"></div>' +
+      '<div class="chrome-loader-line chrome-loader-line-medium"></div>' +
+      '</div>' +
+      '</div>' +
+      '</div>';
+
+    var wrapper = document.getElementById("wrapper");
+    var menu = document.getElementById("menu");
+
+    if (wrapper && menu && menu.parentNode === wrapper) {
+      if (menu.nextSibling) {
+        wrapper.insertBefore(mask, menu.nextSibling);
+      } else {
+        wrapper.appendChild(mask);
+      }
+      return mask;
+    }
+
+    if (wrapper) {
+      wrapper.appendChild(mask);
+      return mask;
+    }
+
     document.body.appendChild(mask);
     return mask;
   }
@@ -157,16 +189,6 @@
     currentIcon.setAttribute("href", iconHref);
   }
 
-  function replaceHomeToolbar(templateDoc, baseUrl) {
-    var sourceToolbar = templateDoc.querySelector(".home-toolbar");
-    var targetToolbar = document.querySelector(".home-toolbar");
-    if (!sourceToolbar || !targetToolbar || !targetToolbar.parentNode) return;
-
-    var clone = sourceToolbar.cloneNode(true);
-    absolutizeSharedNodeUrls(clone, baseUrl);
-    targetToolbar.parentNode.replaceChild(clone, targetToolbar);
-  }
-
   function syncSharedChromeFromTemplate() {
     var currentPath = normalizePath(window.location.pathname || "/");
     if (currentPath === "/template.html") {
@@ -181,9 +203,9 @@
       replaceNodeFromTemplate("topbar", payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("menu", payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("splash", payload.doc, payload.baseUrl);
+      replaceNodeFromTemplate("shared-search", payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("sidebar", payload.doc, payload.baseUrl);
       replaceNodeFromTemplate("footer", payload.doc, payload.baseUrl);
-      replaceHomeToolbar(payload.doc, payload.baseUrl);
     });
   }
 

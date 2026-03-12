@@ -63,7 +63,7 @@
   background: linear-gradient(90deg, #ff6b6b, #ff9a5a);
 }
 
-.events-page .event-card h3 {
+.events-page .event-card h2 {
   margin: 0 0 10px 0;
   line-height: 1.25;
 }
@@ -101,9 +101,9 @@
   gap: 7px;
   padding: 6px 10px;
   border-radius: 6px;
-  background: #e8f4fb;
-  border: 1px solid #c2dbeb;
-  color: #174864;
+  background: #edf1f5;
+  border: 1px solid #cfd7df;
+  color: #3a4b5a;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.35;
@@ -144,12 +144,99 @@
   gap: 8px;
   margin-top: 2px;
   margin-bottom: 6px;
-  padding: 9px 14px;
+  padding: 6px 10px;
   border-radius: 6px;
   background: #e4f3fb;
   color: #0f3f5a;
   font-weight: 700;
+  font-size: 14px;
+  line-height: 1.35;
   border: 1px solid #b7d4e3;
+  text-decoration: none;
+}
+
+.events-page .event-card .placeholder-link i {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.events-page .event-details {
+  margin-top: 12px;
+  border: 1px solid #d3dde6;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.events-page .event-details summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding: 10px 36px 10px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #163d5a;
+}
+
+.events-page .event-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.events-page .event-details summary::after {
+  content: "\f078";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3f5b71;
+}
+
+.events-page .event-details[open] summary::after {
+  content: "\f077";
+}
+
+.events-page .event-details-content {
+  padding: 0 12px 12px 12px;
+  border-top: 1px solid #dfe7ee;
+}
+
+.events-page .event-details-content h3 {
+  margin: 12px 0 8px 0;
+  font-size: 16px;
+  color: #1f3f56;
+}
+
+.events-page .event-details-content ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.events-page .event-details-content li {
+  margin: 0 0 6px 0;
+  color: #334a5d;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.events-page .event-payout-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.events-page .event-payout-table th,
+.events-page .event-payout-table td {
+  border: 1px solid #d2dbe4;
+  padding: 7px 8px;
+  text-align: left;
+}
+
+.events-page .event-payout-table thead th {
+  background: #edf1f5;
+  color: #1e3f57;
 }
 
 @media (max-width: 760px) {
@@ -164,5 +251,9 @@
   .events-page .event-meta li {
     font-size: 13px;
     padding: 6px 9px;
+  }
+
+  .events-page .event-details summary {
+    padding-right: 32px;
   }
 }
