@@ -37,6 +37,12 @@ body {
 	color: #231F20;
 }
 
+body.home-page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
 :root {
 	--sticky-topbar-offset: 0px;
 }
@@ -191,6 +197,25 @@ a:hover {
 /* Wrapper */
 
 #wrapper {
+	width: 100%;
+}
+
+body.home-page #wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+body.home-page #page {
+	flex: 1 0 auto;
+}
+
+body.home-page #footer {
+	margin-top: 20px;
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
 }
 
 /* Header */
