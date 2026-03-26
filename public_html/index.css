@@ -317,6 +317,10 @@
       gap: 16px;
     }
 
+    .home-page .fishing-full-width .split {
+      grid-template-columns: 1fr;
+    }
+
     .home-page .card {
       border: 1px solid var(--lake-border);
       border-radius: 10px;

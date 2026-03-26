@@ -535,7 +535,11 @@
               ? e.target.closest(".nav-dropdown-toggle")
               : null;
         if (!navToggleBtn) return;
-        if (!window.matchMedia("(max-width: 640px)").matches) return;
+        if (!window.matchMedia("(max-width: 640px)").matches) {
+          navToggleBtn.blur();
+          e.preventDefault();
+          return;
+        }
 
         var navItem = navToggleBtn.closest("li");
         if (!navItem) return;
