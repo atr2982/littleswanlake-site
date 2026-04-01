@@ -1,7 +1,4 @@
 (function () {
-  var PAGE_LOADING_CLASS = "shared-chrome-pending";
-  var PAGE_READY_CLASS = "shared-chrome-ready";
-  var MASK_ID = "chrome-loading-mask";
   var BANNER_LOADING_CLASS = "banner-loading";
   var BANNER_READY_CLASS = "banner-ready";
   var BANNER_WAIT_TIMEOUT_MS = 4500;
@@ -26,59 +23,8 @@
     }
   }
 
-  function ensureLoadingMask() {
-    var existingMask = document.getElementById(MASK_ID);
-    if (existingMask) return existingMask;
-
-    var mask = document.createElement("div");
-    mask.id = MASK_ID;
-    mask.setAttribute("aria-hidden", "true");
-    mask.innerHTML =
-      '<div class="chrome-loader-shell">' +
-      '<div class="chrome-loader-banner"></div>' +
-      '<div class="chrome-loader-content">' +
-      '<div class="chrome-loader-search-row"><div class="chrome-loader-search"></div></div>' +
-      '<div class="chrome-loader-card">' +
-      '<div class="chrome-loader-kicker"></div>' +
-      '<div class="chrome-loader-title"></div>' +
-      '<div class="chrome-loader-line chrome-loader-line-wide"></div>' +
-      '<div class="chrome-loader-line"></div>' +
-      '<div class="chrome-loader-line chrome-loader-line-medium"></div>' +
-      '</div>' +
-      '</div>' +
-      '</div>';
-
-    var wrapper = document.getElementById("wrapper");
-    var menu = document.getElementById("menu");
-
-    if (wrapper && menu && menu.parentNode === wrapper) {
-      if (menu.nextSibling) {
-        wrapper.insertBefore(mask, menu.nextSibling);
-      } else {
-        wrapper.appendChild(mask);
-      }
-      return mask;
-    }
-
-    if (wrapper) {
-      wrapper.appendChild(mask);
-      return mask;
-    }
-
-    document.body.appendChild(mask);
-    return mask;
-  }
-
   function setPageLoading(isLoading) {
-    if (!document.body) return;
-    if (isLoading) {
-      ensureLoadingMask();
-      document.body.classList.add(PAGE_LOADING_CLASS);
-      document.body.classList.remove(PAGE_READY_CLASS);
-      return;
-    }
-    document.body.classList.remove(PAGE_LOADING_CLASS);
-    document.body.classList.add(PAGE_READY_CLASS);
+    return;
   }
 
   function buildTemplateCandidates() {
