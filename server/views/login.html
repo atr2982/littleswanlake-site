@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="/default.css" rel="stylesheet" type="text/css" />
+  <link href="/index.css" rel="stylesheet" type="text/css" />
+  <link href="/auth.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="/images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body class="home-page auth-page">
+  <div id="wrapper">
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content auth-layout">
+          <main class="auth-login-view">
+            <section class="auth-login-card">
+              <div class="auth-login-band">
+                <h1>Little Swan Lake</h1>
+                <p>Administrator access</p>
+              </div>
+
+              <div class="auth-login-body">
+                <span class="auth-eyebrow">Sign In</span>
+                <p class="auth-intro">Use your admin credentials to access the private management area.</p>
+
+              <div id="login-error" class="status-message error" role="alert">The email or password was not correct.</div>
+                <form id="login-form" class="auth-form" action="/login" method="post">
+                  <input id="next" type="hidden" name="next" value="/admin" />
+
+                  <div class="auth-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="username" required />
+                  </div>
+
+                  <div class="auth-field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required />
+                  </div>
+
+                  <div class="auth-actions">
+                    <a class="button-secondary" href="/">Back to Home</a>
+                    <button class="button-primary" type="submit">Log In</button>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </main>
+        </div>
+        <div style="clear: both; height: 1px"></div>
+      </div>
+    </div>
+    <div id="footer">
+      <p><a href="mailto:r-andersen@wiu.edu">Contact the LSL Webmaster</a> <br /> </p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/auth.js"></script>
+</body>
+
+</html>

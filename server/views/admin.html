@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Swan Lake</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="/default.css" rel="stylesheet" type="text/css" />
+  <link href="/index.css" rel="stylesheet" type="text/css" />
+  <link href="/auth.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="/images/logo1.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body class="home-page auth-page">
+  <div id="wrapper">
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="content" class="home-content auth-layout">
+          <main class="admin-shell">
+            <section class="admin-topbar">
+              <div class="admin-brand">
+                <span class="auth-eyebrow">Little Swan Lake</span>
+                <h1>Admin Panel</h1>
+                <p>Private management area</p>
+              </div>
+              <form class="admin-actions" action="/logout" method="post">
+                <a class="button-secondary" href="/">Public Site</a>
+                <button class="button-primary" type="submit">Log Out</button>
+              </form>
+            </section>
+
+            <section class="admin-grid">
+              <article class="admin-panel">
+                <div class="admin-panel-header">
+                  <h2>Workspace</h2>
+                  <p class="admin-intro">This is the new protected area. We can add content management features here next.</p>
+                </div>
+                <div class="admin-panel-body">
+                  <div class="admin-callout">
+                    Auth is live. The next step can be adding whatever admin tools you want first.
+                  </div>
+                  <div class="admin-shortcuts">
+                    <a class="admin-shortcut" href="/classifieds.html">
+                      View current classifieds page
+                      <small>Useful while we start wiring admin tools into the existing site.</small>
+                    </a>
+                    <a class="admin-shortcut" href="/forms/forms.html">
+                      View forms page
+                      <small>Another public page you can compare against while we build the admin side.</small>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <div class="admin-stack">
+                <section class="admin-panel">
+                  <div class="admin-panel-header">
+                    <h2>Session</h2>
+                  </div>
+                  <div class="admin-panel-body">
+                    <div class="admin-meta">
+                      <div class="admin-meta-row">
+                        <div class="admin-meta-label">Signed in as</div>
+                        <div class="admin-meta-value" data-admin-email="{{ADMIN_EMAIL}}">{{ADMIN_EMAIL}}</div>
+                      </div>
+                      <div class="admin-meta-row">
+                        <div class="admin-meta-label">Role</div>
+                        <div class="admin-meta-value">Admin</div>
+                      </div>
+                      <div class="admin-meta-row">
+                        <div class="admin-meta-label">Status</div>
+                        <div class="admin-meta-value">Authenticated with a server-side session cookie</div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="admin-panel">
+                  <div class="admin-panel-header">
+                    <h2>Notes</h2>
+                  </div>
+                  <div class="admin-panel-body">
+                    <ul class="admin-notes-list">
+                      <li>Add the two additional users you mentioned so they can log in and watch site updates.</li>
+                      <li>Decide which public pages should get admin controls first, starting with the pages listed in Workspace.</li>
+                      <li>Prepare the auth setup for the DigitalOcean deployment once the first admin tools are in place.</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </section>
+          </main>
+        </div>
+        <div style="clear: both; height: 1px"></div>
+      </div>
+    </div>
+    <div id="footer">
+      <p><a href="mailto:r-andersen@wiu.edu">Contact the LSL Webmaster</a> <br /> </p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/auth.js"></script>
+</body>
+
+</html>
